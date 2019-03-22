@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '30S9N0AO5V',
+      apiKey: 'd7f2acda9bdbd752a7bfc9b40d14cd81',
+      indexName: 'zhaojianBlog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="智能DNS，即通过判断用户的来路，做出一些智能化的处理，然后把智能化判断后的IP返回给用户。 智能DNS普遍支持无限域名解析，这点很好，对于分站较多的站长来说，是一个福音，呵呵。相比某些大牌域名注册公司DNS的种种限制，简直是小巫见大巫了。而且，智能DNS还是免费使用的。 国外的域名注册公司大多支持无限解析，而咱们国内呢？万网，仅仅给出的10条免费域名解析记录（国内域名注册公司给的最少的），新网2">
+<meta name="keywords" content="DNS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="国内5大免费智能DNS解析">
+<meta property="og:url" content="http://www.zhaojian.net/2010/05/dns-jie-xi-fu-wu.html">
+<meta property="og:site_name" content="赵健@zhaojian.net">
+<meta property="og:description" content="智能DNS，即通过判断用户的来路，做出一些智能化的处理，然后把智能化判断后的IP返回给用户。 智能DNS普遍支持无限域名解析，这点很好，对于分站较多的站长来说，是一个福音，呵呵。相比某些大牌域名注册公司DNS的种种限制，简直是小巫见大巫了。而且，智能DNS还是免费使用的。 国外的域名注册公司大多支持无限解析，而咱们国内呢？万网，仅仅给出的10条免费域名解析记录（国内域名注册公司给的最少的），新网2">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.shjue.com/upload/201005191957226066.gif">
+<meta property="og:image" content="http://www.shjue.com/upload/201005191957434182.gif">
+<meta property="og:image" content="http://www.shjue.com/upload/201005191957511886.gif">
+<meta property="og:image" content="http://www.shjue.com/upload/201005191958532215.gif">
+<meta property="og:image" content="http://www.shjue.com/upload/201005191958573421.gif">
+<meta property="og:updated_time" content="2017-11-07T16:19:49.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="国内5大免费智能DNS解析">
+<meta name="twitter:description" content="智能DNS，即通过判断用户的来路，做出一些智能化的处理，然后把智能化判断后的IP返回给用户。 智能DNS普遍支持无限域名解析，这点很好，对于分站较多的站长来说，是一个福音，呵呵。相比某些大牌域名注册公司DNS的种种限制，简直是小巫见大巫了。而且，智能DNS还是免费使用的。 国外的域名注册公司大多支持无限解析，而咱们国内呢？万网，仅仅给出的10条免费域名解析记录（国内域名注册公司给的最少的），新网2">
+<meta name="twitter:image" content="http://www.shjue.com/upload/201005191957226066.gif">
+
+
+
+
+
+
+  <link rel="canonical" href="http://www.zhaojian.net/2010/05/dns-jie-xi-fu-wu.html">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>国内5大免费智能DNS解析 | 赵健@zhaojian.net</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">赵健@zhaojian.net</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">发现生活，专注互联网。</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.zhaojian.net/2010/05/dns-jie-xi-fu-wu.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="赵健">
+      <meta itemprop="description" content="赵健@zhaojian.net 发现生活，专注互联网。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="赵健@zhaojian.net">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">国内5大免费智能DNS解析
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2010-05-26 07:36:18" itemprop="dateCreated datePublished" datetime="2010-05-26T07:36:18+08:00">2010-05-26</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2017-11-08 00:19:49" itemprop="dateModified" datetime="2017-11-08T00:19:49+08:00">2017-11-08</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/life/" itemprop="url" rel="index"><span itemprop="name">生活随笔</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>智能DNS，即通过判断用户的来路，做出一些智能化的处理，然后把智能化判断后的IP返回给用户。</p>
+<p>智能DNS普遍支持无限域名解析，这点很好，对于分站较多的站长来说，是一个福音，呵呵。相比某些大牌域名注册公司DNS的种种限制，简直是小巫见大巫了。而且，智能DNS还是免费使用的。</p>
+<p>国外的域名注册公司大多支持无限解析，而咱们国内呢？万网，仅仅给出的10条免费域名解析记录（国内域名注册公司给的最少的），新网20条。万网域名解析生效时间巨慢，现在讲的是高效、快捷，官方所谓的“24~72小时解析生效的为正常现象”，这完全是在放屁，真会忽悠人！这同时也说明，国内创新意识薄弱，大多都是乐不思蜀、安于现状，国内的技术实力明显不足以与国外抗衡。正常的域名解析生效时间应该是在10分钟内，要知道，现在是信息时代，不是原始社会！你的域名解析不成功、网站打不开，拖累1个小时就够你受的了。2010年1月12日，百度被“黑”6小时，因为域名DNS问题，网站无法访问，造成直接经济损失在1000万元人民币以上，间接损失更是难以估算。</p>
+<p>因为万网域名的政策原因（价格高昂、解析记录少、生效时间慢），2009年，新网以其优势（新网代理曾打出25元注册.COM域名，新网域名解析记录多、生效时间快），一跃成为国内最大的.COM域名注册公司。</p>
+<p>正是因为国内域名注册公司长期垄断市场、混乱行情、忽悠站长，并制造种种限制以获取暴利，国内域名注册公司实力和口碑每况日下，给中国互联网造成了极其恶劣的影响。国内的域名注册公司应该好好反省，为什么现在会有这么多智能DNS的出现，那都是因为你们“作恶”的结果，也是因为你们习以为常的“作恶”，才给了智能DNS生存和发展的机会。</p>
+<p>下面推荐5款不错的智能DNS。</p>
+<p><strong>1.DNSPod：</strong><a href="http://www.dnspod.com/" target="_blank" rel="noopener">http://www.dnspod.com/</a></p>
+<p><img src="http://www.shjue.com/upload/201005191957226066.gif" alt></p>
+<p>DNSPod建立于2006年3月份，是国内最早提供免费智能DNS产品的网站，致力于为各类网站提供高质量的电信、联通、教育网双线或者三线智能DNS免费解析。除了智能DNS解析，DNSPod还提供普通DNS解析。相对竞争对手的产品，DNSPod除了实时生效，不限制用户添加的域名和记录数量外，还率先提供了IPv6的支持和动态域名解析的功能，另外还支持DNS轮询、URL转发、API接口、批量修改管理等先进功能。并且所有功能都是免费提供。 DNSPod目前提供6台免费DNS服务器，尽管域名转发夹带广告，但丝毫不动摇智能DNS的老大地位。</p>
+<p><strong>2.DNS.La：</strong><a href="http://www.dns.la/" target="_blank" rel="noopener">http://www.dns.la/</a></p>
+<p><img src="http://www.shjue.com/upload/201005191957434182.gif" alt></p>
+<p>DNS.La可以为同时有电信、联通、教育网服务器的网站提供免费智能DNS的解析，让电信用户访问电信的服务器，联通的用户访问联通的服务器，达到互联互通的效果。当然，不需要智能DNS解析的普通用户也可以使用其DNS服务。DNS.La目前提供6台免费DNS服务器，不限制用户的域名、记录数量！已经开放的功能有：批量解析、域名PUSH、域名分组、域名转发、域名找回、导入导出。</p>
+<p><strong>3. iiDNS：</strong><a href="http://www.iidns.com/" target="_blank" rel="noopener">http://www.iidns.com/</a></p>
+<p><img src="http://www.shjue.com/upload/201005191957511886.gif" alt></p>
+<p>iiDNS是易名中国eName旗下网站，建立于2006年3月份，是一款免费智能DNS产品。iiDNS可以为同时有电信、联通、教育网服务器的网站 提供智能的解析，让电信用户访问电信的服务器，联通的用户访问联通的服务器，达到互联互通的效果。 当然，不需要智能解析的普通用户也可以使用其服务。iiDNS目前提供6台免费DNS服务器，不限制用户的域名、记录数量，并且提供别的DNS服务提供商没有提供的服务。</p>
+<p><strong>4.亿众DNS：</strong><a href="http://www.dns07.com/" target="_blank" rel="noopener">http://www.dns07.com/</a></p>
+<p><img src="http://www.shjue.com/upload/201005191958532215.gif" alt></p>
+<p>亿众DNS是国内领先的免费动态智能DNS网站，平台致力于为各类网站、企业、个人提供高质量的电信、联通、教育网双线或者三线智能DNS免费解析。亿众DNS目前提供2台免费DNS服务器，支持无限个域名解析数量。</p>
+<p><strong>5.群英智能DNS：</strong><a href="http://dns.qy.com.cn/" target="_blank" rel="noopener">http://dns.qy.com.cn/</a></p>
+<p><img src="http://www.shjue.com/upload/201005191958573421.gif" alt></p>
+<p>QYDNS是全球领先的智能DNS管理体系，QYDNS是具有八年IDC安全技术运营经验与ISO服务资质于一身的国内领先IDC运营商-群英网络有限公司凭借在互联网多年积累的经验成功开发的一套先进的域名实时自助解析系统。QYDNS可适用于各种类型、各种语言的域名解析，为您的网站、邮局等正常访问提供简便、快捷的实时操作平台。QYDNS目前提供2台免费DNS服务器，支持无限个域名解析数量。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/DNS/" rel="tag"># DNS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2010/05/ke-niu-kong-he.html" rel="next" title="可牛25日发杀毒软件 傅盛称曾遭对手恐吓">
+                <i class="fa fa-chevron-left"></i> 可牛25日发杀毒软件 傅盛称曾遭对手恐吓
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2010/05/zai-xian-zhi-zuo-wang-zhan-tou-ming-ico-tu-biao.html" rel="prev" title="在线制作网站透明ico图标">
+                在线制作网站透明ico图标 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">赵健</p>
+              <div class="site-description motion-element" itemprop="description">赵健@zhaojian.net 发现生活，专注互联网。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">144</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">272</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">赵健</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

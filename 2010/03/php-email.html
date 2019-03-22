@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '30S9N0AO5V',
+      apiKey: 'd7f2acda9bdbd752a7bfc9b40d14cd81',
+      indexName: 'zhaojianBlog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="最近网站改版，想弄一个在线提交表单到邮箱的程序，找了很多都用不了，最后自己研究了一个。 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828">
+<meta name="keywords" content="PHP,E-mail,php mail,smtp,邮箱">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP写的提交表单到E-mail邮箱程序">
+<meta property="og:url" content="http://www.zhaojian.net/2010/03/php-email.html">
+<meta property="og:site_name" content="赵健@zhaojian.net">
+<meta property="og:description" content="最近网站改版，想弄一个在线提交表单到邮箱的程序，找了很多都用不了，最后自己研究了一个。 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-07T16:14:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP写的提交表单到E-mail邮箱程序">
+<meta name="twitter:description" content="最近网站改版，想弄一个在线提交表单到邮箱的程序，找了很多都用不了，最后自己研究了一个。 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828">
+
+
+
+
+
+
+  <link rel="canonical" href="http://www.zhaojian.net/2010/03/php-email.html">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>PHP写的提交表单到E-mail邮箱程序 | 赵健@zhaojian.net</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">赵健@zhaojian.net</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">发现生活，专注互联网。</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.zhaojian.net/2010/03/php-email.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="赵健">
+      <meta itemprop="description" content="赵健@zhaojian.net 发现生活，专注互联网。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="赵健@zhaojian.net">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">PHP写的提交表单到E-mail邮箱程序
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2010-03-08 14:16:39" itemprop="dateCreated datePublished" datetime="2010-03-08T14:16:39+08:00">2010-03-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2017-11-08 00:14:50" itemprop="dateModified" datetime="2017-11-08T00:14:50+08:00">2017-11-08</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tech/" itemprop="url" rel="index"><span itemprop="name">技术随笔</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>最近网站改版，想弄一个在线提交表单到邮箱的程序，找了很多都用不了，最后自己研究了一个。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;?php</span><br><span class="line">function spamcheck($field)</span><br><span class="line">  &#123;</span><br><span class="line">  //filter_var() sanitizes the e-mail </span><br><span class="line">  //address using FILTER_SANITIZE_EMAIL</span><br><span class="line">  $field=filter_var($field, FILTER_SANITIZE_EMAIL);</span><br><span class="line"></span><br><span class="line">  //filter_var() validates the e-mail</span><br><span class="line">  //address using FILTER_VALIDATE_EMAIL</span><br><span class="line">  if(filter_var($field, FILTER_VALIDATE_EMAIL))</span><br><span class="line">    &#123;</span><br><span class="line">    return TRUE;</span><br><span class="line">    &#125;</span><br><span class="line">  else</span><br><span class="line">    &#123;</span><br><span class="line">    return FALSE;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">if (isset($_REQUEST[&apos;w_14&apos;]))</span><br><span class="line">  &#123;//if &quot;email&quot; is filled out, proceed</span><br><span class="line"></span><br><span class="line">  //check if the email address is invalid</span><br><span class="line">  $mailcheck = spamcheck($_REQUEST[&apos;w_14&apos;]);</span><br><span class="line">  $w_1_check = $_REQUEST[&apos;w_1&apos;];</span><br><span class="line">  $w_8_check = $_REQUEST[&apos;w_8&apos;];</span><br><span class="line">  $w_13_check = $_REQUEST[&apos;w_13&apos;];</span><br><span class="line">  if ($mailcheck==FALSE)</span><br><span class="line">    &#123;</span><br><span class="line">    echo &quot;&lt;script language=\&quot;JavaScript\&quot;&gt;\r\n&quot;; </span><br><span class="line">    echo &quot; alert(\&quot;请您认真填写 E-Mail，以便工作人员与您取得联系。谢谢合作！\&quot;);\r\n&quot;; </span><br><span class="line">    echo &quot; history.back();\r\n&quot;; </span><br><span class="line">    echo &quot;&lt;/script&gt;&quot;; </span><br><span class="line">    &#125;</span><br><span class="line">          if ($w_1_check==&apos;&apos;)</span><br><span class="line">    &#123;</span><br><span class="line">    echo &quot;&lt;script language=\&quot;JavaScript\&quot;&gt;\r\n&quot;; </span><br><span class="line">    echo &quot; alert(\&quot;请您认真填写公司名称，以便工作人员与您取得联系。谢谢合作！\&quot;);\r\n&quot;; </span><br><span class="line">    echo &quot; history.back();\r\n&quot;; </span><br><span class="line">    echo &quot;&lt;/script&gt;&quot;; </span><br><span class="line">    &#125;</span><br><span class="line">          if ($w_8_check==&apos;&apos;)</span><br><span class="line">    &#123;</span><br><span class="line">    echo &quot;&lt;script language=\&quot;JavaScript\&quot;&gt;\r\n&quot;; </span><br><span class="line">    echo &quot; alert(\&quot;请您认真填写姓名，以便工作人员与您取得联系。谢谢合作！\&quot;);\r\n&quot;; </span><br><span class="line">    echo &quot; history.back();\r\n&quot;; </span><br><span class="line">    echo &quot;&lt;/script&gt;&quot;; </span><br><span class="line">    &#125;         </span><br><span class="line">    	 if ($w_13_check==&apos;&apos;)</span><br><span class="line">    &#123;</span><br><span class="line">    echo &quot;&lt;script language=\&quot;JavaScript\&quot;&gt;\r\n&quot;; </span><br><span class="line">    echo &quot; alert(\&quot;请您认真填写QQ/MSN号码，以便工作人员与您取得联系。谢谢合作！\&quot;);\r\n&quot;; </span><br><span class="line">    echo &quot; history.back();\r\n&quot;; </span><br><span class="line">    echo &quot;&lt;/script&gt;&quot;; </span><br><span class="line">    &#125;</span><br><span class="line">  else</span><br><span class="line">    &#123;//send email</span><br><span class="line">    $email = $_REQUEST[&apos;w_14&apos;] ; </span><br><span class="line">    $subject = $_REQUEST[&apos;w_1&apos;] . &quot; &quot; . $_REQUEST[&apos;w_8&apos;] ;</span><br><span class="line">    $message = &quot;公司名称 :&quot;. $_REQUEST[&apos;w_1&apos;] . &quot;\r\n&quot; . &quot;网页语种 :&quot;. $_REQUEST[&apos;w_2_1&apos;] . &quot;/&quot; . $_REQUEST[&apos;w_2_2&apos;] . &quot;/&quot; . $_REQUEST[&apos;w_2_3&apos;] . &quot;/&quot; . $_REQUEST[&apos;w_2_4&apos;] . &quot;/&quot; . $_REQUEST[&apos;w_2_5&apos;] . &quot;/&quot; . &quot;\r\n&quot; . &quot;需要借鉴的站点 :&quot;. $_REQUEST[&apos;w_3&apos;] . &quot;\r\n&quot; . &quot;主要业务介绍 :&quot;. $_REQUEST[&apos;w_4&apos;] . &quot;\r\n&quot; . &quot;建站费用预算 :&quot;. $_REQUEST[&apos;w_5&apos;] . &quot;-&quot; . $_REQUEST[&apos;w_6&apos;] . &quot;\r\n&quot; . &quot;要求建站完成时间 :&quot;. &quot;希望完工的日期&quot; . $_REQUEST[&apos;w_7&apos;] . &quot;\r\n&quot; . &quot;                  希望完工的天数&quot; . $_REQUEST[&apos;w_7_1&apos;] . &quot;\r\n&quot; . &quot;网站建设其他要求 :&quot;. $_REQUEST[&apos;w_7_2&apos;] . &quot;\r\n&quot; . &quot;=============================================================&quot; . &quot;\r\n&quot; . &quot;姓名 :&quot;. $_REQUEST[&apos;w_8&apos;] . &quot;\r\n&quot; . &quot;性别 :&quot;. $_REQUEST[&apos;w_9&apos;] . &quot;\r\n&quot; . &quot;电话 :&quot;. $_REQUEST[&apos;w_11&apos;] . &quot;\r\n&quot; . &quot;手机 :&quot;. $_REQUEST[&apos;w_12&apos;] . &quot;\r\n&quot; . &quot;QQ/MSN :&quot;. $_REQUEST[&apos;w_13&apos;] . &quot;\r\n&quot; . &quot;电子邮箱 :&quot;. $_REQUEST[&apos;w_14&apos;] . &quot;\r\n&quot; . &quot;Skype :&quot;. $_REQUEST[&apos;w_15&apos;] . &quot;\r\n&quot; . &quot;邮编 :&quot;. $_REQUEST[&apos;w_16&apos;] . &quot;\r\n&quot; . &quot;详细地址 :&quot;. $_REQUEST[&apos;w_17&apos;] . &quot;\r\n&quot;;</span><br><span class="line">    mail(&quot;jinpaiwww@126.com&quot;, &quot;$subject 填写的网站建设意向表。&quot;,</span><br><span class="line">    $message, &quot;From: $email&quot;);</span><br><span class="line">    echo &quot;&lt;script language=\&quot;JavaScript\&quot;&gt;\r\n&quot;;   </span><br><span class="line">    echo &quot;alert(\&quot;信息提交成功！请等待工作人员与您取得联系。自动返回首页\&quot;);\r\n&quot;;   </span><br><span class="line">    echo &quot;location.replace(\&quot;http://www.jinpaiwww.com/\&quot;);\r\n&quot;;   </span><br><span class="line">    echo &quot;&lt;/script&gt;&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">else</span><br><span class="line">  &#123;//if &quot;email&quot; is not filled out, display the form</span><br><span class="line">  echo &quot;&lt;form id=&apos;form1&apos; action=&apos;http://www.jinpaiwww.com/b/b.php&apos; method=&apos;post&apos; name=&apos;form1&apos;&gt;</span><br><span class="line">    &lt;table class=&apos;table_1&apos; cellspacing=&apos;0&apos; cellpadding=&apos;0&apos; width=&apos;675&apos; border=&apos;0&apos;&gt;</span><br><span class="line">        &lt;tbody&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;th colspan=&apos;2&apos;&gt;网站建设申请表&lt;/th&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;td class=&apos;input_1&apos; width=&apos;125&apos;&gt;公司名称&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos; width=&apos;550&apos;&gt;&lt;input class=&apos;input_text&apos; style=&apos;width: 300px&apos; name=&apos;w_1&apos; type=&apos;text&apos; /&gt;&lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;td class=&apos;input_1&apos; width=&apos;125&apos;&gt;网页语种&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos; width=&apos;550&apos;&gt;&lt;input type=&apos;checkbox&apos; checked=&apos;checked&apos; name=&apos;w_2_1&apos; value=&apos;中文简体&apos; /&gt; &lt;label for=&apos;w_2_1&apos;&gt;中文简体&lt;/label&gt; &lt;input type=&apos;checkbox&apos; name=&apos;w_2_2&apos; value=&apos;中文繁体&apos; /&gt; &lt;label for=&apos;w_2_2&apos;&gt;中文繁体&lt;/label&gt; &lt;input type=&apos;checkbox&apos; name=&apos;w_2_3&apos; value=&apos;英文&apos; /&gt; &lt;label for=&apos;w_2_3&apos;&gt;英文&lt;/label&gt; &lt;input type=&apos;checkbox&apos; name=&apos;w_2_4&apos; value=&apos;日文&apos; /&gt; &lt;label for=&apos;w_2_4&apos;&gt;日文&lt;/label&gt; &lt;input type=&apos;checkbox&apos; name=&apos;w_2_５&apos; value=&apos;其它语言&apos; /&gt; &lt;label for=&apos;w_2_5&apos;&gt;其它语言&lt;/label&gt;&lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;td class=&apos;input_1&apos; width=&apos;125&apos;&gt;希望借鉴的站点&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos; width=&apos;550&apos;&gt;&lt;input style=&apos;width: 300px&apos; name=&apos;w_3&apos; type=&apos;text&apos; /&gt;&lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;td class=&apos;input_1&apos; width=&apos;125&apos;&gt;主要业务介绍&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos; width=&apos;550&apos;&gt;&lt;textarea class=&apos;input_text&apos; style=&apos;width: 300px&apos; name=&apos;w_4&apos;&gt;&lt;/textarea&gt;&lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;td class=&apos;input_1&apos; width=&apos;125&apos;&gt;建站费用预算&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos; width=&apos;550&apos;&gt;&lt;input class=&apos;input_text&apos; name=&apos;w_5&apos; type=&apos;text&apos; /&gt; -- &lt;input class=&apos;input_text&apos; name=&apos;w_6&apos; type=&apos;text&apos; /&gt; 元&lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;td class=&apos;input_1&apos; width=&apos;125&apos;&gt;要求建站完成时间&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos; width=&apos;550&apos;&gt;&lt;input class=&apos;input_text&apos; name=&apos;w_7&apos; value=&apos;希望完工的日期&apos; type=&apos;text&apos; /&gt; &lt;input class=&apos;input_text&apos; name=&apos;w_7_1&apos; value=&apos;希望完工的天数&apos; type=&apos;text&apos; /&gt; 天&lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;td class=&apos;input_1&apos; width=&apos;125&apos;&gt;网站建设其它要求&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos; width=&apos;550&apos;&gt;&lt;textarea class=&apos;input_text&apos; style=&apos;width: 300px&apos; name=&apos;w_7_2&apos;&gt;&lt;/textarea&gt;&lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">        &lt;/tbody&gt;</span><br><span class="line">    &lt;/table&gt;</span><br><span class="line">    &lt;table class=&apos;table_1&apos; cellspacing=&apos;0&apos; cellpadding=&apos;0&apos; width=&apos;675&apos; border=&apos;0&apos;&gt;</span><br><span class="line">        &lt;tbody&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;th colspan=&apos;4&apos;&gt;联系人信息&lt;/th&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;td class=&apos;input_1&apos; width=&apos;129&apos;&gt;姓　　名&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos; width=&apos;202&apos;&gt;&lt;input name=&apos;w_8&apos; type=&apos;text&apos; /&gt;&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_1&apos; width=&apos;96&apos;&gt;性　　别&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos; width=&apos;246&apos;&gt;&lt;input type=&apos;radio&apos; checked=&apos;checked&apos; name=&apos;w_9&apos; value=&apos;小姐&apos; /&gt;小姐 &lt;input type=&apos;radio&apos; name=&apos;w_9&apos; value=&apos;先生&apos; /&gt;先生&lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;td class=&apos;input_1&apos; align=&apos;left&apos;&gt;电　　话&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos;&gt;&lt;input class=&apos;input_text&apos; name=&apos;w_11&apos; type=&apos;text&apos; /&gt;&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_1&apos;&gt;手　　机&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos;&gt;&lt;input name=&apos;w_12&apos; type=&apos;text&apos; /&gt;&lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;td class=&apos;input_1&apos;&gt;QQ / MSN&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos;&gt;&lt;input class=&apos;input_text&apos; name=&apos;w_13&apos; type=&apos;text&apos; /&gt;&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_1&apos;&gt;电子邮箱&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos;&gt;&lt;input name=&apos;w_14&apos; type=&apos;text&apos; /&gt;&lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;td class=&apos;input_1&apos;&gt;Skype&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos;&gt;&lt;input class=&apos;input_text&apos; name=&apos;w_15&apos; type=&apos;text&apos; /&gt;&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_1&apos;&gt;邮　　编&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos;&gt;&lt;input name=&apos;w_16&apos; type=&apos;text&apos; /&gt;&lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;td class=&apos;input_1&apos;&gt;详细地址&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos;&gt;&lt;input name=&apos;w_17&apos; type=&apos;text&apos; /&gt;&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_1&apos;&gt;公司地址&lt;/td&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos;&gt;&lt;input name=&apos;w_172&apos; type=&apos;text&apos; /&gt;&lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">        &lt;/tbody&gt;</span><br><span class="line">    &lt;/table&gt;</span><br><span class="line"></span><br><span class="line">    &lt;table class=&apos;table_1&apos; cellspacing=&apos;0&apos; cellpadding=&apos;0&apos; width=&apos;675&apos; border=&apos;0&apos;&gt;</span><br><span class="line">        &lt;tbody&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;td class=&apos;input_2&apos;&gt;</span><br><span class="line">                &lt;div align=&apos;center&apos;&gt;&lt;input id=&apos;send_mail_agent&apos; type=&apos;submit&apos; name=&apos;w_18&apos; value=&apos;Submit&apos; /&gt;&lt;/div&gt;</span><br><span class="line">                &lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">        &lt;/tbody&gt;</span><br><span class="line">    &lt;/table&gt;</span><br><span class="line">  &lt;/form&gt;&quot;;</span><br><span class="line">  &#125;</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+            <a href="/tags/E-mail/" rel="tag"># E-mail</a>
+          
+            <a href="/tags/php-mail/" rel="tag"># php mail</a>
+          
+            <a href="/tags/smtp/" rel="tag"># smtp</a>
+          
+            <a href="/tags/邮箱/" rel="tag"># 邮箱</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2010/02/07-01-com-net-yu-ming-zhang-jia.html" rel="next" title="7月1日 .Com .Net域名涨价 涨幅7%-10%">
+                <i class="fa fa-chevron-left"></i> 7月1日 .Com .Net域名涨价 涨幅7%-10%
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2010/03/wei-ruan-adobe-pdf-lou-dong.html" rel="prev" title="微软：Adobe PDF漏洞再次被利用">
+                微软：Adobe PDF漏洞再次被利用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">赵健</p>
+              <div class="site-description motion-element" itemprop="description">赵健@zhaojian.net 发现生活，专注互联网。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">144</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">272</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">赵健</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '30S9N0AO5V',
+      apiKey: 'd7f2acda9bdbd752a7bfc9b40d14cd81',
+      indexName: 'zhaojianBlog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="在微软本月月经日(8.11)的同一天，国外黑客taviso和julien公开了可以攻击所有新旧Linux系统的一个漏洞，包括但不限于 RedHat,CentOS,Suse,Debian,Ubuntu,Slackware,Mandriva,Gentoo及其衍生系统。黑客只需要执行一个命令，就可以通过此漏洞获得root权限，即使开启了SELinux也于事无补。攻击这个漏洞到底有多简单，下面我们看图说话">
+<meta name="keywords" content="漏洞,内核,黑客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="黑客再爆Linux内核高危漏洞，一个命令可以攻击所有Linux系统">
+<meta property="og:url" content="http://www.zhaojian.net/2009/08/linux-nei-he-gao-wei-lou-dong.html">
+<meta property="og:site_name" content="赵健@zhaojian.net">
+<meta property="og:description" content="在微软本月月经日(8.11)的同一天，国外黑客taviso和julien公开了可以攻击所有新旧Linux系统的一个漏洞，包括但不限于 RedHat,CentOS,Suse,Debian,Ubuntu,Slackware,Mandriva,Gentoo及其衍生系统。黑客只需要执行一个命令，就可以通过此漏洞获得root权限，即使开启了SELinux也于事无补。攻击这个漏洞到底有多简单，下面我们看图说话">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://baoz.net/wp-content/2009/08/linuxlocalroot1.png">
+<meta property="og:image" content="http://baoz.net/wp-content/2009/08/2.6local.png">
+<meta property="og:image" content="http://baoz.net/wp-content/2009/08/mianyi.png">
+<meta property="og:updated_time" content="2017-11-07T16:19:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="黑客再爆Linux内核高危漏洞，一个命令可以攻击所有Linux系统">
+<meta name="twitter:description" content="在微软本月月经日(8.11)的同一天，国外黑客taviso和julien公开了可以攻击所有新旧Linux系统的一个漏洞，包括但不限于 RedHat,CentOS,Suse,Debian,Ubuntu,Slackware,Mandriva,Gentoo及其衍生系统。黑客只需要执行一个命令，就可以通过此漏洞获得root权限，即使开启了SELinux也于事无补。攻击这个漏洞到底有多简单，下面我们看图说话">
+<meta name="twitter:image" content="http://baoz.net/wp-content/2009/08/linuxlocalroot1.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://www.zhaojian.net/2009/08/linux-nei-he-gao-wei-lou-dong.html">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>黑客再爆Linux内核高危漏洞，一个命令可以攻击所有Linux系统 | 赵健@zhaojian.net</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">赵健@zhaojian.net</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">发现生活，专注互联网。</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.zhaojian.net/2009/08/linux-nei-he-gao-wei-lou-dong.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="赵健">
+      <meta itemprop="description" content="赵健@zhaojian.net 发现生活，专注互联网。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="赵健@zhaojian.net">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">黑客再爆Linux内核高危漏洞，一个命令可以攻击所有Linux系统
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2009-08-17 17:02:21" itemprop="dateCreated datePublished" datetime="2009-08-17T17:02:21+08:00">2009-08-17</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2017-11-08 00:19:30" itemprop="dateModified" datetime="2017-11-08T00:19:30+08:00">2017-11-08</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tech/" itemprop="url" rel="index"><span itemprop="name">技术随笔</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在微软本月月经日(8.11)的同一天，国外黑客taviso和julien公开了可以攻击所有新旧Linux系统的一个漏洞，包括但不限于 RedHat,CentOS,Suse,Debian,Ubuntu,Slackware,Mandriva,Gentoo及其衍生系统。黑客只需要执行一个命令，就可以通过此漏洞获得root权限，即使开启了SELinux也于事无补。攻击这个漏洞到底有多简单，下面我们看图说话，有图有真相。</p>
+<p>CHANGELOGS:</p>
+<p>2009/08/16 chenjun@xfocus提供了debian/ubuntu系统的修复方式。</p>
+<p>2009/08/16 根据网友要求添加漏洞详情和exploit下载地址。</p>
+<p>2009/08/16 改进修复方式，避免RHEL下的无效修复。感谢小阮MM反馈并提供服务器协助定位解决。</p>
+<p>2009/08/16 添加攻击经验记录。感谢cnbird分享经验。</p>
+<p>2009/08/17 修正攻击经验记录。感谢xiaoyu,wzt指出selinux相关错误。</p>
+<p><img src="http://baoz.net/wp-content/2009/08/linuxlocalroot1.png" alt></p>
+<p>如上图所示，利用此漏洞极其简单，并且影响所有的Linux内核，baoz强烈建议系统管理员或安全人员参考下列临时修复方案，以防止Linux系统被攻击 。</p>
+<p>1、使用Grsecurity或者Pax内核安全补丁，并开启KERNEXEC防护功能。</p>
+<p>2、升级到2.6.31-rc6或2.4.37.5以上的内核版本。</p>
+<p>3、如果您使用的是RedHa tEnterprise Linux 4/5的系统或Centos4/5的系统，您可以通过下面的操作简单的操作防止被攻击。</p>
+<p>在/etc/modprobe.conf文件中加入下列内容：</p>
+<p>install pppox /bin/true<br>install bluetooth /bin/true<br>install appletalk /bin/true<br>install ipx /bin/true<br>install sctp /bin/true</p>
+<p>执行/sbin/lsmod | grep -e ppp -e blue -e app -e ipx -e sct，如果没有输出，你不需要重启，如果有输出，你需要重启系统，才可以对此攻击免疫。</p>
+<p>下图是免疫前后的效果对比图：</p>
+<p><img src="http://baoz.net/wp-content/2009/08/2.6local.png" alt></p>
+<p><img src="http://baoz.net/wp-content/2009/08/mianyi.png" alt></p>
+<p>4、如果您使用的是Debian或Ubuntu系统，您可以通过下面的操作防止被攻击（感谢chenjun提供）</p>
+<p>cat &gt; /etc/modprobe.d/mitigate-2692.conf &lt;&lt; EOM<br>install ppp_generic /bin/true<br>install pppoe /bin/true<br>install pppox /bin/true<br>install slhc /bin/true<br>install bluetooth /bin/true<br>install ipv6 /bin/true<br>install irda /bin/true<br>install ax25 /bin/true<br>install x25 /bin/true<br>install ipx /bin/true<br>install appletalk /bin/true<br>EOM<br>/etc/init.d/bluez-utils stop</p>
+<p>很明显，第三、四个方案最简单也相对有效，对业务影响也最小，如果您对编译和安装Linux内核不熟悉，千万不要使用前两个方案，否则您的系统可能永远无法启动。</p>
+<p>如果你希望了解漏洞详情，请访问下列URL：</p>
+<p><a href="http://archives.neohapsis.com/archives/fulldisclosure/2009-08/0174.html" target="_blank" rel="noopener">http://archives.neohapsis.com/archives/fulldisclosure/2009-08/0174.html</a></p>
+<p><a href="http://blog.cr0.org/2009/08/linux-null-pointer-dereference-due-to.html" target="_blank" rel="noopener">http://blog.cr0.org/2009/08/linux-null-pointer-dereference-due-to.html</a></p>
+<p><a href="https://bugzilla.redhat.com/show_bug.cgi?id=516949" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=516949</a></p>
+<p>如果你希望亲手验证此漏洞，你可以下载下列两个代码包测试（有可能导致系统不稳定，当机等现象，后果自负）：</p>
+<p><a href="http://www.securityfocus.com/data/vulnerabilities/exploits/wunderbar_emporium-3.tgz" target="_blank" rel="noopener">http://www.securityfocus.com/data/vulnerabilities/exploits/wunderbar_emporium-3.tgz</a></p>
+<p><a href="http://www.securityfocus.com/data/vulnerabilities/exploits/36038-4.tgz" target="_blank" rel="noopener">http://www.securityfocus.com/data/vulnerabilities/exploits/36038-4.tgz</a></p>
+<p>攻击经验记录：</p>
+<p>1、exp和selinux多多少少有点关系，和内核版本，系统版本也有关系，根据wzt提供的信息Recent kernels with mmap_min_addr support may prevent exploitation if<br>the sysctl vm.mmap_min_addr is set above zero来看，exp和vm.mmap_min_addr有更紧密的关系，具体如何大家自己去摸索好了。最好的办法是，把所有的RHEL4.x 5.x都装一次，开关selinux，挨个exp一遍。xiaoyu提醒大家，如果改变了exp的状态，首先要重启，其次建议删除老的文件，重新编译一次 exp。</p>
+<p>2、回连的shell溢出虽然可以成功，但uid不是0，解决办法是用一个带pty的shell。这个经验由cnbird提供。</p>
+<p>Linux在微软的月经日爆如此严重的漏洞，挺值得纪念的。如果您希望了解本漏洞更多的内幕、八卦和细节，请访问<a href="http://baoz.net/linux-sockops-wrap-proto-ops-local-root-exploit" target="_blank" rel="noopener">http://baoz.net/linux-sockops-wrap-proto-ops-local-root-exploit</a></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/漏洞/" rel="tag"># 漏洞</a>
+          
+            <a href="/tags/内核/" rel="tag"># 内核</a>
+          
+            <a href="/tags/黑客/" rel="tag"># 黑客</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2009/08/fan-fou-jing-dian-yu-lu.html" rel="next" title="饭否经典语录。">
+                <i class="fa fa-chevron-left"></i> 饭否经典语录。
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2009/08/xin-wang-zhan-shou-lu-ji-qiao.html" rel="prev" title="新网站被google和百度收录的小技巧">
+                新网站被google和百度收录的小技巧 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">赵健</p>
+              <div class="site-description motion-element" itemprop="description">赵健@zhaojian.net 发现生活，专注互联网。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">144</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">272</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">赵健</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

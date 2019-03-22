@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '30S9N0AO5V',
+      apiKey: 'd7f2acda9bdbd752a7bfc9b40d14cd81',
+      indexName: 'zhaojianBlog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="一、ASP类，对于只学习了 Html 语言的同学来说，ASP 是比较容易上手的，因此也是目前我所推荐的。 1、Zblog，由创始人zx.asd（朱煊）和sipo（刘星晨）联合开发的ASP+Access单用户博客系统，最新版本是 Z-Blog 1.8 Spirit。我曾经体验过一段时间的Zblog 1.7，后来由于个人原因而放弃。该程序最大的特点就是支持文章静态化，有利于搜索引擎的收录。另外，Z-B">
+<meta name="keywords" content="博客,blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="国内外主流Blog程序测评">
+<meta property="og:url" content="http://www.zhaojian.net/2009/04/blog-cheng-xu.html">
+<meta property="og:site_name" content="赵健@zhaojian.net">
+<meta property="og:description" content="一、ASP类，对于只学习了 Html 语言的同学来说，ASP 是比较容易上手的，因此也是目前我所推荐的。 1、Zblog，由创始人zx.asd（朱煊）和sipo（刘星晨）联合开发的ASP+Access单用户博客系统，最新版本是 Z-Blog 1.8 Spirit。我曾经体验过一段时间的Zblog 1.7，后来由于个人原因而放弃。该程序最大的特点就是支持文章静态化，有利于搜索引擎的收录。另外，Z-B">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-07T16:19:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="国内外主流Blog程序测评">
+<meta name="twitter:description" content="一、ASP类，对于只学习了 Html 语言的同学来说，ASP 是比较容易上手的，因此也是目前我所推荐的。 1、Zblog，由创始人zx.asd（朱煊）和sipo（刘星晨）联合开发的ASP+Access单用户博客系统，最新版本是 Z-Blog 1.8 Spirit。我曾经体验过一段时间的Zblog 1.7，后来由于个人原因而放弃。该程序最大的特点就是支持文章静态化，有利于搜索引擎的收录。另外，Z-B">
+
+
+
+
+
+
+  <link rel="canonical" href="http://www.zhaojian.net/2009/04/blog-cheng-xu.html">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>国内外主流Blog程序测评 | 赵健@zhaojian.net</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">赵健@zhaojian.net</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">发现生活，专注互联网。</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.zhaojian.net/2009/04/blog-cheng-xu.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="赵健">
+      <meta itemprop="description" content="赵健@zhaojian.net 发现生活，专注互联网。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="赵健@zhaojian.net">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">国内外主流Blog程序测评
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2009-04-25 16:18:27" itemprop="dateCreated datePublished" datetime="2009-04-25T16:18:27+08:00">2009-04-25</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2017-11-08 00:19:54" itemprop="dateModified" datetime="2017-11-08T00:19:54+08:00">2017-11-08</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tech/" itemprop="url" rel="index"><span itemprop="name">技术随笔</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>一、ASP类，对于只学习了 Html 语言的同学来说，ASP 是比较容易上手的，因此也是目前我所推荐的。</p>
+<p>1、Zblog，由创始人zx.asd（朱煊）和sipo（刘星晨）联合开发的ASP+Access单用户博客系统，最新版本是 Z-Blog 1.8 Spirit。我曾经体验过一段时间的Zblog 1.7，后来由于个人原因而放弃。该程序最大的特点就是支持文章静态化，有利于搜索引擎的收录。另外，Z-Blog 支持在线安装主题和插件，支持Windows Live Writer 离线可视化写博，大大提高了博客管理的效率。Z-Blog 在国内有大量用户，因此皮肤、插件都很多，可以实现很多个性化功能。官方网站：<a href="http://www.rainbowsoft.org/" target="_blank" rel="noopener">http://www.rainbowsoft.org/</a></p>
+<p>2、PJBlog，由在腾讯负责Q-zone的前台JS设计的 PuterJam（陈子舜）独自开发的基于ASP+Access的单用户博客系统，最新版本是PJBlog3 v2.8.2.117，最新版也解决了日志静态化的问题（当年我盼这个功能盼得好苦啊）。PJBlog 具有丰富的插件和模板，良好的可扩展功能，在国内的用户数与 Z-Blog 不相上下（个人观察+猜测）。我用过几个月的 PJBlog ，非常喜欢 PJBlog 的后台，简洁、人性化而不失强大。PJBlog 官方论坛非常活跃，有很多用户热情奉献，新手能够非常快的学习到不少博客技巧。遗憾的是，PJBlog 一直深受 Spam 垃圾留言骚扰（这也是多后来转换到 WordPress 的原因之一），不知道最新版本是否解决了这个问题。另外，PJBlog 的留言中，不能加入评论者的个人 Blog ，让博客之间的“交互性”大打折扣。官方网站：<a href="http://www.PJhome.net/" target="_blank" rel="noopener">http://www.PJhome.net/</a></p>
+<p>3、LBS，由 SiC/CYAN 基于L-Blog二次开发，全英文界面，用的是 XHTML+CSS 构架，比较合理，最新版本是 LBS Version 2.0.310。不支持静态化，对于 Spam 也不能很好的控制。官方网站：<a href="http://www.voidland.com/" target="_blank" rel="noopener">http://www.voidland.com/</a></p>
+<p>4、Oblog，一个基于ASP+Access的多用户博客系统，是一个专业的博客系统提供商，由北京傲博致远计算机技术有限公司开发运营，最新版本是 Oblog 4.6 Access体验版。Oblog 可免费下载使用，支持静态化，常与 Discuz、PHPWind 整合使用，有很多模板可选。对于有此需要的企业而言，Oblog 是一个不错的选择。官方网站：<a href="http://www.oblog.cn/" target="_blank" rel="noopener">http://www.oblog.cn/</a></p>
+<p>小结：国内 ASP Blog 程序还有很多，不过使用最多的应该是以上四款了。个人建议 PJBlog 和 Z-Blog 都是不错的选择，新手容易上手，也可以在建设博客的过程中学到不少东西。</p>
+<p>二、PHP类，使用过 ASP 与 PHP 博客之后，觉得 PHP 相比 ASP 是比较难的。</p>
+<p>1、WordPress，WordPress是一款基于 PHP+Mysql 的开源博客程序，包括单用户系统与 WordPress MU 多用户系统，WordPress 即将推出2.6正式版了。WordPress 程序简洁，功能强大（可以打造成一个CMS），依托于各种各样的插件，你可以实现任何想要的功能。WordPress.com 为全球用户提供免费而专业的 BSP 服务，在中国，yo2.cn 也为用户提供可定制的个性化博客服务，适用于没有技术基础的 WordPress 爱好者。WordPress 在全球拥有大量 Fans（我也是其中之一  ），Fans 贡献了大量的主题与插件，良好循环让 WordPress 越来越强大。同时，在国内还有一些 Fans 维护的博客为网友提供 Wordpress 中文版以及 WordPress 的最新资讯动态，WordPress 中文站就做得很不错。关于 WordPress ，写再多也无法介绍清楚，只有亲自使用才会明白，如果你没有PHP基础但又十分想加入 WordPress 怀抱，请不要犹豫，Google 是最好的老师。官方网站：<a href="http://WordPress.org" target="_blank" rel="noopener">http://WordPress.org</a></p>
+<p>2、SaBlog-X，由 Angel 独自开发的基于 PHP+Mysql 的单用户博客程序，最新版本是Sablog-X Ver 1.6，作者也是 Discuz! Lite 版本的制作者。目前国内还是有很多 Blogger 使用的 SaBlog ，应该是国内最好的 PHP 博客程序了。SaBlog-X 支持静态化，利于 SEO ，对于 Spam 也有较好的防御机制。不过，SaBlog-X 主题、插件较少，可能需要 Blogger 有一定开发能力才能进行相应扩展。官方网站：<a href="http://www.sablog.net/" target="_blank" rel="noopener">http://www.sablog.net/</a></p>
+<p>3、Bo-Blog，由 Bob Shen 开发的一款基于 PHP+Mysql 的单用户博客程序，最新版本是 Bo-Blog 2.1.0。目前国内 PHP 博客中， Bo-Blog 与 SaBlog-X 不相上下。Bo-Blog 的主要优点是模板丰富、插件超多，但程序整体开发更新较为缓慢。官方网站：<a href="http://www.bo-blog.com/" target="_blank" rel="noopener">http://www.bo-blog.com/</a></p>
+<p>小结：国内 PHP 类博客程序也不止 SaBlog-X 与 Bo-Blog，此外还有 F2Blog、C-Blog、ExBlog、7Blog 等。当然，放眼全球，WordPress 无疑是最优秀最受欢迎和关注的 Blog 程序。</p>
+<p>三、.Net类，用.Net架设独立博客的较少，还是介绍两款吧，我都没用过，主要参考了别人的评测。</p>
+<p>1、ZJ-Blog，基于ASP.net 1.1环境开发的单用户博客程序，支持Access和MySQL两种数据库，其最大的特点是采用.net开发并大量的使用了Ajax技术。最新版本是 ZJ-Blog V1.0 Beta2，官方站点：<a href="http://www.zj-blog.com/" target="_blank" rel="noopener">http://www.zj-blog.com/</a></p>
+<p>2、Bitrac，由 LBS 的前身、L-Blog的作者 Loveyuki（卫慧杰）开发的博客程序。之前的 L-Blog 是基于 ASP+Access 的小型单用户博客系统，后来停止开发。作者卫慧杰现开发了基于 ASP.NET 2.0 + SQLite 的单用户博客程序，内置 URLRewrite 和页面压缩功能，支持 MetaWeblogAPI，自写的 HTML 模板引擎，方便修改风格，完全的可视化编辑环境。目前是内测版本。真是一个精力充沛的博客开发者，对.Net感兴趣的同学可以试试。官方网站：<a href="http://www.loveyuki.com/" target="_blank" rel="noopener">http://www.loveyuki.com/</a></p>
+<p>小结：.Net 的博客程序我没用过，不好说。不过因为要使用微软的.Net环境，感觉非常烦琐。</p>
+<p>四、CGI类，主要是因为著名的 MovableType 采用了CGI。</p>
+<p>MovableType，是一个 CGI 程序的博客系统，应用非常广泛，是世界上使用最多的 Blog 系统之一，香港台湾的80%以上的独立博客站点都是通过 MovableType 架设的，最新版本是MovableType 4.0 。与 WordPress 一样，MovableType 插件众多，可以实现非常强大的功能。但是安装比较复杂，较难上手。官方网站：<a href="http://www.movabletype.org/" target="_blank" rel="noopener">http://www.movabletype.org/</a></p>
+<p>小结：没有用过 CGI 类博客，难以上手。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/博客/" rel="tag"># 博客</a>
+          
+            <a href="/tags/blog/" rel="tag"># blog</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2009/04/mysql-tian-jia-yong-hu-yuan-cheng-fang-wen-quan-xian.html" rel="next" title="MySQL添加用户远程访问权限">
+                <i class="fa fa-chevron-left"></i> MySQL添加用户远程访问权限
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2009/05/wang-ye-zhi-zuo.html" rel="prev" title="网页制作之事不过三 做站八种情况要杜绝">
+                网页制作之事不过三 做站八种情况要杜绝 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">赵健</p>
+              <div class="site-description motion-element" itemprop="description">赵健@zhaojian.net 发现生活，专注互联网。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">144</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">272</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">赵健</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

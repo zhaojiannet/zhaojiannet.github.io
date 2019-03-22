@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '30S9N0AO5V',
+      apiKey: 'd7f2acda9bdbd752a7bfc9b40d14cd81',
+      indexName: 'zhaojianBlog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="一些常用的css 命名 页头：header 登录条：loginbar 标志：logo 侧栏：sidebar 广告：banner 导航：nav 子导航：subnav 菜单：menu 子菜单：submenu 搜索：search 滚动：scroll 页面主体：main 内容：content  标签页：tab 文章列表：list  提示信息：msg  小技巧：tips  栏目标题：title  网站页面常">
+<meta name="keywords" content="css,样式命名">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用的一些建站命名与中英文">
+<meta property="og:url" content="http://www.zhaojian.net/2010/02/chang-yong-de-yi-xie-jian-zhan-ming-ming-yu-zhong-ying-wen.html">
+<meta property="og:site_name" content="赵健@zhaojian.net">
+<meta property="og:description" content="一些常用的css 命名 页头：header 登录条：loginbar 标志：logo 侧栏：sidebar 广告：banner 导航：nav 子导航：subnav 菜单：menu 子菜单：submenu 搜索：search 滚动：scroll 页面主体：main 内容：content  标签页：tab 文章列表：list  提示信息：msg  小技巧：tips  栏目标题：title  网站页面常">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-07T15:56:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常用的一些建站命名与中英文">
+<meta name="twitter:description" content="一些常用的css 命名 页头：header 登录条：loginbar 标志：logo 侧栏：sidebar 广告：banner 导航：nav 子导航：subnav 菜单：menu 子菜单：submenu 搜索：search 滚动：scroll 页面主体：main 内容：content  标签页：tab 文章列表：list  提示信息：msg  小技巧：tips  栏目标题：title  网站页面常">
+
+
+
+
+
+
+  <link rel="canonical" href="http://www.zhaojian.net/2010/02/chang-yong-de-yi-xie-jian-zhan-ming-ming-yu-zhong-ying-wen.html">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>常用的一些建站命名与中英文 | 赵健@zhaojian.net</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">赵健@zhaojian.net</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">发现生活，专注互联网。</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.zhaojian.net/2010/02/chang-yong-de-yi-xie-jian-zhan-ming-ming-yu-zhong-ying-wen.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="赵健">
+      <meta itemprop="description" content="赵健@zhaojian.net 发现生活，专注互联网。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="赵健@zhaojian.net">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">常用的一些建站命名与中英文
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2010-02-16 10:10:18" itemprop="dateCreated datePublished" datetime="2010-02-16T10:10:18+08:00">2010-02-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2017-11-07 23:56:58" itemprop="dateModified" datetime="2017-11-07T23:56:58+08:00">2017-11-07</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tech/" itemprop="url" rel="index"><span itemprop="name">技术随笔</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>一些常用的css 命名</strong></p>
+<p>页头：header <br><br>登录条：loginbar <br><br>标志：logo <br><br>侧栏：sidebar <br><br>广告：banner <br><br>导航：nav <br><br>子导航：subnav <br><br>菜单：menu <br><br>子菜单：submenu <br><br>搜索：search <br><br>滚动：scroll <br><br>页面主体：main <br><br>内容：content  <br><br>标签页：tab <br><br>文章列表：list  <br><br>提示信息：msg  <br><br>小技巧：tips  <br><br>栏目标题：title <br></p>
+<p><strong>网站页面常用链节</strong></p>
+<p>加入：joinus  <br><br>指南：guild  <br><br>服务：service  <br><br>热点：hot  <br><br>新闻：news  <br><br>下载：download  <br><br>注册：regsiter  <br><br>状态：status  <br><br>按钮：btn  <br><br>投票：vote  <br><br>合作伙伴：partner  <br><br>友情链接：friendlink  <br><br>页脚：footer  <br><br>版权：copyright <br></p>
+<p><strong>CSS ID 的命名</strong></p>
+<p>外　套：　　wrap  <br><br>主导航：　　mainnav  <br><br>子导航：　　subnav  <br><br>页　脚：　　footer  <br><br>整个页面：　content  <br><br>页　眉：　　header  <br><br>页　脚：　　footer  <br><br>商　标：　　label  <br><br>标　题：　　title  <br><br>主导航：　　mainbav（globalnav） <br><br>顶导航：　　topnav  <br><br>边导航：　　sidebar  <br><br>左导航：　　leftsidebar  <br><br>右导航：　　rightsidebar  <br><br>旗　志：　　logo  <br><br>标　语：　　banner  <br><br>菜单内容1： menu1content  <br><br>菜单容量：　menucontainer  <br><br>子菜单：　　submenu  <br><br>边导航图标：sidebarIcon  <br><br>注释：　　　note  <br><br>面包屑：　　breadcrumb(即页面所处位置导航提示） <br><br>容器：　　　container  <br><br>内容：　　　content  <br><br>搜索：　　　search  <br><br>登陆：　　　Login  <br><br>功能区：　　shop(如购物车，收银台)  <br><br>当前的　　　current <br></p>
+<p><strong>在编辑样式表时可用的注释可这样写</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;– Footer –&gt; </span><br><span class="line">内容区 </span><br><span class="line">&lt;– End Footer –&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>不过本人习惯这样写:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;footer&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/div&gt;&lt;!– #footer : end –&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>样式文件命名</strong></p>
+<p>主要的 master.css <br><br>布局，版面 layout.css <br><br>专栏 columns.css <br><br>文字 font.css <br><br>打印样式 print.css <br><br>主题 themes.css<br></p>
+<p><strong>网站常用中英文对照表</strong></p>
+<p>网站导航 Site Map <br><br>公司简介 Profile or Company Profile or Company <br><br>公司设备 Equipment Equipment <br><br>公司荣誉 Glories Glories <br><br>企业文化 Culture Culture <br><br>产品展示 Product Product <br><br>资质认证 Quality Certification <br><br>企业规模 Scale Scale <br><br>营销网络 Sales Network <br><br>组织机构 organization organization <br><br>合作加盟 Join In Cooperation <br><br>技术力量 Technology Technology <br><br>经理致辞 Managers oration <br><br>发展历程 Development History <br><br>工程案例 Engineering Projects <br><br>业务范围 Business Scope <br><br>分支机构 Branches <br><br>供求信息 Supply &amp; Demand <br><br>经营理念 Operation Principle <br><br>产品销售 Sales Sales <br><br>联系我们 Contact Us Contact Us <br><br>信息发布 Information Information <br><br>返回首页 Homepage Homepage <br><br>产品定购 order order <br><br>分类浏览 Browse By Category <br><br>电子商务 E-business <br><br>公司实力 Strength Strength <br><br>版权所有 Copy Right <br><br>友情连结 Hot Link <br><br>应用领域 Application Fields <br><br>人力资源 Human Resource Hr <br><br>领导致辞 Leaders oration <br><br>企业资质 Enterprise Qualification <br><br>行业新闻 Trade News <br><br>行业动态 Trends <br><br>客户留言 Customer Message <br><br>客户服务 Customer Service <br><br>新闻动态 News &amp; Trends <br><br>公司名称 Company Name <br><br>销售热线 Sales Hot-Line <br><br>联系人 Contact Person <br><br>您的要求 Your Requirements <br><br>建设中 In Construction <br><br>证书 Certificate Certificate <br><br>地址 ADD Add <br><br>邮编 Postal Code Zipcode <br><br>电话 TEL Tel <br><br>传真 FAX Fax <br><br>产品名称 Product Name <br><br>产品说明 Description Description <br><br>价格 Price <br><br>品牌 Brand <br><br>规格 Specification <br><br>尺寸 Size <br><br>生产厂家 Manufacuturer Manufacturer <br><br>型号 Model <br><br>产品标号 Item No. <br><br>技术指标 Technique Data <br><br>产品描述 Description <br><br>产地 Production Place <br><br>销售信息 Sales Information <br><br>用途 Application <br><br>论坛 Forum <br><br>在线订购 On-line order <br><br>招商 Enterprise-establishing <br><br>招标 Bid Inviting <br><br>综述 General <br><br>业绩 Achievements <br><br>招聘 Join Us <br><br>求贤纳士 Join Us <br><br>大事 Great Event <br><br>动态 Trends <br><br>服务 Service <br><br>投资 Investment <br><br>行业 Industry <br><br>规划 Programming <br><br>环境 Environment <br><br>发送 Delivery <br><br>提交 Submit <br><br>重写 Reset <br><br>登录 Enter <br><br>注册 Login <br><br>社区 Community <br><br>业务介绍 Business Introduction <br><br>在线调查 Online Inquiry Inquiry <br><br>下载中心 Download <br><br>会员登陆 Member Entrance <br><br>意见反馈 Feedback <br><br>常见问题 FAQ <br><br>中心概况 General Profile <br><br>教育培训 Education &amp; Training <br><br>游乐园 Amusement Park <br><br>在线交流 Online Communication <br><br>专题报道 Special Report<br></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag"># css</a>
+          
+            <a href="/tags/样式命名/" rel="tag"># 样式命名</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2010/02/135-139-445-duan-kou-ru-qin.html" rel="next" title="如何防范135端口139端口445端口入侵">
+                <i class="fa fa-chevron-left"></i> 如何防范135端口139端口445端口入侵
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2010/02/avira-antivir-xiao-hong-san-guan-fang-jian-ti-zhong-wen-ban.html" rel="prev" title="Avira AntiVir（小红伞）官方简体中文版">
+                Avira AntiVir（小红伞）官方简体中文版 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">赵健</p>
+              <div class="site-description motion-element" itemprop="description">赵健@zhaojian.net 发现生活，专注互联网。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">144</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">272</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">赵健</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
