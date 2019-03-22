@@ -465,8 +465,8 @@
         <category>技术随笔</category>
       </categories>
       <tags>
-        <tag>css</tag>
         <tag>cms</tag>
+        <tag>css</tag>
         <tag>dede</tag>
         <tag>pagelist</tag>
         <tag>不换行</tag>
@@ -606,9 +606,9 @@
         <category>技术随笔</category>
       </categories>
       <tags>
-        <tag>WordPress</tag>
         <tag>IIS</tag>
         <tag>URL</tag>
+        <tag>WordPress</tag>
         <tag>主机</tag>
         <tag>静态化</tag>
       </tags>
@@ -650,9 +650,9 @@
         <category>技术随笔</category>
       </categories>
       <tags>
+        <tag>baidu</tag>
         <tag>百度</tag>
         <tag>谷歌</tag>
-        <tag>baidu</tag>
         <tag>google</tag>
       </tags>
   </entry>
@@ -665,9 +665,9 @@
       </categories>
       <tags>
         <tag>漏洞</tag>
+        <tag>微软</tag>
         <tag>Adobe</tag>
         <tag>PDF</tag>
-        <tag>微软</tag>
       </tags>
   </entry>
   <entry>
@@ -705,13 +705,13 @@
       </categories>
       <tags>
         <tag>windows</tag>
-        <tag>微软</tag>
         <tag>Microsoft</tag>
         <tag>windows 2000</tag>
         <tag>Windows Server</tag>
         <tag>windows update</tag>
         <tag>Windows Vista</tag>
         <tag>windows xp</tag>
+        <tag>微软</tag>
       </tags>
   </entry>
   <entry>
@@ -1002,9 +1002,9 @@
         <category>技术随笔</category>
       </categories>
       <tags>
-        <tag>百度</tag>
         <tag>baidu</tag>
         <tag>伊朗黑客</tag>
+        <tag>百度</tag>
         <tag>百度被黑</tag>
       </tags>
   </entry>
@@ -1052,8 +1052,8 @@
       </categories>
       <tags>
         <tag>杀毒软件</tag>
-        <tag>AVG</tag>
         <tag>Avast</tag>
+        <tag>AVG</tag>
         <tag>BitDefender</tag>
         <tag>eScan</tag>
         <tag>ESET NOD32</tag>
@@ -1555,8 +1555,8 @@
       </categories>
       <tags>
         <tag>seo</tag>
-        <tag>优化</tag>
         <tag>百度</tag>
+        <tag>优化</tag>
         <tag>谷歌</tag>
       </tags>
   </entry>
