@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[不一定再更新了，谨以此纪念那个曾经年少、无知、幼稚的我]]></title>
+    <url>%2F2019%2F03%2Fcan-not-go-back.html</url>
+    <content type="text"><![CDATA[整理硬盘，翻出了老旧照片，还有旧博客的备份， 把WordPress博客的备份转换成hexo，上传到了GitHub上。 以后不一定会再更新了，但保留下来，留作纪念， 谨以此纪念那个曾经年少、无知、幼稚的我。]]></content>
+      <categories>
+        <category>生活随笔</category>
+      </categories>
+      <tags>
+        <tag>博客存档</tag>
+        <tag>留作部分</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MAC 下配置 XAMPP 实现多站点绑定本地域名遇到的问题]]></title>
     <url>%2F2017%2F11%2Fmac-xampp-localhost-domain.html</url>
     <content type="text"><![CDATA[一直都在虚拟机里跑PHP环境，今天想在Mac里装一个环境试试，最终选择了XAMPP。 好的，问题来了，XAMPP并不支持多站点，但我想要实现多个域名访问不同的站点，网上找了好长时间的方案，都是复制粘贴来的，真不知道复制过来你们是怎么配置的 自己动手吧 本地环境： 12OSX 10.13.1XAMPP-VM (PHP 7.1.11) 实现需求： XAMPP实现多站点访问并绑定域名 首先修改配置文件 httpd-vhosts.conf 1vi /opt/lampp/etc/extra/httpd-vhosts.conf 在文件最下方，添加配置信息 12345678910&lt;VirtualHost *:80&gt; ServerAdmin 757118@qq.com DocumentRoot &quot;/opt/lampp/htdocs/111.com&quot; ServerName 111.com ErrorLog &quot;logs/111.com-error_log&quot; CustomLog &quot;logs/111.com-access_log&quot; common&lt;/VirtualHost&gt;# 其中 111.com 为本次想要实现本地访问的域名# 想要添加更多域名，就依次复制更多次以上代码并修改对应域名 然后按 esc 键，输入 :wq 回车保存。 接下来修改配置文件 httpd.conf 1vi /opt/lampp/etc/httpd.conf 修改内容 12# Virtual hosts#Include etc/extra/httpd-vhosts.conf 为 12# Virtual hostsInclude etc/extra/httpd-vhosts.conf 然后重启Apache服务 修改本地域名访问，这回把111.com设为本地的测试域名 1vi /etc/hosts 在下方添加 1192.168.64.2 111.com 完成，输入域名 111.com 访问本地目录]]></content>
@@ -506,9 +518,9 @@
         <category>技术随笔</category>
       </categories>
       <tags>
+        <tag>软件</tag>
         <tag>快乐无极</tag>
         <tag>后门</tag>
-        <tag>软件</tag>
       </tags>
   </entry>
   <entry>
@@ -606,9 +618,9 @@
         <category>技术随笔</category>
       </categories>
       <tags>
+        <tag>WordPress</tag>
         <tag>IIS</tag>
         <tag>URL</tag>
-        <tag>WordPress</tag>
         <tag>主机</tag>
         <tag>静态化</tag>
       </tags>
@@ -665,9 +677,9 @@
       </categories>
       <tags>
         <tag>漏洞</tag>
-        <tag>微软</tag>
         <tag>Adobe</tag>
         <tag>PDF</tag>
+        <tag>微软</tag>
       </tags>
   </entry>
   <entry>
@@ -705,13 +717,13 @@
       </categories>
       <tags>
         <tag>windows</tag>
+        <tag>微软</tag>
         <tag>Microsoft</tag>
         <tag>windows 2000</tag>
         <tag>Windows Server</tag>
         <tag>windows update</tag>
         <tag>Windows Vista</tag>
         <tag>windows xp</tag>
-        <tag>微软</tag>
       </tags>
   </entry>
   <entry>
@@ -1052,8 +1064,8 @@
       </categories>
       <tags>
         <tag>杀毒软件</tag>
-        <tag>Avast</tag>
         <tag>AVG</tag>
+        <tag>Avast</tag>
         <tag>BitDefender</tag>
         <tag>eScan</tag>
         <tag>ESET NOD32</tag>
@@ -1154,7 +1166,6 @@
       <tags>
         <tag>zhaojian</tag>
         <tag>赵健</tag>
-        <tag>软件</tag>
         <tag>7-zip</tag>
         <tag>adblock plus</tag>
         <tag>ccleaner</tag>
@@ -1165,6 +1176,7 @@
         <tag>openoffice</tag>
         <tag>torrent</tag>
         <tag>vlc</tag>
+        <tag>软件</tag>
       </tags>
   </entry>
   <entry>
@@ -1232,8 +1244,8 @@
         <category>技术随笔</category>
       </categories>
       <tags>
-        <tag>zhaojian</tag>
         <tag>博客</tag>
+        <tag>zhaojian</tag>
         <tag>赵健</tag>
       </tags>
   </entry>
@@ -1447,8 +1459,8 @@
         <category>技术随笔</category>
       </categories>
       <tags>
-        <tag>博客</tag>
         <tag>blog</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
