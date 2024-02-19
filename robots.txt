@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Sitemap: https://www.zhaojian.net/sitemap.xml
+Sitemap: https://www.zhaojian.net/baidusitemap.xml

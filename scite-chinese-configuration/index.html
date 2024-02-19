@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="zh-CN" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="zhaoJian.Net" />
+  <!-- Open Graph Description 简短摘要-->
+  
+  <!-- 用于搜索引擎的文章摘要 -->
+  
+    <meta name="keywords" content="zhaojian,zhaojiannet,zhaojian.net,赵健,linux,自驾,旅行,旅途,IT技术,nodejs,javascript,debian,ubuntu,kali,manjaro,佛系IT少年" />
+    <meta name="description" content="zhaoJian.Net - 赵健的技术笔记 | 技术如旅途，学习似人生。保持热爱，勇往直前。" />
+    
+  
+  
+  <title>
+    
+      SciTE 中文配置信息 
+      
+      
+      |
+    
+     zhaoJian.Net - 赵健的技术笔记 | 赵健 zhaojian zhaoJianNet
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon-next.png">
+    <link rel="icon" href="/images/favicon-32x32-next.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
+  
+    
+<link rel="stylesheet" href="/css/figcaption/mac-block.css">
+
+  
+
+  <!-- jquery3.3.1 -->
+  
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  
+
+  <!-- fancybox -->
+  
+    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70H136JFY6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-70H136JFY6');
+    </script>
+  
+
+  
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="zhaoJian.Net - 赵健的技术笔记 | 赵健 zhaojian zhaoJianNet" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img no-lazy src="/images/zhaojian-avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">zhaoJian.Net</a></div>
+    
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">首页</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">关于</a>
+        </li>
+      
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">分类</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">归档</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">标签</a>
+        </li>
+      
+        <li class="nav-item" data-path="/sitemap.xml">
+          <a href="/sitemap.xml">站点地图</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">SciTE 中文配置信息</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2024-01-23 15:44:56
+        </span>
+        
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="分类"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/tech/" title="技术">
+                    <b>#</b> 技术
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="标签"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/SciTE-%E4%B8%AD%E6%96%87/" title="SciTE 中文">
+                    #SciTE 中文
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/SciTE-%E4%B8%AD%E6%96%87%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF/" title="SciTE 中文配置信息">
+                    #SciTE 中文配置信息
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/SciTE-%E4%BD%BF%E7%94%A8/" title="SciTE 使用">
+                    #SciTE 使用
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/SciTE-%E9%85%8D%E7%BD%AE/" title="SciTE 配置">
+                    #SciTE 配置
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <p>最近换 SciTE 编辑器了，非常适合我，这是我使用过的唯一能媲美 notepad++ 的编辑器了，因为就要常驻 Linux 了，所以准备转投 SciTE 了。<br>用了几天还不错，不过配置的确很头疼，我的这个配置是参考了一下网上的，又修改了一下适合我自己的习惯。<br>贴出来，有需要的就拿去吧。（后期会持续更新…）<br>#SciTEGlobal.properties<br>—— 全局配置文件，一般不去改动；<br>#SciTEUser.properties —— 用户配置文件，对全局配置要改动的地方，都写在这个文件里；<br>#SciTE.properties —— 本地配置文件，也就是针对当前目录的配置文件，会覆盖全局和用户配置文件；<br>#html.properties —— 特定文件类型的配置文件，比如 html.properties 就是专门针对网页文件的配置文件，au3.properties 是 AutoIt 的配置文件；<br>#参数中多数情况下值设成 1 表示启用某个功能，设成 0 表示不启用某个功能。<br>#支持中文字符 ++++++++++++++++++++++++++++<br>#支持中文 963 表示简体中文<br>code.page&#x3D;65001<br>output.code.page&#x3D;65001<br>#character.set&#x3D;134 不启用的话，在输出区中文可能会乱码<br>#character.set&#x3D;134<br>#Big5:code.page&#x3D;950<br>#UTF8:code.page&#x3D;65001<br>#全局参数 ++++++++++++++++++++++++++++<br>#软件工作目录<br>SciteDefaultHome&#x3D;D:\ 系统工具 \ 网页制作 \scite<br>#关闭文件时提示保存<br>are.you.sure&#x3D;1<br>#重新载入文档时提示<br>are.you.sure.on.reload&#x3D;1<br>#重新载入文档时保留还原信息<br>reload.preserves.undo&#x3D;1<br>#编译和运行时提示保存<br>#are.you.sure.for.build&#x3D;1<br>#检查文档是否已经被其他软件打开<br>check.if.already.open&#x3D;1<br>#显示最近打开的文件<br>save.recent&#x3D;1<br>#只打开一个文件时隐藏标签卡<br>tabbar.hide.one&#x3D;1<br>#最小化时缩小到系统托盘<br>minimize.to.tray&#x3D;1<br>#显示工具栏<br>toolbar.visible&#x3D;0<br>#显示状态栏<br>statusbar.visible&#x3D;1<br>#标题栏显示 1\2\3 三种方式显示当前编辑文件名和文件路径<br>title.full.path&#x3D;2<br>#显示当前 buffer 序号<br>title.show.buffers&#x3D;1<br>buffers&#x3D;100<br>#最小化到屏幕下方的任务栏。如果改成 1，就是最小到屏幕最右下角的托盘区域。<br>minimize.to.tray&#x3D;0<br>#scite 启动时 tab 栏可见<br>tabbar.visible&#x3D;1<br>#当只打开一篇文档时隐藏 tab 栏<br>tabbar.hide.one&#x3D;0<br>#tab 栏启用多行模式，同时打开较多文件时，多行模式比较方便<br>tabbar.multiline&#x3D;1<br>#打开文件路径为当前编辑文件相同目录<br>open.dialog.in.file.directory&#x3D;1<br>#将结果输出窗口放到下方<br>split.vertical&#x3D;0<br>#打开文件时打开的目录为当前操作文件所在目录。这个功能非常实用，否则有时文件目录很深，要打开一个文件，一级级点击进去。<br>open.dialog.in.file.directory&#x3D;1<br>#在输出区显示执行命令所用时间<br>time.commands&#x3D;1<br>#替换相关设置，0 时 () 要写成 ()。一般设成 1++++++++++++++++++++++++++++<br>find.replace.regexp.posix&#x3D;1<br>#打开替换高级开关，可以只搜索某个样式<br>find.replace.advanced&#x3D;1<br>#是否默认用正则表达式搜索<br>find.replace.regexp&#x3D;0<br>#默认搜索时 Wrap around<br>find.replace.wrap&#x3D;1<br>#也就是搜索框的 Transform. backslash expressions 开关<br>#打开这个开关，搜索时要用 \ 来表示 <br>find.replace.escapes&#x3D;0<br>find.replacewith.focus&#x3D;1<br>#通过搜索查找到的字符颜色（用半透明显示）<br>find.mark&#x3D;#F14687<br>#界面布局，字体，颜色等 ++++++++++++++++++++++++++++<br>#默认<br>style.<em>.32&#x3D;$(font.base),back:#cce8cf<br>#行号背景，前景，字体，你可以在用户配置文件里改动一下试试，立即能看到效果<br>style.</em>.33&#x3D;fore:#000000,back:#CCCCCC,$(font.base)<br>#括号 (‘, ‘)’, ‘[‘, ‘]‘, ‘{‘, 和 ‘} 高亮颜色<br>style.<em>.34&#x3D;fore:#0000FF,bold<br>#不匹配括号高亮颜色。这在写代码多层括号嵌套时很有用。<br>style.</em>.35&#x3D;fore::#009933,bold<br>#控制字符<br>style.<em>.36&#x3D;<br>#缩进线<br>style.</em>.37&#x3D;fore:#C0C0C0,back:#CCCCCC<br>#启用括号匹配检查<br>braces.check&#x3D;1<br>braces.sloppy&#x3D;1<br>#软件启动时左边距，上边距，宽，高。宽高设成 - 1 时表示窗口最大化<br>position.left&#x3D;0<br>position.top&#x3D;0<br>position.width&#x3D;-1<br>position.height&#x3D;-1<br>#当打开两个 scite 时，设成 1, 并 position.left&#x3D;0,position.width &#x3D; 屏幕宽度一半，这时两个 scite 实例就可以并列显示了。这在特殊情况下可能有用<br>position.tile&#x3D;1<br>#缩进空白可见<br>view.indentation.whitespace&#x3D;1<br>#设置空白符的前景色和背景色<br>whitespace.fore<br>whitespace.back<br>#每个空白缩进单元显示一条垂直线，修改后重启 Scite 文本编辑器生效。<br>view.indentation.guides&#x3D;1<br>highlight.indentation.guides&#x3D;1<br>#默认字体字号，这里使用了等宽字体<br>font.base&#x3D;font:Courier New,size:9<br>font.small&#x3D;font:Courier New,size:9<br>#选中代码字体、背景颜色及色彩透明度<br>selection.fore&#x3D;#000000<br>selection.back&#x3D;#000080<br>selection.alpha&#x3D;80<br>#闪烁光标的颜色<br>caret.fore&#x3D;#000080<br>#闪烁光标的宽度 1\2\3<br>caret.width&#x3D;2<br>#光标所在行背景色<br>caret.line.back&#x3D;#5ba52f<br>#缩进，换行，代码折叠 ++++++++++++++++++++++++++++<br>#启用括号匹配检查<br>braces.check&#x3D;1<br>braces.sloppy&#x3D;1<br>#tab 键缩进的字符数<br>tabsize&#x3D;4<br>#缩进字符数<br>indent.size&#x3D;4<br>#缩进使用 tab 键<br>use.tabs&#x3D;1<br>#缩进，就是自动保持前一行的缩进<br>#indent.auto&#x3D;1<br>#智能缩进，和上面的区别就是有反缩进<br>indent.automatic&#x3D;1<br>#代码缩进，比如大括号回车自动缩进<br>indent.opening&#x3D;1<br>#代码反缩进，同上<br>indent.closing&#x3D;1<br>#tab 键缩进<br>#tab.indents&#x3D;0<br>#自动换行开关，写代码一般不要打开自动换行<br>wrap&#x3D;1<br>#换行的风格，没用过<br>wrap.style&#x3D;2<br>#输出窗口自动换行<br>output.wrap&#x3D;1<br>#自动换行处的标记符<br>wrap.visual.flags&#x3D;0<br>#代码折叠开关，建议打开<br>fold&#x3D;1<br>#折叠指示，建议打开<br>fold.compact&#x3D;1<br>#折叠代码样式 1\2\3，2 比较好看<br>fold.symbols&#x3D;3<br>#代码折叠区的宽度<br>fold.margin.width&#x3D;16<br>#代码注释折叠<br>fold.comment&#x3D;1<br>#折叠预处理<br>fold.preprocessor&#x3D;1<br>#鼠标到达文件末尾行后滚动条可继续下移<br>end.at.last.line&#x3D;0<br>#显示行号<br>line.margin.visible&#x3D;1<br>#行号显示的位数，3 + 表示默认 3 位数，不够再加<br>line.margin.width&#x3D;3+<br>#行号缩进的宽度，最好不缩进<br>margin.width&#x3D;0<br>#长行指示<br>edge.column&#x3D;200<br>edge.mode&#x3D;0<br>edge.colour&#x3D;#F9F9F9<br>#设置错误行的前景色和背景色<br>error.marker.fore&#x3D;#0000A0<br>error.marker.back&#x3D;#DADAFF<br>#设置书签列的前景色，背景色和透明度<br>bookmark.fore&#x3D;#808000<br>bookmark.back&#x3D;#FFFFA0<br>#如果书签列被关闭，书签所在行将以指定透明度显示<br>bookmark.alpha&#x3D;100<br>#语法提示及自动完成 ++++++++++++++++++++++++++++<br>#除默认语法提示外，可自定义增加后缀名为 API 语法自动完成文件，$(SciteDefaultHome) 表示工作目录，建议在工作目录中新建 API 目录专门存放自动完成文件<br>api.<em>.asp&#x3D;$(SciteDefaultHome)&#x2F;api&#x2F;asp.api<br>#python<br>api.</em>.py&#x3D;$(SciteDefaultHome)&#x2F;api&#x2F;python.api<br>api.<em>.pyw&#x3D;$(SciteDefaultHome)&#x2F;api&#x2F;python.api<br>#php<br>api.</em>.php&#x3D;$(SciteDefaultHome)&#x2F;api&#x2F;php.api<br>#css<br>api.<em>.css&#x3D;$(SciteDefaultHome)&#x2F;api&#x2F;css.api<br>#java<br>api.</em>.js&#x3D;$(SciteDefaultHome)&#x2F;api&#x2F;java.api<br>#在文件内出现过的词都可以自动完成<br>autocompleteword.automatic&#x3D;1<br>#自动补全 xml 及 html 标签<br>xml.auto.close.tags&#x3D;1<br>#xml 和 html 文档标签大小写不敏感<br>html.tags.case.sensitive&#x3D;0<br>#编译错误定位到源代码<br>error.select.line&#x3D;1<br>#外部的扩展，打印和导出文档的时候有用 ++++++++++++++++++++++++++++<br>#export.keep.ext&#x3D;1（构建可执行程序支持）<br>#所见即所得，可以实时预览<br>export.html.wysiwyg&#x3D;1<br>#export.html.tabs&#x3D;1（HTML tab 键支持）<br>#export.html.folding&#x3D;1（HTML 折叠支持）<br>#HTML 旧风格支持<br>export.html.styleused&#x3D;1<br>#export.html.title.fullpath&#x3D;1（HTML 文件显示完整路径）<br>#export.rtf.tabs&#x3D;1（多文档 RTF 支持）<br>#export.rtf.font.face&#x3D;Arial（RTF 文档的默认字体）<br>#export.rtf.font.size&#x3D;9（同上）<br>#export.rtf.tabsize&#x3D;8（同上）<br>#输出 PDF 文档放大倍数<br>export.pdf.magnification&#x3D;0<br>#PDF 默认字体 Font: Courier, Helvetica or Times (Courier<br>line-wraps)<br>export.pdf.font&#x3D;Helvetica<br>#Page size (in points): width, height<br>#E.g. Letter 612,792; A4 595,842; maximum 14400,14400<br>#PDF 页面默认大小<br>export.pdf.pagesize&#x3D;595,842<br>#PDF 默认页边距 Margins (in points): left, right, top, bottom<br>export.pdf.margins&#x3D;72,72,72,72<br>#支持输出 XML<br>export.xml.collapse.spaces&#x3D;1<br>export.xml.collapse.lines&#x3D;1<br>#常用字符列表，留下英文和数字就行了，汉字感觉用不上 ++++++++++++++++++++++++++++<br>chars.alpha&#x3D;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<br>chars.numeric&#x3D;0123456789<br>#打开文件对话框的文件过滤配置，默认的文件类型是在 source.files 中定义的文件类型，把自己最常编辑的文件类型写到 source.files 中，如 <em>.php;</em>.html; 等 ++++++++++++++++++++++++++++<br>source.files&#x3D;<em>.asm;</em>.c;<em>.cc;</em>.cpp;<em>.cxx;</em>.cs;<em>.h;</em>.hh;<em>.hxx;</em>.hpp;<br><em>.idl;</em>.odl;<em>.rc;</em>.rc2;<em>.dlg;</em>.def;<br><em>.vb;</em>.vbs;<em>.bas;</em>.frm;<em>.cls;</em>.ctl;<br><em>.java;</em>.js;<em>.php;</em>.py;<em>.pl;</em>.rb;<em>.cgi;</em>.lua;<em>.conf;<br>make</em>;<em>.mak;<br><em>.properties;</em>.html;</em>.xml;<em>.iface;</em>.bat;<em>.e<br>if PLAT_WIN<br>all.files&#x3D;All Files (</em>.<em>)</em>.*<br>if PLAT_GTK<br>all.files&#x3D;All Files (<em>)<em>Hidden Files (.</em>).</em><br>open.filter&#x3D;<br>All Source$(source.files)<br>$(all.files)<br>$(filter.ada)<br>$(filter.conf)<br>$(filter.asm)<br>$(filter.asn1)<br>$(filter.ave)<br>$(filter.baan)<br>$(filter.bash)<br>$(filter.caml)<br>$(filter.cmake)<br>$(filter.cpp)<br>#$(filter.ch)<br>$(filter.css)<br>$(filter.d)<br>$(filter.eiffel)<br>$(filter.erlang)<br>$(filter.fortran)<br>$(filter.idl)<br>$(filter.inno)<br>$(filter.java)<br>$(filter.js)<br>$(filter.kix)<br>$(filter.lout)<br>$(filter.lua)<br>$(filter.matlab)<br>$(filter.post)<br>$(filter.mmixal)<br>$(filter.nncrontab)<br>$(filter.nsis)<br>$(filter.opal)<br>$(filter.pascal)<br>$(filter.perl)<br>$(filter.php)<br>$(filter.pov)<br>$(filter.prg)<br>$(filter.properties)<br>$(filter.ps)<br>$(filter.python)<br>$(filter.ruby)<br>$(filter.sql)<br>$(filter.specman)<br>$(filter.tcl)<br>$(filter.tex)<br>$(filter.text)<br>$(filter.vb)<br>$(filter.web)<br>$(filter.yaml)<br>$(filter.verilog)<br>$(filter.vhdl)<br>#部分语言特别设置 ++++++++++++++++++++++++++++<br>#asp 的默认脚本语言，设成 1 时是 Java, 2 是 VB, 3 是 Python<br>asp.default.language&#x3D;2<br>#Python 用的，你不用 Python 编程语言的话，这条不用管，大概是缩进对齐用的<br>tab.timmy.whinge.level<br>#输出区的位置，大小，及启动 scite 文本编辑器时输出区是否隐藏 ++++++++++++++++++++++++++++<br>#输出区在下方<br>split.vertical&#x3D;0<br>#output.horizontal.size&#x3D;200<br>#output.vertical.size&#x3D;60<br>#output.initial.hide&#x3D;1<br>#执行命令前清空输出区的内容<br>clear.before.execute&#x3D;1<br>#文件尾留空，默认设置中，光标在文件最后一行时垂直滑动条无法再向下滚动，不符合使用习惯。<br>end.at.last.line&#x3D;0<br>#新建文件时的默认语言模块<br>default.file.ext&#x3D;.hmtl</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/wordpress-article-page-cannot-find-featured-image/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+              2024-01-23 15:44:56
+            </span>
+            
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="分类"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/tech/" title="技术">
+                        <b>#</b> 技术
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="标签"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/SciTE-%E4%B8%AD%E6%96%87/" title="SciTE 中文">
+                        #SciTE 中文
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/SciTE-%E4%B8%AD%E6%96%87%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF/" title="SciTE 中文配置信息">
+                        #SciTE 中文配置信息
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/SciTE-%E4%BD%BF%E7%94%A8/" title="SciTE 使用">
+                        #SciTE 使用
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/SciTE-%E9%85%8D%E7%BD%AE/" title="SciTE 配置">
+                        #SciTE 配置
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="/windows8-administrator-cannot-open-xxx/" target="_self">
+                <span>下一页</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067825494341267"
+  crossorigin="anonymous"></script>
+  <!-- foot_ads -->
+  <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-7067825494341267"
+    data-ad-slot="1142359537"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <br>
+
+
+  <div id="tcomment"></div>
+    <script src="https://cdn.staticfile.org/twikoo/1.6.30/twikoo.all.min.js"></script>
+    <script>
+    twikoo.init({
+      envId: 'https://zhaojiannet-zhaojian.hf.space', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
+      el: '#tcomment', // 容器元素
+      // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+      // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+      // lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
+    })
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    
+  </div>
+
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          
+              <a title="zhaojiannet" target="_blank" rel="noopener" href="https://github.com/zhaojiannet">
+                <i class="iconfont icon-github"></i>
+              </a>
+              
+        </li>
+        
+        <li>
+          
+              <a title="zhaojiannet" target="_blank" rel="noopener" href="https://www.facebook.com/zhaoJianNet">
+                <i class="iconfont icon-facebooksquare"></i>
+              </a>
+              
+        </li>
+        
+        <li>
+          
+              <a title="zhaojiannet" target="_blank" rel="noopener" href="https://twitter.com/zhaoJianNet">
+                <i class="iconfont icon-twitter"></i>
+              </a>
+              
+        </li>
+        
+        <li>
+          
+              <a title="微信：757118" href="/#">
+                <i class="iconfont icon-wechat"></i>
+              </a>
+              
+        </li>
+        
+        <li>
+          
+              <a title="QQ：757118" href="/#">
+                <i class="iconfont icon-qq"></i>
+              </a>
+              
+        </li>
+        
+        <li>
+          
+              <a title="rss" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+              </a>
+              
+        </li>
+        
+    </ul>
+  </div>
+  
+    
+    <div class="footer-more">
+      
+        <a href="https://www.zhaojian.net">Copyright © 2009~2024 zhaoJian.Net - 赵健的技术笔记  <br> <a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">辽ICP备20000595号 </a> <br> 由 <a href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral" rel="noopener" target="_blank"><img style="vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/uploads/2024/01/upyun_logo5.png" width="48px" alt="又拍云logo"></a> 提供CDN加速服务</a>
+        
+    </div>
+  
+    
+    <div class="footer-more">
+      
+        Theme by Oranges | Powered by Hexo
+        
+    </div>
+  
+  
+    <div class="footer-views">
+      
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+      
+          本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        
+      
+          本站访客数<span id="busuanzi_value_site_uv"></span>人
+        
+      
+    </div>
+  
+</div>
+
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?ff869ab994a5c69697df116162829598";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="搜索...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>首次搜索，正在载入索引文件，请稍后……<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>没有找到内容，请尝试更换检索词。<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>未找到search.xml文件，具体请参考：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>请求失败，尝试重新刷新页面或稍后重试。<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + SciTE%20%E4%B8%AD%E6%96%87%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF + '&url=' + https%3A%2F%2Fwww.zhaojian.net%2Fscite-chinese-configuration%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://www.zhaojian.net/scite-chinese-configuration/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
+  
+  
+<script src="/js/shares.js"></script>
+
+
+
+      </div>
+    </div>
+  
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
+</html>
