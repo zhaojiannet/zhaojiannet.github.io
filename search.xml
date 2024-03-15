@@ -4,6 +4,237 @@
   
     
     <entry>
+      <title>解决Brave浏览器翻译无法使用 无法翻译此网页 无法翻译整页内容 无法使用翻译成中文 翻译无法访问</title>
+      <link href="/brave-browser-translation-cannot-be-used/"/>
+      <url>/brave-browser-translation-cannot-be-used/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>Brave是一个基于Chromium浏览器及其Blink排版引擎的自由及开放源代码的浏览器，由Mozilla项目的联合创始人、JavaScript的创造者布兰登·艾克与他人共同创建。它最初于2016年发布，旨在提供更快速、更私密、更安全的网络浏览体验。与其他主流浏览器相比，Brave有一些独特的特性和功能：</p><p><strong>隐私保护</strong>: Brave致力于保护用户的隐私。它默认启用了广告拦截器和跟踪器阻止功能，使用户能够更好地控制他们在网上的个人信息。</p><p><strong>广告替换</strong>: Brave提供了一个名为Brave Rewards的功能，允许用户选择接收基于他们浏览习惯的隐私友好的广告，并获得BAT（Basic Attention Token）代币作为奖励。</p><p><strong>性能优化</strong>: Brave通过加载页面时阻止大量的广告和跟踪器，提高了浏览速度。此外，它还采用了一种称为Brave Shields的功能，可以防止网站上的大部分第三方脚本加载，从而减少了页面加载时间。</p></blockquote><p>最近在用Brave浏览器，发现Brave浏览器在中国的翻译功能无法使用，因翻译API接口地址无法访问，无法通过翻译此网页翻译整页内容。</p><p>选中内容可以翻译成中文</p><p><img src="/uploads/2024/03/brave_0314013.png" alt="图1"></p><p>但无法使用翻译整页内容，无法翻译此网页</p><p><img src="/uploads/2024/03/brave_0314012.png" alt="图2"></p><p>因为Brave也是一个基于Chromium的浏览器，首先想到会不会像谷歌浏览器（Chrome）一样，因为无法访问谷歌翻译导致的也无法访问Brave的翻译。使用了浏览器代理规则和修改hosts文件两种方案，均无法解决。</p><p>上网搜索，发现Brave的翻译竟然是与Lingvanex合作自建的，但我在Brave浏览器的github代码里的确看到有谷歌翻译API的地址：<code>translate.googleapis.com</code>，可能是我看的地方不对。</p><p>在整页翻译时抓包找到了Brave翻译的API接口地址为：<code>translate.brave.com</code>，再通过扫<code>translate.brave.com</code>获取到中国可以访问的IP地址</p><p>最终通过修改hosts文件的方法，使Brave浏览器的翻译功能恢复正常。</p><p><img src="/uploads/2024/03/brave_0314015.png" alt="图3"></p><p>方法：</p><p>以Windows系统为例，在 <code>C:\Windows\System32\drivers\etc\</code> 目录下，找到 host 文件，使用超级管理员权限编辑，在最下方添加下面的内容。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">172.65.248.248 translate.brave.com</span><br></pre></td></tr></table></figure><p>保存后即可在中国正常使用Brave浏览器的翻译功能。</p><p>如图所示：</p><p><img src="/uploads/2024/03/Code_0314018.png" alt="图4"></p><p>如仍无法使用，可重启浏览器，或刷新DNS解析缓存试试。</p><p>方法：</p><p>打开Windows终端&#x2F;CMD&#x2F;PowerShell，执行以下命令。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> brave </tag>
+            
+            <tag> 浏览器 </tag>
+            
+            <tag> 翻译 </tag>
+            
+            <tag> brave翻译 </tag>
+            
+            <tag> brave翻译成中文 </tag>
+            
+            <tag> brave翻译整页内容 </tag>
+            
+            <tag> brave浏览器翻译 </tag>
+            
+            <tag> brave无法使用翻译 </tag>
+            
+            <tag> brave翻译无法访问 </tag>
+            
+            <tag> brave翻译无法使用 </tag>
+            
+            <tag> google翻译 </tag>
+            
+            <tag> 谷歌翻译 </tag>
+            
+            <tag> 谷歌翻译无法访问 </tag>
+            
+            <tag> 谷歌翻译无法使用 </tag>
+            
+            <tag> brave无法翻译此网页 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IT课程 JavaScript基础 036_语法结构</title>
+      <link href="/it-course-javascript-036/"/>
+      <url>/it-course-javascript-036/</url>
+      
+        <content type="html"><![CDATA[<h3 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h3><p>JavaScript语句（Statements）是一组指令，用于执行特定的任务。</p><p>示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 变量声明</span></span><br><span class="line"><span class="keyword">let</span> userName = <span class="string">&#x27;赵健&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> age = <span class="number">18</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 条件语句</span></span><br><span class="line"><span class="keyword">if</span> (age &gt;= <span class="number">18</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(userName + <span class="string">&#x27; 是一个成年人&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(userName + <span class="string">&#x27; 是一个未成年人&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;循环输出 &#x27;</span> + (i + <span class="number">1</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数定义</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Hello</span>(<span class="params">name</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&#x27;你好, &#x27;</span> + name + <span class="string">&#x27;!&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数调用</span></span><br><span class="line"><span class="keyword">let</span> sayHello = <span class="title class_">Hello</span>(userName);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(sayHello);</span><br></pre></td></tr></table></figure><h3 id="分号"><a href="#分号" class="headerlink" title="分号"></a>分号</h3><p>在JavaScript中，分号（<code>;</code>）是语句结束符号，用于标识语句的结束。分号在大多数情况下是可选的，因为JavaScript解释器会尝试自动插入分号（Automatic Semicolon Insertion，ASI），以使代码解析为语法正确。然而，存在一些情况下，ASI 可能会导致不符合预期的行为，因此建议在编写 JavaScript 代码时显式添加分号。</p><p>当出现分号时，不管是单行还是多行，此语句结束。</p><p>示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">alert</span>(<span class="string">&#x27;Hello&#x27;</span>);<span class="title function_">alert</span>(<span class="string">&#x27;JavaScript!&#x27;</span>);</span><br></pre></td></tr></table></figure><p>当存在换行符（line break）时，在大多数情况下可以省略分号。</p><p>示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">alert</span>(<span class="string">&#x27;Hello&#x27;</span>)</span><br><span class="line"><span class="title function_">alert</span>(<span class="string">&#x27;JavaScript!&#x27;</span>)</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">alert</span>(<span class="string">&#x27;Hello&#x27;</span>);</span><br><span class="line"><span class="title function_">alert</span>(<span class="string">&#x27;JavaScript!&#x27;</span>)</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">alert</span>(<span class="string">&#x27;Hello&#x27;</span>)</span><br><span class="line"><span class="title function_">alert</span>(<span class="string">&#x27;JavaScript!&#x27;</span>);</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">alert</span>(<span class="string">&#x27;Hello&#x27;</span>);<span class="title function_">alert</span>(<span class="string">&#x27;JavaScript!&#x27;</span>)</span><br></pre></td></tr></table></figure><p>当遇到语句块、代码块时，换行不会自动添加分号。且 <strong>空格</strong> 和 <strong>换行</strong> 会被忽略。</p><p>示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">alert</span><br><span class="line">(</span><br><span class="line"><span class="number">1</span>+</span><br><span class="line"> <span class="number">2</span></span><br><span class="line"> +<span class="number">1</span>);</span><br></pre></td></tr></table></figure><h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>在JavaScript中，注释是用于在代码中添加说明和备注的文本，这些文本对于程序的执行没有实际影响。注释对于提高代码可读性、协作和调试非常有用。</p><h5 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h5><p>使用 <code>//</code> 符号可以创建单行注释。从 <code>//</code> 开始到行末的所有文本都将被视为注释。</p><p>示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">alert</span>(<span class="string">&#x27;Hello JavaScript!&#x27;</span>); <span class="comment">// 跟随在语句后面的单行注释</span></span><br><span class="line"><span class="comment">// 独占一行的单行注释</span></span><br></pre></td></tr></table></figure><h5 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h5><p>使用 <code>/*</code> 开始，<code>*/</code> 结束可以创建多行注释。在这两个符号之间的所有文本都将被视为注释。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  这是一个多行注释</span></span><br><span class="line"><span class="comment">  可以跨越多行</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="title function_">alert</span>(<span class="string">&#x27;Hello&#x27;</span>);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">多行注释也可以用于注释掉一块代码，下面的代码不会执行</span></span><br><span class="line"><span class="comment">alert(&#x27;JavaScript!&#x27;); </span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><h3 id="对话框"><a href="#对话框" class="headerlink" title="对话框"></a>对话框</h3><p>JavaScript提供了几种用于与用户进行简单交互的对话框，包括<code>alert</code>、<code>confirm</code>和<code>prompt</code>。这些对话框允许你向用户显示信息、询问问题或接受输入。当对话框显示时，代码会暂停执行，直到用户关闭对话框为止。</p><h5 id="alert-对话框"><a href="#alert-对话框" class="headerlink" title="alert 对话框"></a><code>alert</code> 对话框</h5><p><code>alert</code> 对话框用于向用户显示一条消息，并等待用户点击“确定”按钮。</p><p>示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">alert</span>(<span class="string">&#x27;Hello 内部JavaScript!&#x27;</span>);</span><br></pre></td></tr></table></figure><p>效果：</p><p><img src="/uploads/2024/03/msedge_0214006.png" alt="示例效果"></p><h5 id="confirm-对话框"><a href="#confirm-对话框" class="headerlink" title="confirm 对话框"></a><code>confirm</code> 对话框</h5><p><code>confirm</code> 对话框用于向用户显示一个带有确认和取消按钮的对话框，通常用于询问用户是否要执行某个操作。</p><p>示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> yesNo = <span class="title function_">confirm</span>(<span class="string">&quot;你在学习JavaScript吗?&quot;</span>);</span><br><span class="line"><span class="title function_">alert</span>(yesNo);</span><br></pre></td></tr></table></figure><p>效果：</p><p><img src="/uploads/2024/03/msedge_0214047.png" alt="示例效果"></p><h5 id="prompt-对话框"><a href="#prompt-对话框" class="headerlink" title="prompt 对话框"></a><code>prompt</code> 对话框</h5><p><code>prompt</code> 对话框用于向用户显示一个带有输入字段的对话框，通常用于接受用户的输入。</p><p>示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="title function_">prompt</span>(<span class="string">&quot;请输入你的名字：&quot;</span>, <span class="string">&#x27;&#x27;</span>);</span><br><span class="line"><span class="title function_">alert</span>(name);</span><br></pre></td></tr></table></figure><p>效果：</p><p><img src="/uploads/2024/03/msedge_0214052.png" alt="示例效果"></p><h3 id="开发者工具"><a href="#开发者工具" class="headerlink" title="开发者工具"></a>开发者工具</h3><p>JavaScript开发者工具是浏览器内置的一组工具，用于帮助开发者调试、分析和优化JavaScript代码。不同的浏览器提供不同的开发者工具，以下是常见浏览器的JavaScript开发者工具：</p><p><strong>Chrome 开发者工具</strong></p><p>打开 Chrome 浏览器，按下 <code>Ctrl + Shift + I</code>（Windows&#x2F;Linux）或 <code>Cmd + Option + I</code>（Mac）可以打开 Chrome 开发者工具。</p><p>鼠标在浏览器中，右键，弹出菜单选择“检查”，可以打开 Chrome 开发者工具。</p><p>如图：<br><img src="/uploads/2024/03/msedge_0214057.png" alt="示例效果"></p><p>点击浏览器“设置及其他”图标，选择“更多工具”—“开发人员工具”，可以打开 Chrome 开发者工具。</p><p>如图：<br><img src="/uploads/2024/03/msedge_0214060.png" alt="示例效果"></p><p>主要功能和面板：</p><ul><li><strong>Console（控制台）：</strong> 用于执行和调试JavaScript代码，查看输出、错误以及警告信息。</li><li><strong>Sources（源代码）：</strong> 提供代码编辑器、断点设置、监视表达式等功能，用于调试JavaScript源代码。</li><li><strong>Network（网络）：</strong> 查看页面发起的网络请求，检查请求和响应的详细信息。</li><li><strong>Performance（性能）：</strong> 分析页面性能，查看加载时间、CPU使用情况等。</li><li><strong>Application（应用程序）：</strong> 查看和调试本地存储、Session Storage、Cookies等。</li><li><strong>Elements（元素）：</strong> 查看和编辑DOM树，修改CSS样式。</li></ul><p><img src="/uploads/2024/03/msedge_0214061.png" alt="示例效果"></p><h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><p>JavaScript关键字是在JavaScript编程语言中具有特殊用途的保留字，它们用于标识变量、函数、语句等。这些关键字不能被用作标识符（例如变量名、函数名等）。</p><p>以下是一些JavaScript关键词：</p><ol><li><strong>基本关键字：</strong></li></ol><ul><li><code>break</code></li><li><code>case</code></li><li><code>catch</code></li><li><code>continue</code></li><li><code>debugger</code></li><li><code>default</code></li><li><code>delete</code></li><li><code>do</code></li><li><code>else</code></li><li><code>false</code></li><li><code>finally</code></li><li><code>for</code></li><li><code>function</code></li><li><code>if</code></li><li><code>in</code></li><li><code>instanceof</code></li><li><code>new</code></li><li><code>null</code></li><li><code>return</code></li><li><code>switch</code></li><li><code>this</code></li><li><code>throw</code></li><li><code>true</code></li><li><code>try</code></li><li><code>typeof</code></li><li><code>undefined</code></li><li><code>var</code></li><li><code>void</code></li><li><code>while</code></li><li><code>with</code></li></ul><ol start="2"><li><strong>保留关键字（在严格模式下有特殊用途）：</strong></li></ol><ul><li><code>implements</code></li><li><code>interface</code></li><li><code>package</code></li><li><code>private</code></li><li><code>protected</code></li><li><code>public</code></li><li><code>static</code></li><li><code>yield</code></li></ul><ol start="3"><li><strong>ECMAScript 6（ES6）引入的关键字：</strong></li></ol><ul><li><code>class</code></li><li><code>const</code></li><li><code>export</code></li><li><code>extends</code></li><li><code>import</code></li><li><code>super</code></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> JavaScript基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> IT课程 </tag>
+            
+            <tag> HTML课程 </tag>
+            
+            <tag> CSS课程 </tag>
+            
+            <tag> JavaScript课程 </tag>
+            
+            <tag> Java课程 </tag>
+            
+            <tag> 计算机系统与网络 </tag>
+            
+            <tag> JavaScript语法 </tag>
+            
+            <tag> JavaScript结构 </tag>
+            
+            <tag> 语法结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>鼠标维修升级版（更换配件方案），解决鼠标按键连点，鼠标单击变双击</title>
+      <link href="/mouse-repair-record/"/>
+      <url>/mouse-repair-record/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://www.zhaojian.net/logitech-mx-anywhere-2s-mouse-is-broken-single-click-becomes-double-click-solution/">罗技MX Anywhere 2S鼠标坏了，鼠标按键连点，鼠标单击变双击不换微动开关的解决方法</a></p><p><a href="https://www.zhaojian.net/xiaomi-wireless-bluetooth-silent-mouse-is-broken-mouse-wheel-fails-solution/">小米无线蓝牙静音鼠标坏了，鼠标滚轮上下跳动，鼠标滚轮失灵不换编码器的解决方法</a></p><p>继之前两次通过不更换配件的方法维修鼠标之后，想到家里还有一堆换鼠标，不更换配件已经无法修理，于是开始寻找更换配件的方案。买了电烙铁套装和鼠标微动开关，开始动手。</p><p>我买的鼠标微动型号是：欧姆龙 红点D2FC-F-K60MN，这个微动稍稍有点硬，声音有点大，如果习惯了静音鼠标，可能会不习惯。</p><p><img src="/uploads/2024/02/20240227111522.jpg" alt="欧姆龙 红点D2FC-F-K60MN 罗技鼠标微动"></p><p>有网友说与罗技MX Anywhere 2S、罗技M557、罗技M558等原装微动最接近的微动型号是：欧姆龙 蓝点D2FC-F-K（50M）。我红点买多了，只能下次有机会再换蓝点试试。</p><p><img src="/uploads/2024/02/20240227111532.jpg" alt="欧姆龙 蓝点D2FC-F-K（50M） 罗技鼠标微动"></p><p>第一次操作，特意换了最细的焊头，但焊接点焊的像狗屎一样，后来上网找视频，看大神们用的都是刀头，第二次操作时，焊点就比较均匀了。</p><p>因为不知道是否会成功，就没有详细记录，只简单拍了几个照片。</p><p>遇到的问题有：</p><p>1、罗技MX Anywhere 2S 电源线异常难拆，差点把线弄断了，插槽也碎了，还好胶水粘上继续能用。</p><p>2、罗技M557&#x2F;罗技M558 螺丝不要拧太紧，容易把鼠标电源开关弄坏了，也是胶水粘上继续能用。</p><p>3、罗技鼠标的微动拆解比较费劲，一定要注意不要长时间加热，会把电路板烧坏（焊点处金属圆圈的线路）。</p><p>经过一系列操作后，最终修复了3个鼠标，结局还算圆满。</p><p><img src="/uploads/2024/02/20240227113121.jpg" alt="图 1"></p><p><img src="/uploads/2024/02/20240227113126.jpg" alt="图 2"></p><p><img src="/uploads/2024/02/20240227113059.jpg" alt="图 3"></p><p><img src="/uploads/2024/02/20240227113039.jpg" alt="图 4"></p><p><img src="/uploads/2024/02/20240227113048.jpg" alt="图 5"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 罗技 </tag>
+            
+            <tag> 鼠标 </tag>
+            
+            <tag> 鼠标左键连点 </tag>
+            
+            <tag> 鼠标右键连点 </tag>
+            
+            <tag> 鼠标单击变双击 </tag>
+            
+            <tag> 鼠标连点 </tag>
+            
+            <tag> 单击变双击 </tag>
+            
+            <tag> 微动开关 </tag>
+            
+            <tag> 解决方案 </tag>
+            
+            <tag> MX Anywhere 2S </tag>
+            
+            <tag> Logitech </tag>
+            
+            <tag> 小米鼠标 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IT课程 JavaScript基础 035_HelloJavaScript</title>
+      <link href="/it-course-javascript-035/"/>
+      <url>/it-course-javascript-035/</url>
+      
+        <content type="html"><![CDATA[<p>JavaScript 是一种高级动态面向对象的编程语言，也是世界上最流行的编程语言之一。它主要用于 Web 开发，但也广泛应用于服务器端开发、游戏开发、移动开发和其他领域。</p><p>JavaScript最初由Netscape公司的布兰登·艾克 （Brendan Eich） 在1995年设计和实现，最初被称为”LiveScript”，后来改名为JavaScript。</p><p>1997 年，ECMA 国际组织（欧洲计算机制造商协会）发布了 ECMAScript 标准，该标准定义了 JavaScript 的语法和语义。ECMAScript 标准的发布使 JavaScript 成为一种标准化的语言，并得到了所有主要浏览器的支持。</p><p>JavaScript不同于Java，尽管它们的名字相似，但它们是两种不同的编程语言。JavaScript主要用于前端开发，通过浏览器执行，而Java通常用于后端开发，并且是一种独立的编程语言。</p><p>JavaScript具有以下主要特点：</p><ul><li><strong>易于学习和使用</strong>：JavaScript 语法相对简单，即使是没有编程经验的人也能很快上手。</li><li><strong>动态性：</strong> JavaScript是一种动态语言，变量的类型可以在运行时进行动态更改。</li><li><strong>面向对象：</strong> JavaScript支持面向对象编程（OOP）的概念，包括封装、继承和多态。</li><li><strong>事件驱动：</strong> JavaScript通常通过处理事件来实现与用户的交互，例如点击按钮、输入文本等。</li><li><strong>脚本语言：</strong> JavaScript是一种脚本语言，它通常被解释而不是编译。这使得它可以直接在浏览器中执行。</li></ul><p>随着时间的推移，JavaScript逐渐发展为一门通用的编程语言，不仅仅用于前端开发，还用于服务器端开发（使用Node.js）以及游戏开发、移动应用等程序开发。</p><p>JavaScript 在其他领域的应用包括：</p><ul><li>服务器端开发：使用 Node.js 等平台，JavaScript 可以用于开发服务器端应用程序。</li><li>游戏开发：JavaScript 可以用于开发网页游戏和移动游戏。</li><li>移动开发：JavaScript 可以用于开发混合移动应用程序。</li></ul><h3 id="如何使用JavaScript"><a href="#如何使用JavaScript" class="headerlink" title="如何使用JavaScript"></a>如何使用JavaScript</h3><h5 id="内部-JavaScript"><a href="#内部-JavaScript" class="headerlink" title="内部 JavaScript"></a>内部 JavaScript</h5><p>在HTML文档内，通过<code>&lt;script&gt;</code>标签将JavaScript代码嵌入在<code>&lt;head&gt;</code>或<code>&lt;body&gt;</code>标签中。这样的脚本会在页面加载时执行。推荐在<code>&lt;/head&gt;</code>或<code>&lt;/body&gt;</code>结束标签前引入</p><p>示例：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- head区域 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">alert</span>(<span class="string">&#x27;Hello 内部JavaScript!&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- head区域 --&gt;</span></span><br></pre></td></tr></table></figure><p>效果：</p><p><img src="/uploads/2024/02/Code_0214003.png" alt="示例效果"><br><img src="/uploads/2024/02/msedge_0214006.png" alt="示例效果"></p><h5 id="外部-JavaScript"><a href="#外部-JavaScript" class="headerlink" title="外部 JavaScript"></a>外部 JavaScript</h5><p>将JavaScript代码保存在独立的文件中，通过<code>&lt;script&gt;</code>标签的<code>src</code>属性引用外部文件。这有助于代码的复用和维护。</p><p>示例：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;script.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">alert</span>(<span class="string">&#x27;Hello 外部JavaScript!&#x27;</span>);</span><br></pre></td></tr></table></figure><p>效果：<br><img src="/uploads/2024/02/Code_0214008.png" alt="示例效果"></p><p><img src="/uploads/2024/02/msedge_0214016.png" alt="示例效果"></p><h5 id="内联-JavaScript"><a href="#内联-JavaScript" class="headerlink" title="内联 JavaScript"></a>内联 JavaScript</h5><p>内联引用是将JavaScript代码直接写在HTML标签的事件属性中，通常用于处理简单的、特定的交互或事件。如：事件处理、DOM操作</p><p>示例：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;javascript:alert(&#x27;Hello JavaScript!&#x27;)&quot;</span>&gt;</span>JavaScript测试<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure><p>效果：</p><p><img src="/uploads/2024/02/Code_0216005.png" alt="示例效果"><br><img src="/uploads/2024/02/firefox_0216006.png" alt="示例效果"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> JavaScript基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> IT课程 </tag>
+            
+            <tag> HTML课程 </tag>
+            
+            <tag> CSS课程 </tag>
+            
+            <tag> JavaScript课程 </tag>
+            
+            <tag> Java课程 </tag>
+            
+            <tag> 计算机系统与网络 </tag>
+            
+            <tag> JavaScript基础 </tag>
+            
+            <tag> JavaScript简介 </tag>
+            
+            <tag> JavaScript使用 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IT课程 CSS基础 034_CSS框架与实践</title>
+      <link href="/it-course-css-034/"/>
+      <url>/it-course-css-034/</url>
+      
+        <content type="html"><![CDATA[<h3 id="CSS框架与实践"><a href="#CSS框架与实践" class="headerlink" title="CSS框架与实践"></a>CSS框架与实践</h3><p><a href="https://getbootstrap.com/">Bootstrap</a></p><p><a href="https://semantic-ui.com/">Semantic UI</a></p><p><a href="https://pure-css.github.io/">Pure CSS</a></p><p><a href="https://tailwindcss.com/">Tailwind CSS</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> CSS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> IT课程 </tag>
+            
+            <tag> HTML课程 </tag>
+            
+            <tag> CSS课程 </tag>
+            
+            <tag> JavaScript课程 </tag>
+            
+            <tag> Java课程 </tag>
+            
+            <tag> 计算机系统与网络 </tag>
+            
+            <tag> css布局 </tag>
+            
+            <tag> css框架 </tag>
+            
+            <tag> css组件 </tag>
+            
+            <tag> css实践 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>IT课程 CSS基础 033_响应式布局</title>
       <link href="/it-course-css-033/"/>
       <url>/it-course-css-033/</url>
@@ -2892,9 +3123,9 @@
       
         <tags>
             
-            <tag> 傲游 </tag>
-            
             <tag> 浏览器 </tag>
+            
+            <tag> 傲游 </tag>
             
             <tag> 遨游 </tag>
             

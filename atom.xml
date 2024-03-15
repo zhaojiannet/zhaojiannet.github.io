@@ -1,20 +1,255 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>zhaoJian.Net - 赵健的技术笔记 | 赵健 zhaojian zhaoJianNet</title>
+  <title>赵健的技术笔记 - 赵健(zhaoJian.Net)</title>
   <icon>https://www.zhaojian.net/icon.png</icon>
   <subtitle>技术如旅途，学习似人生，保持热爱，勇往直前</subtitle>
   <link href="https://www.zhaojian.net/atom.xml" rel="self"/>
   
   <link href="https://www.zhaojian.net/"/>
-  <updated>2024-02-18T14:04:03.000Z</updated>
+  <updated>2024-03-15T14:37:33.758Z</updated>
   <id>https://www.zhaojian.net/</id>
   
   <author>
-    <name>zhaoJian.Net</name>
+    <name>赵健(zhaoJian.Net)</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决Brave浏览器翻译无法使用 无法翻译此网页 无法翻译整页内容 无法使用翻译成中文 翻译无法访问</title>
+    <link href="https://www.zhaojian.net/brave-browser-translation-cannot-be-used/"/>
+    <id>https://www.zhaojian.net/brave-browser-translation-cannot-be-used/</id>
+    <published>2024-03-14T12:56:00.000Z</published>
+    <updated>2024-03-15T14:37:33.758Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Brave是一个基于Chromium浏览器及其Blink排版引擎的自由及开放源代码的浏览器，由Mozilla项目的联合创始人、JavaScript的创造者布兰登·艾克与他人共同创建。它最初于2016年发布，旨在提供更快速、更私密、更安全的网络浏览体</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://www.zhaojian.net/categories/tech/"/>
+    
+    
+    <category term="brave" scheme="https://www.zhaojian.net/tags/brave/"/>
+    
+    <category term="浏览器" scheme="https://www.zhaojian.net/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+    <category term="翻译" scheme="https://www.zhaojian.net/tags/%E7%BF%BB%E8%AF%91/"/>
+    
+    <category term="brave翻译" scheme="https://www.zhaojian.net/tags/brave%E7%BF%BB%E8%AF%91/"/>
+    
+    <category term="brave翻译成中文" scheme="https://www.zhaojian.net/tags/brave%E7%BF%BB%E8%AF%91%E6%88%90%E4%B8%AD%E6%96%87/"/>
+    
+    <category term="brave翻译整页内容" scheme="https://www.zhaojian.net/tags/brave%E7%BF%BB%E8%AF%91%E6%95%B4%E9%A1%B5%E5%86%85%E5%AE%B9/"/>
+    
+    <category term="brave浏览器翻译" scheme="https://www.zhaojian.net/tags/brave%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BF%BB%E8%AF%91/"/>
+    
+    <category term="brave无法使用翻译" scheme="https://www.zhaojian.net/tags/brave%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E7%BF%BB%E8%AF%91/"/>
+    
+    <category term="brave翻译无法访问" scheme="https://www.zhaojian.net/tags/brave%E7%BF%BB%E8%AF%91%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/"/>
+    
+    <category term="brave翻译无法使用" scheme="https://www.zhaojian.net/tags/brave%E7%BF%BB%E8%AF%91%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8/"/>
+    
+    <category term="google翻译" scheme="https://www.zhaojian.net/tags/google%E7%BF%BB%E8%AF%91/"/>
+    
+    <category term="谷歌翻译" scheme="https://www.zhaojian.net/tags/%E8%B0%B7%E6%AD%8C%E7%BF%BB%E8%AF%91/"/>
+    
+    <category term="谷歌翻译无法访问" scheme="https://www.zhaojian.net/tags/%E8%B0%B7%E6%AD%8C%E7%BF%BB%E8%AF%91%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/"/>
+    
+    <category term="谷歌翻译无法使用" scheme="https://www.zhaojian.net/tags/%E8%B0%B7%E6%AD%8C%E7%BF%BB%E8%AF%91%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8/"/>
+    
+    <category term="brave无法翻译此网页" scheme="https://www.zhaojian.net/tags/brave%E6%97%A0%E6%B3%95%E7%BF%BB%E8%AF%91%E6%AD%A4%E7%BD%91%E9%A1%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IT课程 JavaScript基础 036_语法结构</title>
+    <link href="https://www.zhaojian.net/it-course-javascript-036/"/>
+    <id>https://www.zhaojian.net/it-course-javascript-036/</id>
+    <published>2024-03-13T09:30:00.000Z</published>
+    <updated>2024-03-13T09:31:49.613Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;语句&quot;&gt;&lt;a href=&quot;#语句&quot; class=&quot;headerlink&quot; title=&quot;语句&quot;&gt;&lt;/a&gt;语句&lt;/h3&gt;&lt;p&gt;JavaScript语句（Statements）是一组指令，用于执行特定的任务。&lt;/p&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://www.zhaojian.net/categories/learn/"/>
+    
+    <category term="JavaScript基础" scheme="https://www.zhaojian.net/categories/learn/JavaScript%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="IT课程" scheme="https://www.zhaojian.net/tags/IT%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="HTML课程" scheme="https://www.zhaojian.net/tags/HTML%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="CSS课程" scheme="https://www.zhaojian.net/tags/CSS%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="JavaScript课程" scheme="https://www.zhaojian.net/tags/JavaScript%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="Java课程" scheme="https://www.zhaojian.net/tags/Java%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="计算机系统与网络" scheme="https://www.zhaojian.net/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="JavaScript语法" scheme="https://www.zhaojian.net/tags/JavaScript%E8%AF%AD%E6%B3%95/"/>
+    
+    <category term="JavaScript结构" scheme="https://www.zhaojian.net/tags/JavaScript%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="语法结构" scheme="https://www.zhaojian.net/tags/%E8%AF%AD%E6%B3%95%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>鼠标维修升级版（更换配件方案），解决鼠标按键连点，鼠标单击变双击</title>
+    <link href="https://www.zhaojian.net/mouse-repair-record/"/>
+    <id>https://www.zhaojian.net/mouse-repair-record/</id>
+    <published>2024-02-27T03:42:00.000Z</published>
+    <updated>2024-02-27T03:41:53.207Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.zhaojian.net/logitech-mx-anywhere-2s-mouse-is-broken-single-click-becomes-double-click-solution/&quot;&gt;罗技MX Anywhere</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://www.zhaojian.net/categories/tech/"/>
+    
+    
+    <category term="罗技" scheme="https://www.zhaojian.net/tags/%E7%BD%97%E6%8A%80/"/>
+    
+    <category term="鼠标" scheme="https://www.zhaojian.net/tags/%E9%BC%A0%E6%A0%87/"/>
+    
+    <category term="鼠标左键连点" scheme="https://www.zhaojian.net/tags/%E9%BC%A0%E6%A0%87%E5%B7%A6%E9%94%AE%E8%BF%9E%E7%82%B9/"/>
+    
+    <category term="鼠标右键连点" scheme="https://www.zhaojian.net/tags/%E9%BC%A0%E6%A0%87%E5%8F%B3%E9%94%AE%E8%BF%9E%E7%82%B9/"/>
+    
+    <category term="鼠标单击变双击" scheme="https://www.zhaojian.net/tags/%E9%BC%A0%E6%A0%87%E5%8D%95%E5%87%BB%E5%8F%98%E5%8F%8C%E5%87%BB/"/>
+    
+    <category term="鼠标连点" scheme="https://www.zhaojian.net/tags/%E9%BC%A0%E6%A0%87%E8%BF%9E%E7%82%B9/"/>
+    
+    <category term="单击变双击" scheme="https://www.zhaojian.net/tags/%E5%8D%95%E5%87%BB%E5%8F%98%E5%8F%8C%E5%87%BB/"/>
+    
+    <category term="微动开关" scheme="https://www.zhaojian.net/tags/%E5%BE%AE%E5%8A%A8%E5%BC%80%E5%85%B3/"/>
+    
+    <category term="解决方案" scheme="https://www.zhaojian.net/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    
+    <category term="MX Anywhere 2S" scheme="https://www.zhaojian.net/tags/MX-Anywhere-2S/"/>
+    
+    <category term="Logitech" scheme="https://www.zhaojian.net/tags/Logitech/"/>
+    
+    <category term="小米鼠标" scheme="https://www.zhaojian.net/tags/%E5%B0%8F%E7%B1%B3%E9%BC%A0%E6%A0%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IT课程 JavaScript基础 035_HelloJavaScript</title>
+    <link href="https://www.zhaojian.net/it-course-javascript-035/"/>
+    <id>https://www.zhaojian.net/it-course-javascript-035/</id>
+    <published>2024-02-21T09:20:00.000Z</published>
+    <updated>2024-02-21T09:16:13.187Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;JavaScript 是一种高级动态面向对象的编程语言，也是世界上最流行的编程语言之一。它主要用于 Web 开发，但也广泛应用于服务器端开发、游戏开发、移动开发和其他领域。&lt;/p&gt;
+&lt;p&gt;JavaScript最初由Netscape公司的布兰登·艾克 （Brendan</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://www.zhaojian.net/categories/learn/"/>
+    
+    <category term="JavaScript基础" scheme="https://www.zhaojian.net/categories/learn/JavaScript%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="IT课程" scheme="https://www.zhaojian.net/tags/IT%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="HTML课程" scheme="https://www.zhaojian.net/tags/HTML%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="CSS课程" scheme="https://www.zhaojian.net/tags/CSS%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="JavaScript课程" scheme="https://www.zhaojian.net/tags/JavaScript%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="Java课程" scheme="https://www.zhaojian.net/tags/Java%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="计算机系统与网络" scheme="https://www.zhaojian.net/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="JavaScript基础" scheme="https://www.zhaojian.net/tags/JavaScript%E5%9F%BA%E7%A1%80/"/>
+    
+    <category term="JavaScript简介" scheme="https://www.zhaojian.net/tags/JavaScript%E7%AE%80%E4%BB%8B/"/>
+    
+    <category term="JavaScript使用" scheme="https://www.zhaojian.net/tags/JavaScript%E4%BD%BF%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IT课程 CSS基础 034_CSS框架与实践</title>
+    <link href="https://www.zhaojian.net/it-course-css-034/"/>
+    <id>https://www.zhaojian.net/it-course-css-034/</id>
+    <published>2024-02-19T11:03:00.000Z</published>
+    <updated>2024-02-19T11:03:44.882Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;CSS框架与实践&quot;&gt;&lt;a href=&quot;#CSS框架与实践&quot; class=&quot;headerlink&quot; title=&quot;CSS框架与实践&quot;&gt;&lt;/a&gt;CSS框架与实践&lt;/h3&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://www.zhaojian.net/categories/learn/"/>
+    
+    <category term="CSS基础" scheme="https://www.zhaojian.net/categories/learn/css/"/>
+    
+    
+    <category term="IT课程" scheme="https://www.zhaojian.net/tags/IT%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="HTML课程" scheme="https://www.zhaojian.net/tags/HTML%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="CSS课程" scheme="https://www.zhaojian.net/tags/CSS%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="JavaScript课程" scheme="https://www.zhaojian.net/tags/JavaScript%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="Java课程" scheme="https://www.zhaojian.net/tags/Java%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="计算机系统与网络" scheme="https://www.zhaojian.net/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="css布局" scheme="https://www.zhaojian.net/tags/css%E5%B8%83%E5%B1%80/"/>
+    
+    <category term="css框架" scheme="https://www.zhaojian.net/tags/css%E6%A1%86%E6%9E%B6/"/>
+    
+    <category term="css组件" scheme="https://www.zhaojian.net/tags/css%E7%BB%84%E4%BB%B6/"/>
+    
+    <category term="css实践" scheme="https://www.zhaojian.net/tags/css%E5%AE%9E%E8%B7%B5/"/>
+    
+  </entry>
   
   <entry>
     <title>IT课程 CSS基础 033_响应式布局</title>
@@ -703,224 +938,6 @@
     <category term="css颜色" scheme="https://www.zhaojian.net/tags/css%E9%A2%9C%E8%89%B2/"/>
     
     <category term="css颜色值" scheme="https://www.zhaojian.net/tags/css%E9%A2%9C%E8%89%B2%E5%80%BC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IT课程 CSS基础 020_选择器</title>
-    <link href="https://www.zhaojian.net/it-course-css-020/"/>
-    <id>https://www.zhaojian.net/it-course-css-020/</id>
-    <published>2024-01-26T14:30:00.000Z</published>
-    <updated>2024-01-29T23:30:56.549Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;选择器&quot;&gt;&lt;a href=&quot;#选择器&quot; class=&quot;headerlink&quot; title=&quot;选择器&quot;&gt;&lt;/a&gt;选择器&lt;/h3&gt;&lt;p&gt;选择器用于选择文档中需要样式化的元素，通过不同的选择模式，告诉浏览器哪些元素应用哪些样式。&lt;/p&gt;
-&lt;h5</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="https://www.zhaojian.net/categories/learn/"/>
-    
-    <category term="CSS基础" scheme="https://www.zhaojian.net/categories/learn/css/"/>
-    
-    
-    <category term="IT课程" scheme="https://www.zhaojian.net/tags/IT%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="HTML课程" scheme="https://www.zhaojian.net/tags/HTML%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="CSS课程" scheme="https://www.zhaojian.net/tags/CSS%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="JavaScript课程" scheme="https://www.zhaojian.net/tags/JavaScript%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="Java课程" scheme="https://www.zhaojian.net/tags/Java%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="计算机系统与网络" scheme="https://www.zhaojian.net/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%BD%91%E7%BB%9C/"/>
-    
-    <category term="hello css" scheme="https://www.zhaojian.net/tags/hello-css/"/>
-    
-    <category term="css基础" scheme="https://www.zhaojian.net/tags/css%E5%9F%BA%E7%A1%80/"/>
-    
-    <category term="css选择器" scheme="https://www.zhaojian.net/tags/css%E9%80%89%E6%8B%A9%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IT课程 CSS基础 019_HelloCSS</title>
-    <link href="https://www.zhaojian.net/it-course-css-019/"/>
-    <id>https://www.zhaojian.net/it-course-css-019/</id>
-    <published>2024-01-26T14:00:00.000Z</published>
-    <updated>2024-01-29T23:30:50.509Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;什么是-CSS-？&quot;&gt;&lt;a href=&quot;#什么是-CSS-？&quot; class=&quot;headerlink&quot; title=&quot;什么是 CSS ？&quot;&gt;&lt;/a&gt;什么是 CSS ？&lt;/h3&gt;&lt;p&gt;CSS（Cascading Style Sheets，层叠样式表）和 HTML</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="https://www.zhaojian.net/categories/learn/"/>
-    
-    <category term="CSS基础" scheme="https://www.zhaojian.net/categories/learn/css/"/>
-    
-    
-    <category term="IT课程" scheme="https://www.zhaojian.net/tags/IT%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="HTML课程" scheme="https://www.zhaojian.net/tags/HTML%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="CSS课程" scheme="https://www.zhaojian.net/tags/CSS%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="JavaScript课程" scheme="https://www.zhaojian.net/tags/JavaScript%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="Java课程" scheme="https://www.zhaojian.net/tags/Java%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="计算机系统与网络" scheme="https://www.zhaojian.net/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%BD%91%E7%BB%9C/"/>
-    
-    <category term="hello css" scheme="https://www.zhaojian.net/tags/hello-css/"/>
-    
-    <category term="css基础" scheme="https://www.zhaojian.net/tags/css%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>免费申请国外0月租电话卡接码，英国Giffgaff的SIM卡申请及激活方法</title>
-    <link href="https://www.zhaojian.net/free-application-and-activation-of-uk-giffgaff-sim-card/"/>
-    <id>https://www.zhaojian.net/free-application-and-activation-of-uk-giffgaff-sim-card/</id>
-    <published>2024-01-25T10:00:00.000Z</published>
-    <updated>2024-01-25T10:12:44.583Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;因为手机厂商的安全、防骚扰不断提升，现在国内的手机，几乎收不到垃圾短信了，但比垃圾短信更恶心的公益短信来了，有时候一天好几条，双卡再翻倍，无法取消，让人崩溃、无语。&lt;/p&gt;
-&lt;p&gt;而那些非常重要的验证码，却被屏蔽无法接收，实属无奈，决定申请一张可以实现0月租的Giffgaf</summary>
-        
-      
-    
-    
-    
-    <category term="技术" scheme="https://www.zhaojian.net/categories/tech/"/>
-    
-    
-    <category term="免费申请电话卡" scheme="https://www.zhaojian.net/tags/%E5%85%8D%E8%B4%B9%E7%94%B3%E8%AF%B7%E7%94%B5%E8%AF%9D%E5%8D%A1/"/>
-    
-    <category term="英国电话卡" scheme="https://www.zhaojian.net/tags/%E8%8B%B1%E5%9B%BD%E7%94%B5%E8%AF%9D%E5%8D%A1/"/>
-    
-    <category term="国外电话卡" scheme="https://www.zhaojian.net/tags/%E5%9B%BD%E5%A4%96%E7%94%B5%E8%AF%9D%E5%8D%A1/"/>
-    
-    <category term="Giffgaff" scheme="https://www.zhaojian.net/tags/Giffgaff/"/>
-    
-    <category term="SIM卡" scheme="https://www.zhaojian.net/tags/SIM%E5%8D%A1/"/>
-    
-    <category term="接码" scheme="https://www.zhaojian.net/tags/%E6%8E%A5%E7%A0%81/"/>
-    
-    <category term="免费接码" scheme="https://www.zhaojian.net/tags/%E5%85%8D%E8%B4%B9%E6%8E%A5%E7%A0%81/"/>
-    
-    <category term="接码电话卡" scheme="https://www.zhaojian.net/tags/%E6%8E%A5%E7%A0%81%E7%94%B5%E8%AF%9D%E5%8D%A1/"/>
-    
-    <category term="国外sim卡" scheme="https://www.zhaojian.net/tags/%E5%9B%BD%E5%A4%96sim%E5%8D%A1/"/>
-    
-    <category term="无月租电话卡" scheme="https://www.zhaojian.net/tags/%E6%97%A0%E6%9C%88%E7%A7%9F%E7%94%B5%E8%AF%9D%E5%8D%A1/"/>
-    
-    <category term="0月租电话卡" scheme="https://www.zhaojian.net/tags/0%E6%9C%88%E7%A7%9F%E7%94%B5%E8%AF%9D%E5%8D%A1/"/>
-    
-    <category term="无实名制电话卡" scheme="https://www.zhaojian.net/tags/%E6%97%A0%E5%AE%9E%E5%90%8D%E5%88%B6%E7%94%B5%E8%AF%9D%E5%8D%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IT课程 HTML基础 018_HTML实践</title>
-    <link href="https://www.zhaojian.net/it-course-html-018/"/>
-    <id>https://www.zhaojian.net/it-course-html-018/</id>
-    <published>2024-01-25T09:30:00.000Z</published>
-    <updated>2024-01-26T08:01:33.908Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;HTML实践部分主要了解HTML的实践应用，包括HTML的常用标签、HTML的常用属性、HTML的常用事件等。&lt;br&gt;网站在不同时期的设计风格，不同时期使用的技术、开发工具、框架等。&lt;/p&gt;
-&lt;p&gt;使用HTML基础部分所学内容，结合HTML的实践应用，完成一个完整的网站。&lt;</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="https://www.zhaojian.net/categories/learn/"/>
-    
-    <category term="HTML基础" scheme="https://www.zhaojian.net/categories/learn/html/"/>
-    
-    
-    <category term="IT课程" scheme="https://www.zhaojian.net/tags/IT%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="HTML课程" scheme="https://www.zhaojian.net/tags/HTML%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="CSS课程" scheme="https://www.zhaojian.net/tags/CSS%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="JavaScript课程" scheme="https://www.zhaojian.net/tags/JavaScript%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="Java课程" scheme="https://www.zhaojian.net/tags/Java%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="计算机系统与网络" scheme="https://www.zhaojian.net/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%BD%91%E7%BB%9C/"/>
-    
-    <category term="HTML实践" scheme="https://www.zhaojian.net/tags/HTML%E5%AE%9E%E8%B7%B5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IT课程 HTML基础 017_SEO优化</title>
-    <link href="https://www.zhaojian.net/it-course-html-017/"/>
-    <id>https://www.zhaojian.net/it-course-html-017/</id>
-    <published>2024-01-24T14:30:00.000Z</published>
-    <updated>2024-01-26T08:01:29.152Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;SEO&quot;&gt;&lt;a href=&quot;#SEO&quot; class=&quot;headerlink&quot; title=&quot;SEO&quot;&gt;&lt;/a&gt;SEO&lt;/h3&gt;&lt;p&gt;SEO 全称 Search Engine</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="https://www.zhaojian.net/categories/learn/"/>
-    
-    <category term="HTML基础" scheme="https://www.zhaojian.net/categories/learn/html/"/>
-    
-    
-    <category term="IT课程" scheme="https://www.zhaojian.net/tags/IT%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="HTML课程" scheme="https://www.zhaojian.net/tags/HTML%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="CSS课程" scheme="https://www.zhaojian.net/tags/CSS%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="JavaScript课程" scheme="https://www.zhaojian.net/tags/JavaScript%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="Java课程" scheme="https://www.zhaojian.net/tags/Java%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="计算机系统与网络" scheme="https://www.zhaojian.net/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%BD%91%E7%BB%9C/"/>
-    
-    <category term="SEO" scheme="https://www.zhaojian.net/tags/SEO/"/>
-    
-    <category term="SEO优化" scheme="https://www.zhaojian.net/tags/SEO%E4%BC%98%E5%8C%96/"/>
-    
-    <category term="keyword" scheme="https://www.zhaojian.net/tags/keyword/"/>
-    
-    <category term="description" scheme="https://www.zhaojian.net/tags/description/"/>
     
   </entry>
   
