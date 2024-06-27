@@ -4,6 +4,65 @@
   
     
     <entry>
+      <title>免费无限制的全功能域名邮箱实现方案，cloudflare 电子邮件路由 Catch-all 功能收邮件+zoho企业邮箱发邮件</title>
+      <link href="/free-domain-mail-solution-cloudflare-email-routing-catch-all-zoho-mail/"/>
+      <url>/free-domain-mail-solution-cloudflare-email-routing-catch-all-zoho-mail/</url>
+      
+        <content type="html"><![CDATA[<p>免费的域名邮箱或企业邮局不多了，仅存的几家功能也有限，刀法很精准，想解决痛点问题都要付费开通，一直使用 cloudflare 电子邮件路由，通过设置 Catch-all 地址 实现泛邮箱功能，可以让任意一个邮箱或不存在的邮箱地址收信并转发到指定邮箱接收。</p><p>但此方案只解决了收信问题，发信无法实现，虽然也可以通过Google或outlook实现代发，但实际效果跟常见的垃圾邮件伪造地址发信是一样的，大部分都会进垃圾箱或被拒收。</p><p>于是想到了一个比较奇葩的方案，可以实现自由收信、发信，通过设置MX的优先级，实现cloudflare优先收信，zoho不收信只发信，这样提供发信成功率，我测试的100%成功发信。</p><p>cloudflare DNS MX 设置如下：</p><p><img src="/uploads/2024/06/msedge_0627019.png" alt="图1"></p><p>cloudflare Catch-all设置如下：</p><p><img src="/uploads/2024/06/msedge_0627021.png" alt="图1"></p><p>zoho企业邮箱 DNS MX 设置如下：</p><p><img src="/uploads/2024/06/msedge_0627022.png" alt="图1"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 域名邮箱 </tag>
+            
+            <tag> 企业邮箱 </tag>
+            
+            <tag> 企业邮局 </tag>
+            
+            <tag> 免费邮箱 </tag>
+            
+            <tag> 免费邮局 </tag>
+            
+            <tag> 免费企业邮箱 </tag>
+            
+            <tag> 免费企业邮局 </tag>
+            
+            <tag> 免费域名邮箱 </tag>
+            
+            <tag> 免费域名邮局 </tag>
+            
+            <tag> cloudflare </tag>
+            
+            <tag> cloudflare电子邮件 </tag>
+            
+            <tag> cloudflare电子邮件路由 </tag>
+            
+            <tag> cloudflare电子邮件路由catch-all </tag>
+            
+            <tag> zoho </tag>
+            
+            <tag> zoho邮箱 </tag>
+            
+            <tag> zoho邮局 </tag>
+            
+            <tag> zoho企业邮箱 </tag>
+            
+            <tag> zoho企业邮局 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>解决Brave浏览器翻译无法使用 无法翻译此网页 无法翻译整页内容 无法使用翻译成中文 翻译无法访问</title>
       <link href="/brave-browser-translation-cannot-be-used/"/>
       <url>/brave-browser-translation-cannot-be-used/</url>

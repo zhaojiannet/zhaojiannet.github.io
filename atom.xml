@@ -1,20 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>赵健的技术笔记 - 赵健(zhaoJian.Net)</title>
+  <title>赵健的技术笔记 - 赵健(zhaoJian)</title>
   <icon>https://www.zhaojian.net/icon.png</icon>
-  <subtitle>技术如旅途，学习似人生，保持热爱，勇往直前</subtitle>
+  <subtitle>保持热爱，勇往直前</subtitle>
   <link href="https://www.zhaojian.net/atom.xml" rel="self"/>
   
   <link href="https://www.zhaojian.net/"/>
-  <updated>2024-03-15T14:37:33.758Z</updated>
+  <updated>2024-06-27T00:57:25.687Z</updated>
   <id>https://www.zhaojian.net/</id>
   
   <author>
-    <name>赵健(zhaoJian.Net)</name>
+    <name>赵健(zhaoJian)</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>免费无限制的全功能域名邮箱实现方案，cloudflare 电子邮件路由 Catch-all 功能收邮件+zoho企业邮箱发邮件</title>
+    <link href="https://www.zhaojian.net/free-domain-mail-solution-cloudflare-email-routing-catch-all-zoho-mail/"/>
+    <id>https://www.zhaojian.net/free-domain-mail-solution-cloudflare-email-routing-catch-all-zoho-mail/</id>
+    <published>2024-06-27T01:56:00.000Z</published>
+    <updated>2024-06-27T00:57:25.687Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;免费的域名邮箱或企业邮局不多了，仅存的几家功能也有限，刀法很精准，想解决痛点问题都要付费开通，一直使用 cloudflare 电子邮件路由，通过设置 Catch-all 地址</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://www.zhaojian.net/categories/tech/"/>
+    
+    
+    <category term="域名邮箱" scheme="https://www.zhaojian.net/tags/%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/"/>
+    
+    <category term="企业邮箱" scheme="https://www.zhaojian.net/tags/%E4%BC%81%E4%B8%9A%E9%82%AE%E7%AE%B1/"/>
+    
+    <category term="企业邮局" scheme="https://www.zhaojian.net/tags/%E4%BC%81%E4%B8%9A%E9%82%AE%E5%B1%80/"/>
+    
+    <category term="免费邮箱" scheme="https://www.zhaojian.net/tags/%E5%85%8D%E8%B4%B9%E9%82%AE%E7%AE%B1/"/>
+    
+    <category term="免费邮局" scheme="https://www.zhaojian.net/tags/%E5%85%8D%E8%B4%B9%E9%82%AE%E5%B1%80/"/>
+    
+    <category term="免费企业邮箱" scheme="https://www.zhaojian.net/tags/%E5%85%8D%E8%B4%B9%E4%BC%81%E4%B8%9A%E9%82%AE%E7%AE%B1/"/>
+    
+    <category term="免费企业邮局" scheme="https://www.zhaojian.net/tags/%E5%85%8D%E8%B4%B9%E4%BC%81%E4%B8%9A%E9%82%AE%E5%B1%80/"/>
+    
+    <category term="免费域名邮箱" scheme="https://www.zhaojian.net/tags/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/"/>
+    
+    <category term="免费域名邮局" scheme="https://www.zhaojian.net/tags/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E9%82%AE%E5%B1%80/"/>
+    
+    <category term="cloudflare" scheme="https://www.zhaojian.net/tags/cloudflare/"/>
+    
+    <category term="cloudflare电子邮件" scheme="https://www.zhaojian.net/tags/cloudflare%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6/"/>
+    
+    <category term="cloudflare电子邮件路由" scheme="https://www.zhaojian.net/tags/cloudflare%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E8%B7%AF%E7%94%B1/"/>
+    
+    <category term="cloudflare电子邮件路由catch-all" scheme="https://www.zhaojian.net/tags/cloudflare%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E8%B7%AF%E7%94%B1catch-all/"/>
+    
+    <category term="zoho" scheme="https://www.zhaojian.net/tags/zoho/"/>
+    
+    <category term="zoho邮箱" scheme="https://www.zhaojian.net/tags/zoho%E9%82%AE%E7%AE%B1/"/>
+    
+    <category term="zoho邮局" scheme="https://www.zhaojian.net/tags/zoho%E9%82%AE%E5%B1%80/"/>
+    
+    <category term="zoho企业邮箱" scheme="https://www.zhaojian.net/tags/zoho%E4%BC%81%E4%B8%9A%E9%82%AE%E7%AE%B1/"/>
+    
+    <category term="zoho企业邮局" scheme="https://www.zhaojian.net/tags/zoho%E4%BC%81%E4%B8%9A%E9%82%AE%E5%B1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>解决Brave浏览器翻译无法使用 无法翻译此网页 无法翻译整页内容 无法使用翻译成中文 翻译无法访问</title>
@@ -887,57 +946,6 @@
     <category term="css字体" scheme="https://www.zhaojian.net/tags/css%E5%AD%97%E4%BD%93/"/>
     
     <category term="css链接" scheme="https://www.zhaojian.net/tags/css%E9%93%BE%E6%8E%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IT课程 CSS基础 021_值类型、单位、大小、颜色</title>
-    <link href="https://www.zhaojian.net/it-course-css-021/"/>
-    <id>https://www.zhaojian.net/it-course-css-021/</id>
-    <published>2024-01-27T14:00:00.000Z</published>
-    <updated>2024-01-29T23:34:32.799Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;数值类型&quot;&gt;&lt;a href=&quot;#数值类型&quot; class=&quot;headerlink&quot; title=&quot;数值类型&quot;&gt;&lt;/a&gt;数值类型&lt;/h3&gt;&lt;p&gt; CSS</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="https://www.zhaojian.net/categories/learn/"/>
-    
-    <category term="CSS基础" scheme="https://www.zhaojian.net/categories/learn/css/"/>
-    
-    
-    <category term="IT课程" scheme="https://www.zhaojian.net/tags/IT%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="HTML课程" scheme="https://www.zhaojian.net/tags/HTML%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="CSS课程" scheme="https://www.zhaojian.net/tags/CSS%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="JavaScript课程" scheme="https://www.zhaojian.net/tags/JavaScript%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="Java课程" scheme="https://www.zhaojian.net/tags/Java%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="计算机系统与网络" scheme="https://www.zhaojian.net/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%BD%91%E7%BB%9C/"/>
-    
-    <category term="hello css" scheme="https://www.zhaojian.net/tags/hello-css/"/>
-    
-    <category term="css基础" scheme="https://www.zhaojian.net/tags/css%E5%9F%BA%E7%A1%80/"/>
-    
-    <category term="css单位" scheme="https://www.zhaojian.net/tags/css%E5%8D%95%E4%BD%8D/"/>
-    
-    <category term="css值类型" scheme="https://www.zhaojian.net/tags/css%E5%80%BC%E7%B1%BB%E5%9E%8B/"/>
-    
-    <category term="css大小" scheme="https://www.zhaojian.net/tags/css%E5%A4%A7%E5%B0%8F/"/>
-    
-    <category term="css颜色" scheme="https://www.zhaojian.net/tags/css%E9%A2%9C%E8%89%B2/"/>
-    
-    <category term="css颜色值" scheme="https://www.zhaojian.net/tags/css%E9%A2%9C%E8%89%B2%E5%80%BC/"/>
     
   </entry>
   
