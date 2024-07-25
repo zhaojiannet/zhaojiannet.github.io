@@ -4,6 +4,49 @@
   
     
     <entry>
+      <title>IT课程 JavaScript基础 037_字面量、变量、常量</title>
+      <link href="/it-course-javascript-037/"/>
+      <url>/it-course-javascript-037/</url>
+      
+        <content type="html"><![CDATA[<h3 id="字面量"><a href="#字面量" class="headerlink" title="字面量"></a>字面量</h3><p>字面量是直接出现在代码中的值，例如数字、字符串、布尔值等。</p><ul><li><strong>数字字面量：</strong> 如 <code>5</code>, <code>3.14</code>。</li><li><strong>字符串字面量：</strong> 如 <code>&#39;Hello, World!&#39;</code>, <code>&quot;JavaScript&quot;</code>。</li><li><strong>布尔字面量：</strong> <code>true</code> 和 <code>false</code>。</li><li><strong>对象字面量：</strong> 如 <code>&#123; key: &#39;value&#39;, age: 25 &#125;</code>。</li><li><strong>数组字面量：</strong> 如 <code>[1, 2, 3, 4]</code>。</li></ul><p>示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 数字字面量</span></span><br><span class="line"><span class="keyword">var</span> age = <span class="number">18</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 字符串字面量</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">&quot;赵健&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 布尔字面量</span></span><br><span class="line"><span class="keyword">var</span> isStudent = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数组字面量</span></span><br><span class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 对象字面量</span></span><br><span class="line"><span class="keyword">var</span> person = &#123;<span class="attr">name</span>: <span class="string">&quot;赵健&quot;</span>, <span class="attr">age</span>: <span class="number">18</span>&#125;;</span><br></pre></td></tr></table></figure><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>变量是用来存储数据的容器，可以用来“存储”字面量，变量中存储的字面量可以随意修改，通过变量可以对字面量进行描述，并且变量比较方便修改。变量可以存储任何类型的值（实际上变量中并不存储任何值，而是存储值的内存地址），包括字面量、其他变量的返回值等。使用 var、let 关键字声明变量。</p><ul><li><code>var</code> 关键字声明的变量是全局变量或函数作用域内的变量，可以重复声明 <code>var</code> 变量。</li><li><code>let</code> 关键字声明的变量是块作用域内的变量，不能重复声明 <code>let</code> 变量。</li></ul><p>示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 var 声明（定义）变量</span></span><br><span class="line"><span class="keyword">var</span> age = <span class="number">18</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 let 声明（定义）变量</span></span><br><span class="line"><span class="keyword">let</span> name = <span class="string">&quot;赵健&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 先声明，后赋值</span></span><br><span class="line"><span class="keyword">let</span> name;</span><br><span class="line">name = <span class="string">&quot;赵健&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//一行（次）声明多个变量</span></span><br><span class="line"><span class="keyword">let</span> age = <span class="number">18</span>, name = <span class="string">&quot;赵健&quot;</span>;</span><br></pre></td></tr></table></figure><h5 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h5><p>变量名是标识符的一种形式，变量名是用来标识存储数据的内存位置的名称。<br>标识符是用于命名变量、函数、类等的符号或名称。</p><p><strong>命名规则</strong></p><ul><li>变量名只能使用字母（含非英文字母）、数字、下划线 (<code>_</code>)、美元符号 (<code>$</code>) 。</li><li>变量名首字母不能是数字。</li><li>变量名不能包含空格或其他特殊符号。</li><li>变量名不能与 JavaScript 关键字相同。</li></ul><p><strong>命名规范</strong></p><ul><li>驼峰命名法：第一个单词首字母小写，其他单词首字母大写。例如：<code>userName</code>、<code>firstName</code></li><li>帕斯卡（大驼峰）命名法：所有单词首字母大写。例如：<code>UserName</code>、<code>FirstName</code></li><li>下划线命名法：单词之间用下划线连接。例如：<code>user_name</code>、<code>first_name</code></li></ul><p>合规的变量名示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> userName;</span><br><span class="line"><span class="keyword">let</span> hello123;</span><br><span class="line"><span class="keyword">let</span> age;</span><br><span class="line"><span class="keyword">let</span> $width;</span><br><span class="line"><span class="keyword">let</span> _height;</span><br><span class="line"><span class="keyword">let</span> 名字;</span><br></pre></td></tr></table></figure><p>不合规的变量名示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> 123abc; <span class="comment">// 以数字开头</span></span><br><span class="line"><span class="keyword">let</span> user name; <span class="comment">// 包含空格</span></span><br><span class="line"><span class="keyword">let</span> $#; <span class="comment">// 包含特殊字符</span></span><br><span class="line"><span class="keyword">let</span> <span class="keyword">function</span>; <span class="comment">// 与 JavaScript 关键字相同</span></span><br></pre></td></tr></table></figure><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>常量是不能（或不想）被修改的值，常量可以使用 <code>const</code> 关键字声明，常量只能赋值一次，重复赋值会报错。推荐使用大写字母和下划线来命名这些常量。</p><p>示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 const 声明（定义）常量</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">PI</span> = <span class="number">3.14</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">COLOR_RED</span> = <span class="string">&quot;#F00&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 尝试修改常量</span></span><br><span class="line"><span class="variable constant_">PI</span> = <span class="number">3.15</span>; <span class="comment">// Uncaught TypeError: Assignment to constant variable.</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> JavaScript基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> IT课程 </tag>
+            
+            <tag> HTML课程 </tag>
+            
+            <tag> CSS课程 </tag>
+            
+            <tag> JavaScript课程 </tag>
+            
+            <tag> Java课程 </tag>
+            
+            <tag> 计算机系统与网络 </tag>
+            
+            <tag> JavaScript字面量 </tag>
+            
+            <tag> JavaScript变量 </tag>
+            
+            <tag> JavaScript常量 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>VMware 官网免登陆下载地址 VMware Workstation Pro 下载地址 VMware Workstation Player 下载链接</title>
       <link href="/vmware-workstation-direct-download-address/"/>
       <url>/vmware-workstation-direct-download-address/</url>
