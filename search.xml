@@ -4,6 +4,47 @@
   
     
     <entry>
+      <title>IT课程 JavaScript基础 039_类型转换</title>
+      <link href="/it-course-javascript-039/"/>
+      <url>/it-course-javascript-039/</url>
+      
+        <content type="html"><![CDATA[<p>类型转换是将一个数据类型转换为另一个数据类型的过程。类型转换可以是隐式的（由JavaScript引擎自动完成）或显式的（通过编码进行手动转换）。</p><h3 id="隐式类型转换（类型强制转换）"><a href="#隐式类型转换（类型强制转换）" class="headerlink" title="隐式类型转换（类型强制转换）"></a>隐式类型转换（类型强制转换）</h3><p>在一些操作中，JavaScript会自动进行类型转换，以便进行运算或比较。</p><p>示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">5</span> + <span class="string">&quot;5&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num);  <span class="comment">// 输出 &quot;55&quot;，数字和字符串相加，数字被转换为字符串</span></span><br></pre></td></tr></table></figure><h3 id="显式类型转换"><a href="#显式类型转换" class="headerlink" title="显式类型转换"></a>显式类型转换</h3><h5 id="字符串转换"><a href="#字符串转换" class="headerlink" title="字符串转换"></a>字符串转换</h5><p><code>String()</code> 函数： 将其他类型转换为字符串。</p><p>示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">let</span> str1 = <span class="title class_">String</span>(num);  <span class="comment">// String() 函数，可处理 `null` 或 `undefined`</span></span><br><span class="line"><span class="keyword">let</span> str2 = num.<span class="title function_">toString</span>(); <span class="comment">// toString() 方法，无法处理 `null` 或 `undefined`</span></span><br><span class="line"><span class="keyword">let</span> str3 = num + <span class="string">&quot;&quot;</span>; <span class="comment">// 通过与空字符串相加，得到隐式类型转换的字符串</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str1);  <span class="comment">// 输出 &quot;123&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str2);  <span class="comment">// 输出 &quot;123&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str3);  <span class="comment">// 输出 &quot;123&quot;</span></span><br></pre></td></tr></table></figure><h5 id="数字转换"><a href="#数字转换" class="headerlink" title="数字转换"></a>数字转换</h5><p><code>Number()</code> 函数： 将其他类型转换为数字。</p><p>示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str1 = <span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> str2 = <span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> str3 = <span class="string">&quot;aaa&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> num1 = <span class="title class_">Number</span>(str1);</span><br><span class="line"><span class="keyword">let</span> num2 = <span class="title class_">Number</span>(str2);</span><br><span class="line"><span class="keyword">let</span> num3 = <span class="title class_">Number</span>(str3);</span><br><span class="line"><span class="keyword">let</span> num4 = +str1;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num1);  <span class="comment">// 输出 123</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num2);  <span class="comment">// 输出 0</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num3);  <span class="comment">// 输出 NaN</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num3);  <span class="comment">// 输出 123，如果使用-号，输出-123</span></span><br></pre></td></tr></table></figure><p>注意：如果字符串不能被解析为有效的数字，结果将是 NaN（Not a Number）。</p><p><code>parseInt()</code> 和 <code>parseFloat()</code> 函数： 将 <strong>字符串</strong> 转换为整数或浮点数。</p><p>示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&quot;42&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> num = <span class="built_in">parseInt</span>(str);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num);  <span class="comment">// 输出 42</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&quot;3.14&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> num = <span class="built_in">parseFloat</span>(str);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num);  <span class="comment">// 输出 3.14</span></span><br></pre></td></tr></table></figure><h5 id="布尔值转换"><a href="#布尔值转换" class="headerlink" title="布尔值转换"></a>布尔值转换</h5><p><code>Boolean()</code> 函数： 将其他类型转换为布尔值。</p><p>示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> value = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> bool1 = <span class="title class_">Boolean</span>(value);</span><br><span class="line"><span class="keyword">let</span> bool2 = !value;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(bool1);  <span class="comment">// 输出 true，非空字符串转换为 true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(bool2);  <span class="comment">// 输出 true，使用逻辑非对非布尔值隐式转换（!值为false，再使用!!取正）</span></span><br></pre></td></tr></table></figure><p>注意：0、NaN、null、undefined、空字符串等（空的、没有的、错误的）会转换为 false，其它值、对象会转换为 true。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> JavaScript基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> IT课程 </tag>
+            
+            <tag> HTML课程 </tag>
+            
+            <tag> CSS课程 </tag>
+            
+            <tag> JavaScript课程 </tag>
+            
+            <tag> Java课程 </tag>
+            
+            <tag> 计算机系统与网络 </tag>
+            
+            <tag> JavaScript数据类型 </tag>
+            
+            <tag> JavaScript 类型转换 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>IT课程 JavaScript基础 038_数据类型</title>
       <link href="/it-course-javascript-038/"/>
       <url>/it-course-javascript-038/</url>
