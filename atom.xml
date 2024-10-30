@@ -6,7 +6,7 @@
   <link href="https://www.zhaojian.net/atom.xml" rel="self"/>
   
   <link href="https://www.zhaojian.net/"/>
-  <updated>2024-09-23T07:55:20.748Z</updated>
+  <updated>2024-10-30T01:53:31.282Z</updated>
   <id>https://www.zhaojian.net/</id>
   
   <author>
@@ -17,11 +17,51 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>IT课程 JavaScript基础 040_运算符</title>
+    <link href="https://www.zhaojian.net/it-course-javascript-040/"/>
+    <id>https://www.zhaojian.net/it-course-javascript-040/</id>
+    <published>2024-10-30T03:00:00.000Z</published>
+    <updated>2024-10-30T01:53:31.282Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;JavaScript 运算符用于对数学运算、比较、逻辑运算等操作并返回结果。&lt;/p&gt;
+&lt;h3 id=&quot;算术运算符&quot;&gt;&lt;a href=&quot;#算术运算符&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://www.zhaojian.net/categories/learn/"/>
+    
+    <category term="JavaScript基础" scheme="https://www.zhaojian.net/categories/learn/JavaScript%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="IT课程" scheme="https://www.zhaojian.net/tags/IT%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="HTML课程" scheme="https://www.zhaojian.net/tags/HTML%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="CSS课程" scheme="https://www.zhaojian.net/tags/CSS%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="JavaScript课程" scheme="https://www.zhaojian.net/tags/JavaScript%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="Java课程" scheme="https://www.zhaojian.net/tags/Java%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="计算机系统与网络" scheme="https://www.zhaojian.net/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="JavaScript运算符" scheme="https://www.zhaojian.net/tags/JavaScript%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>IT课程 JavaScript基础 039_类型转换</title>
     <link href="https://www.zhaojian.net/it-course-javascript-039/"/>
     <id>https://www.zhaojian.net/it-course-javascript-039/</id>
     <published>2024-09-23T09:00:00.000Z</published>
-    <updated>2024-09-23T07:55:20.748Z</updated>
+    <updated>2024-10-30T01:35:21.324Z</updated>
     
     
       
@@ -63,7 +103,7 @@
     <link href="https://www.zhaojian.net/it-course-javascript-038/"/>
     <id>https://www.zhaojian.net/it-course-javascript-038/</id>
     <published>2024-08-22T01:25:00.000Z</published>
-    <updated>2024-08-22T00:23:53.325Z</updated>
+    <updated>2024-10-30T01:35:21.320Z</updated>
     
     
       
@@ -117,7 +157,7 @@
     <link href="https://www.zhaojian.net/it-course-javascript-037/"/>
     <id>https://www.zhaojian.net/it-course-javascript-037/</id>
     <published>2024-07-25T01:40:00.000Z</published>
-    <updated>2024-07-25T00:42:21.181Z</updated>
+    <updated>2024-10-30T01:35:21.312Z</updated>
     
     
       
@@ -160,7 +200,7 @@
     <link href="https://www.zhaojian.net/vmware-workstation-direct-download-address/"/>
     <id>https://www.zhaojian.net/vmware-workstation-direct-download-address/</id>
     <published>2024-07-07T03:00:00.000Z</published>
-    <updated>2024-07-04T01:55:55.878Z</updated>
+    <updated>2024-10-30T01:35:21.532Z</updated>
     
     
       
@@ -199,7 +239,7 @@
     <link href="https://www.zhaojian.net/free-domain-mail-solution-cloudflare-email-routing-catch-all-zoho-mail/"/>
     <id>https://www.zhaojian.net/free-domain-mail-solution-cloudflare-email-routing-catch-all-zoho-mail/</id>
     <published>2024-06-27T01:56:00.000Z</published>
-    <updated>2024-06-27T00:57:25.687Z</updated>
+    <updated>2024-10-30T01:35:21.124Z</updated>
     
     
       
@@ -258,7 +298,7 @@
     <link href="https://www.zhaojian.net/brave-browser-translation-cannot-be-used/"/>
     <id>https://www.zhaojian.net/brave-browser-translation-cannot-be-used/</id>
     <published>2024-03-14T12:56:00.000Z</published>
-    <updated>2024-03-15T14:37:33.758Z</updated>
+    <updated>2024-10-30T01:35:21.036Z</updated>
     
     
       
@@ -312,7 +352,7 @@
     <link href="https://www.zhaojian.net/it-course-javascript-036/"/>
     <id>https://www.zhaojian.net/it-course-javascript-036/</id>
     <published>2024-03-13T09:30:00.000Z</published>
-    <updated>2024-03-13T09:31:49.613Z</updated>
+    <updated>2024-10-30T01:35:21.308Z</updated>
     
     
       
@@ -357,7 +397,7 @@
     <link href="https://www.zhaojian.net/mouse-repair-record/"/>
     <id>https://www.zhaojian.net/mouse-repair-record/</id>
     <published>2024-02-27T03:42:00.000Z</published>
-    <updated>2024-02-27T03:41:53.207Z</updated>
+    <updated>2024-10-30T01:35:21.400Z</updated>
     
     
       
@@ -404,7 +444,7 @@
     <link href="https://www.zhaojian.net/it-course-javascript-035/"/>
     <id>https://www.zhaojian.net/it-course-javascript-035/</id>
     <published>2024-02-21T09:20:00.000Z</published>
-    <updated>2024-02-21T09:16:13.187Z</updated>
+    <updated>2024-10-30T01:35:21.308Z</updated>
     
     
       
@@ -448,7 +488,7 @@
     <link href="https://www.zhaojian.net/it-course-css-034/"/>
     <id>https://www.zhaojian.net/it-course-css-034/</id>
     <published>2024-02-19T11:03:00.000Z</published>
-    <updated>2024-02-19T11:03:44.882Z</updated>
+    <updated>2024-10-30T01:35:21.256Z</updated>
     
     
       
@@ -493,7 +533,7 @@
     <link href="https://www.zhaojian.net/it-course-css-033/"/>
     <id>https://www.zhaojian.net/it-course-css-033/</id>
     <published>2024-02-18T14:10:00.000Z</published>
-    <updated>2024-02-18T14:04:03.000Z</updated>
+    <updated>2024-10-30T01:35:21.248Z</updated>
     
     
       
@@ -534,7 +574,7 @@
     <link href="https://www.zhaojian.net/xiaomi-wireless-bluetooth-silent-mouse-is-broken-mouse-wheel-fails-solution/"/>
     <id>https://www.zhaojian.net/xiaomi-wireless-bluetooth-silent-mouse-is-broken-mouse-wheel-fails-solution/</id>
     <published>2024-02-17T15:22:00.000Z</published>
-    <updated>2024-02-17T15:19:35.206Z</updated>
+    <updated>2024-10-30T01:35:21.624Z</updated>
     
     
       
@@ -575,7 +615,7 @@
     <link href="https://www.zhaojian.net/it-course-css-032/"/>
     <id>https://www.zhaojian.net/it-course-css-032/</id>
     <published>2024-02-16T13:50:00.000Z</published>
-    <updated>2024-02-16T13:48:00.482Z</updated>
+    <updated>2024-10-30T01:35:21.244Z</updated>
     
     
       
@@ -624,7 +664,7 @@
     <link href="https://www.zhaojian.net/it-course-css-031/"/>
     <id>https://www.zhaojian.net/it-course-css-031/</id>
     <published>2024-02-15T11:40:00.000Z</published>
-    <updated>2024-02-15T11:39:34.670Z</updated>
+    <updated>2024-10-30T01:35:21.240Z</updated>
     
     
       
@@ -669,7 +709,7 @@
     <link href="https://www.zhaojian.net/logitech-mx-anywhere-2s-mouse-is-broken-single-click-becomes-double-click-solution/"/>
     <id>https://www.zhaojian.net/logitech-mx-anywhere-2s-mouse-is-broken-single-click-becomes-double-click-solution/</id>
     <published>2024-02-12T13:21:00.000Z</published>
-    <updated>2024-02-17T15:21:17.148Z</updated>
+    <updated>2024-10-30T01:35:21.372Z</updated>
     
     
       
@@ -714,7 +754,7 @@
     <link href="https://www.zhaojian.net/it-course-css-030/"/>
     <id>https://www.zhaojian.net/it-course-css-030/</id>
     <published>2024-02-05T14:00:00.000Z</published>
-    <updated>2024-02-06T00:39:18.933Z</updated>
+    <updated>2024-10-30T01:35:21.236Z</updated>
     
     
       
@@ -761,7 +801,7 @@
     <link href="https://www.zhaojian.net/it-course-css-029/"/>
     <id>https://www.zhaojian.net/it-course-css-029/</id>
     <published>2024-02-04T05:00:00.000Z</published>
-    <updated>2024-02-04T05:04:07.938Z</updated>
+    <updated>2024-10-30T01:35:21.232Z</updated>
     
     
       
@@ -804,7 +844,7 @@
     <link href="https://www.zhaojian.net/it-course-css-028/"/>
     <id>https://www.zhaojian.net/it-course-css-028/</id>
     <published>2024-02-03T10:00:00.000Z</published>
-    <updated>2024-02-03T10:15:23.131Z</updated>
+    <updated>2024-10-30T01:35:21.228Z</updated>
     
     
       
@@ -849,7 +889,7 @@
     <link href="https://www.zhaojian.net/it-course-css-027/"/>
     <id>https://www.zhaojian.net/it-course-css-027/</id>
     <published>2024-02-02T14:00:00.000Z</published>
-    <updated>2024-02-02T14:00:55.620Z</updated>
+    <updated>2024-10-30T01:35:21.224Z</updated>
     
     
       
@@ -886,54 +926,6 @@
     <category term="css动画" scheme="https://www.zhaojian.net/tags/css%E5%8A%A8%E7%94%BB/"/>
     
     <category term="css过渡" scheme="https://www.zhaojian.net/tags/css%E8%BF%87%E6%B8%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IT课程 CSS基础 026_显示、可见性、效果</title>
-    <link href="https://www.zhaojian.net/it-course-css-026/"/>
-    <id>https://www.zhaojian.net/it-course-css-026/</id>
-    <published>2024-02-01T14:00:00.000Z</published>
-    <updated>2024-02-02T14:00:37.504Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;显示&quot;&gt;&lt;a href=&quot;#显示&quot; class=&quot;headerlink&quot; title=&quot;显示&quot;&gt;&lt;/a&gt;显示&lt;/h3&gt;&lt;p&gt;在CSS中，&lt;code&gt;display&lt;/code&gt;属性决定了元素在页面中的显示方式。&lt;/p&gt;
-&lt;h5</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="https://www.zhaojian.net/categories/learn/"/>
-    
-    <category term="CSS基础" scheme="https://www.zhaojian.net/categories/learn/css/"/>
-    
-    
-    <category term="IT课程" scheme="https://www.zhaojian.net/tags/IT%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="HTML课程" scheme="https://www.zhaojian.net/tags/HTML%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="CSS课程" scheme="https://www.zhaojian.net/tags/CSS%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="JavaScript课程" scheme="https://www.zhaojian.net/tags/JavaScript%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="Java课程" scheme="https://www.zhaojian.net/tags/Java%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="计算机系统与网络" scheme="https://www.zhaojian.net/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%BD%91%E7%BB%9C/"/>
-    
-    <category term="hello css" scheme="https://www.zhaojian.net/tags/hello-css/"/>
-    
-    <category term="css基础" scheme="https://www.zhaojian.net/tags/css%E5%9F%BA%E7%A1%80/"/>
-    
-    <category term="css显示" scheme="https://www.zhaojian.net/tags/css%E6%98%BE%E7%A4%BA/"/>
-    
-    <category term="css可见性" scheme="https://www.zhaojian.net/tags/css%E5%8F%AF%E8%A7%81%E6%80%A7/"/>
-    
-    <category term="css效果" scheme="https://www.zhaojian.net/tags/css%E6%95%88%E6%9E%9C/"/>
     
   </entry>
   
