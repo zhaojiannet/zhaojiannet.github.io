@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.zhaojian.net/arch-endeavouros-manjaro-linux-wechat-weixin-qq/</loc>
+    <lastmod>2025-01-07</lastmod>
+  </url>
+  <url>
     <loc>https://www.zhaojian.net/it-course-javascript-042/</loc>
     <lastmod>2025-01-06</lastmod>
   </url>
@@ -17,15 +21,11 @@
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/arch-manjaro-pacman-yay-install-upgrade-clear-cache-common-command/</loc>
-    <lastmod>2024-10-30</lastmod>
-  </url>
-  <url>
     <loc>https://www.zhaojian.net/baidu-seo-vs-google-seo/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/block-china-unicom-ads-1/</loc>
+    <loc>https://www.zhaojian.net/arch-manjaro-pacman-yay-install-upgrade-clear-cache-common-command/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
@@ -33,11 +33,15 @@
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/blog-new-begin-2012/</loc>
+    <loc>https://www.zhaojian.net/block-linux-debian-system-beep-prompt/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/block-linux-debian-system-beep-prompt/</loc>
+    <loc>https://www.zhaojian.net/block-china-unicom-ads-1/</loc>
+    <lastmod>2024-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://www.zhaojian.net/blog-new-begin-2012/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
@@ -57,15 +61,11 @@
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/dmsguestbook-calls-on-the-article-page/</loc>
-    <lastmod>2024-10-30</lastmod>
-  </url>
-  <url>
     <loc>https://www.zhaojian.net/debian11-bullseye-kde-daily-use-and-common-software-installation/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/dns-erroes/</loc>
+    <loc>https://www.zhaojian.net/dmsguestbook-calls-on-the-article-page/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
@@ -74,6 +74,10 @@
   </url>
   <url>
     <loc>https://www.zhaojian.net/easyboot-oem-bm1-file-open/</loc>
+    <lastmod>2024-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://www.zhaojian.net/dns-erroes/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
@@ -129,10 +133,6 @@
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/it-course-cs-003/</loc>
-    <lastmod>2024-10-30</lastmod>
-  </url>
-  <url>
     <loc>https://www.zhaojian.net/it-course-cs-002/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
@@ -142,6 +142,10 @@
   </url>
   <url>
     <loc>https://www.zhaojian.net/it-course-cs-005/</loc>
+    <lastmod>2024-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://www.zhaojian.net/it-course-cs-003/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
@@ -169,11 +173,11 @@
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/it-course-css-022/</loc>
+    <loc>https://www.zhaojian.net/it-course-css-023/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/it-course-css-023/</loc>
+    <loc>https://www.zhaojian.net/it-course-css-022/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
@@ -193,7 +197,7 @@
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/it-course-css-028/</loc>
+    <loc>https://www.zhaojian.net/it-course-css-030/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
@@ -201,19 +205,15 @@
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/it-course-css-030/</loc>
-    <lastmod>2024-10-30</lastmod>
-  </url>
-  <url>
     <loc>https://www.zhaojian.net/it-course-css-031/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/it-course-css-033/</loc>
+    <loc>https://www.zhaojian.net/it-course-css-032/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/it-course-css-032/</loc>
+    <loc>https://www.zhaojian.net/it-course-css-028/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
@@ -222,6 +222,10 @@
   </url>
   <url>
     <loc>https://www.zhaojian.net/it-course-html-009/</loc>
+    <lastmod>2024-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://www.zhaojian.net/it-course-css-033/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
@@ -253,11 +257,11 @@
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/it-course-html-017/</loc>
+    <loc>https://www.zhaojian.net/it-course-html-018/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/it-course-html-018/</loc>
+    <loc>https://www.zhaojian.net/it-course-html-017/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
@@ -285,15 +289,15 @@
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/kubuntu2210-daily-use-and-common-software-installation/</loc>
-    <lastmod>2024-10-30</lastmod>
-  </url>
-  <url>
     <loc>https://www.zhaojian.net/kubuntu2210-upgrade-latest-linux-kernel/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
     <loc>https://www.zhaojian.net/linux-debian-virtualbox-usb-device-not-recognized/</loc>
+    <lastmod>2024-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://www.zhaojian.net/kubuntu2210-daily-use-and-common-software-installation/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
@@ -309,11 +313,11 @@
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/linux-use-pidgin-login-xiaonei/</loc>
+    <loc>https://www.zhaojian.net/linux-pinyin-input-method-dictionary-is-causing-abnormal-memory-usage-in-fcitx5/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/linux-pinyin-input-method-dictionary-is-causing-abnormal-memory-usage-in-fcitx5/</loc>
+    <loc>https://www.zhaojian.net/linux-use-pidgin-login-xiaonei/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
@@ -369,11 +373,11 @@
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/php-undefined-indexhe-undefined-variablede-errors/</loc>
+    <loc>https://www.zhaojian.net/php-submit-form-to-email/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/php-submit-form-to-email/</loc>
+    <loc>https://www.zhaojian.net/php-undefined-indexhe-undefined-variablede-errors/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
@@ -385,11 +389,11 @@
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/search-engine-website-submission/</loc>
+    <loc>https://www.zhaojian.net/scite-chinese-configuration/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/scite-chinese-configuration/</loc>
+    <loc>https://www.zhaojian.net/search-engine-website-submission/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
@@ -421,11 +425,11 @@
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/ubuntu-linux-flash-errer/</loc>
+    <loc>https://www.zhaojian.net/ubuntu-fedora-centos-linux-cannot-network-only-baidu/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/ubuntu-fedora-centos-linux-cannot-network-only-baidu/</loc>
+    <loc>https://www.zhaojian.net/ubuntu-linux-flash-errer/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
@@ -453,11 +457,11 @@
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/verification-code-erroe/</loc>
+    <loc>https://www.zhaojian.net/virtual-host-bind-chinese-domain-name/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/virtual-host-bind-chinese-domain-name/</loc>
+    <loc>https://www.zhaojian.net/verification-code-erroe/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
@@ -477,11 +481,11 @@
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/windows-right-click-menu-cannot-find-create-a-new-text-document/</loc>
+    <loc>https://www.zhaojian.net/windows-task-manager-no-menu-bar-no-border/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/windows-task-manager-no-menu-bar-no-border/</loc>
+    <loc>https://www.zhaojian.net/windows-right-click-menu-cannot-find-create-a-new-text-document/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
@@ -513,11 +517,11 @@
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/wordpress-call-page-content/</loc>
+    <loc>https://www.zhaojian.net/wordpress-call-specific-article/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://www.zhaojian.net/wordpress-call-specific-article/</loc>
+    <loc>https://www.zhaojian.net/wordpress-call-page-content/</loc>
     <lastmod>2024-10-30</lastmod>
   </url>
   <url>

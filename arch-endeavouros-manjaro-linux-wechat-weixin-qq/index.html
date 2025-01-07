@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="zh-CN" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="赵健(zhaoJian)" />
+  <!-- Open Graph Description 简短摘要-->
+  
+  <!-- 用于搜索引擎的文章摘要 -->
+  
+    <meta name="keywords" content="赵健,zhaojian,zhaojiannet,赵健的技术笔记,技术笔记,linux,IT技术,nodejs,javascript,linux,佛系IT少年" />
+    <meta name="description" content="赵健的技术笔记 | 保持热爱，勇往直前。赵健，zhaojian，zhaoJianNet，佛系IT少年。" />
+    
+  
+  
+  <title>
+    
+      EndeavourOS、Manjaro等Arch系Linux安装新版Linux微信、QQ方法 
+      
+      
+      |
+    
+     赵健的技术笔记 - 赵健(zhaoJian)
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon-next.png">
+    <link rel="icon" href="/images/favicon-32x32-next.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
+  
+    
+<link rel="stylesheet" href="/css/figcaption/mac-block.css">
+
+  
+
+  <!-- jquery3.3.1 -->
+  
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  
+
+  <!-- fancybox -->
+  
+    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70H136JFY6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-70H136JFY6');
+    </script>
+  
+
+  
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"KNlPq4LXPTtF1VVr",ck:"KNlPq4LXPTtF1VVr"})</script>
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="赵健的技术笔记 - 赵健(zhaoJian)" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img no-lazy src="/images/zhaojian-avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">赵健(zhaoJian)</a></div>
+    
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">首页</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">关于</a>
+        </li>
+      
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">分类</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">归档</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">标签</a>
+        </li>
+      
+        <li class="nav-item" data-path="/sitemap.xml">
+          <a href="/sitemap.xml">站点地图</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">EndeavourOS、Manjaro等Arch系Linux安装新版Linux微信、QQ方法</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2025-01-07 06:04:08
+        </span>
+        
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="分类"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/tech/" title="技术">
+                    <b>#</b> 技术
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="标签"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/EndeavourOS/" title="EndeavourOS">
+                    #EndeavourOS
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/Manjaro/" title="Manjaro">
+                    #Manjaro
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/Arch/" title="Arch">
+                    #Arch
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/Linux/" title="Linux">
+                    #Linux
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/Linux-%E5%BE%AE%E4%BF%A1/" title="Linux 微信">
+                    #Linux 微信
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/Linux-QQ/" title="Linux QQ">
+                    #Linux QQ
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%BE%AE%E4%BF%A1/" title="微信">
+                    #微信
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/QQ/" title="QQ">
+                    #QQ
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/Linux-WeChat/" title="Linux WeChat">
+                    #Linux WeChat
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/Arch%E5%AE%89%E8%A3%85%E5%BE%AE%E4%BF%A1/" title="Arch安装微信">
+                    #Arch安装微信
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/Arch%E5%AE%89%E8%A3%85QQ/" title="Arch安装QQ">
+                    #Arch安装QQ
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/EndeavourOS%E5%AE%89%E8%A3%85%E5%BE%AE%E4%BF%A1/" title="EndeavourOS安装微信">
+                    #EndeavourOS安装微信
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/EndeavourOS%E5%AE%89%E8%A3%85QQ/" title="EndeavourOS安装QQ">
+                    #EndeavourOS安装QQ
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/Manjaro%E5%AE%89%E8%A3%85%E5%BE%AE%E4%BF%A1/" title="Manjaro安装微信">
+                    #Manjaro安装微信
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/Manjaro%E5%AE%89%E8%A3%85QQ/" title="Manjaro安装QQ">
+                    #Manjaro安装QQ
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/Linux%E5%AE%89%E8%A3%85%E5%BE%AE%E4%BF%A1/" title="Linux安装微信">
+                    #Linux安装微信
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/Linux%E5%AE%89%E8%A3%85QQ/" title="Linux安装QQ">
+                    #Linux安装QQ
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <p>最近因为AUR在WeChat包上闹的换回了Debian，用了几天竟然有点不习惯，在尝试了几个不同的Debian系 发行版后，感觉还是没有EndeavourOS用着顺手，兜兜转转又换回了EndeavourOS，但实在是分不清、看不懂也不想再卷入AUR的wechat闹剧了。</p>
+<p>选择最原始、最简单的方法，下载官方网站 AppImage 格式软件包，自建开始菜单快捷方式。</p>
+<h3 id="微信-Linux-版"><a href="#微信-Linux-版" class="headerlink" title="微信 Linux 版"></a>微信 Linux 版</h3><h5 id="1、下载官方最新-微信-Linux-版，建议保存到非默认下载目录。"><a href="#1、下载官方最新-微信-Linux-版，建议保存到非默认下载目录。" class="headerlink" title="1、下载官方最新 微信 Linux 版，建议保存到非默认下载目录。"></a>1、下载官方最新 微信 Linux 版，建议保存到非默认下载目录。</h5><p>微信 Linux 版 官网：<a target="_blank" rel="noopener" href="https://linux.weixin.qq.com/">https://linux.weixin.qq.com/</a></p>
+<p>![[&#x2F;uploads&#x2F;2025&#x2F;01&#x2F;wechat_appimage.png]]</p>
+<p>微信高清logo（非官方）：<a target="_blank" rel="noopener" href="https://github.com/zhaojiannet/zhaojiannet.github.io/tree/main/uploads/2025/01/wechat_logo.png">https://github.com/zhaojiannet/zhaojiannet.github.io/tree/main/uploads/2025/01/wechat_logo.png</a></p>
+<h5 id="2、创建开始菜单快捷方式"><a href="#2、创建开始菜单快捷方式" class="headerlink" title="2、创建开始菜单快捷方式"></a>2、创建开始菜单快捷方式</h5><p>使用nano在&#x2F;usr&#x2F;share&#x2F;applications目录下，创建wechat.desktop</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /usr/share/applications/wechat.desktop</span><br></pre></td></tr></table></figure>
+
+<p>wechat.desktop文件内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Encoding=UTF-8</span><br><span class="line">Type=Application</span><br><span class="line">#应用名称</span><br><span class="line">Name=微信</span><br><span class="line">#图标路径（建议与上面下载的AppImage软件包放到一起）</span><br><span class="line">Icon=/home/zhaojian/Cores/Tools/Linux/WeChat/wechat_logo.png</span><br><span class="line">#启动是否开启终端</span><br><span class="line">Terminal=false</span><br><span class="line">#AppImage文件路径（上面下载保存的AppImage软件包路径）</span><br><span class="line">Exec=/home/zhaojian/Cores/Tools/Linux/WeChat/WeChatLinux_x86_64.AppImage</span><br><span class="line">#分类目录</span><br><span class="line">Categories=Network;</span><br><span class="line">#说明</span><br><span class="line">Comment=微信 Linux桌面版</span><br></pre></td></tr></table></figure>
+
+<p>依次输入：Ctrl + X、Y、回车键，保存。</p>
+<h3 id="QQ-Linux-版"><a href="#QQ-Linux-版" class="headerlink" title="QQ Linux 版"></a>QQ Linux 版</h3><h5 id="1、下载官方最新-QQ-Linux-版，建议保存到非默认下载目录。"><a href="#1、下载官方最新-QQ-Linux-版，建议保存到非默认下载目录。" class="headerlink" title="1、下载官方最新 QQ Linux 版，建议保存到非默认下载目录。"></a>1、下载官方最新 QQ Linux 版，建议保存到非默认下载目录。</h5><p>QQ Linux 版 官网：<a target="_blank" rel="noopener" href="https://im.qq.com/linuxqq/">https://im.qq.com/linuxqq/</a></p>
+<p>![[&#x2F;uploads&#x2F;2025&#x2F;01&#x2F;qq_appimage.png]]</p>
+<p>QQ高清logo（非官方）：<a target="_blank" rel="noopener" href="https://github.com/zhaojiannet/zhaojiannet.github.io/tree/main/uploads/2025/01/qq_logo.png">https://github.com/zhaojiannet/zhaojiannet.github.io/tree/main/uploads/2025/01/qq_logo.png</a></p>
+<h5 id="2、创建开始菜单快捷方式-1"><a href="#2、创建开始菜单快捷方式-1" class="headerlink" title="2、创建开始菜单快捷方式"></a>2、创建开始菜单快捷方式</h5><p>使用nano在&#x2F;usr&#x2F;share&#x2F;applications目录下，创建qq.desktop</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /usr/share/applications/qq.desktop</span><br></pre></td></tr></table></figure>
+
+<p>qq.desktop文件内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Encoding=UTF-8</span><br><span class="line">Type=Application</span><br><span class="line">#应用名称</span><br><span class="line">Name=QQ</span><br><span class="line">#图标路径（建议与上面下载的AppImage软件包放到一起）</span><br><span class="line">Icon=/home/zhaojian/Cores/Tools/Linux/QQ/qq_logo.png</span><br><span class="line">#启动是否开启终端</span><br><span class="line">Terminal=false</span><br><span class="line">#AppImage文件路径（上面下载保存的AppImage软件包路径）</span><br><span class="line">Exec=/home/zhaojian/Cores/Tools/Linux/QQ/QQ_3.2.15_241224_x86_64_01.AppImage</span><br><span class="line">#分类目录</span><br><span class="line">Categories=Network;</span><br><span class="line">#说明</span><br><span class="line">Comment=QQ Linux桌面版</span><br></pre></td></tr></table></figure>
+
+<p>依次输入：Ctrl + X、Y、回车键，保存。</p>
+<p>腾讯官方最新发布的Linux 4.0.1 测试版，已经再不断改进中可以正常使用了，如果在使用中遇到问题，还可以加 微信Linux版官方QQ交流群：736511883 反馈。<br>加上早就可以正常使用的QQ Linux版，腾讯系现在就差企业微信和腾讯会议不能完美支持Linux了。</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/it-course-javascript-042/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+              2025-01-07 06:04:08
+            </span>
+            
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="分类"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/tech/" title="技术">
+                        <b>#</b> 技术
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="标签"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS/" title="EndeavourOS">
+                        #EndeavourOS
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Manjaro/" title="Manjaro">
+                        #Manjaro
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Arch/" title="Arch">
+                        #Arch
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux/" title="Linux">
+                        #Linux
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-%E5%BE%AE%E4%BF%A1/" title="Linux 微信">
+                        #Linux 微信
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-QQ/" title="Linux QQ">
+                        #Linux QQ
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%BE%AE%E4%BF%A1/" title="微信">
+                        #微信
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/QQ/" title="QQ">
+                        #QQ
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-WeChat/" title="Linux WeChat">
+                        #Linux WeChat
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Arch%E5%AE%89%E8%A3%85%E5%BE%AE%E4%BF%A1/" title="Arch安装微信">
+                        #Arch安装微信
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Arch%E5%AE%89%E8%A3%85QQ/" title="Arch安装QQ">
+                        #Arch安装QQ
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS%E5%AE%89%E8%A3%85%E5%BE%AE%E4%BF%A1/" title="EndeavourOS安装微信">
+                        #EndeavourOS安装微信
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS%E5%AE%89%E8%A3%85QQ/" title="EndeavourOS安装QQ">
+                        #EndeavourOS安装QQ
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Manjaro%E5%AE%89%E8%A3%85%E5%BE%AE%E4%BF%A1/" title="Manjaro安装微信">
+                        #Manjaro安装微信
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Manjaro%E5%AE%89%E8%A3%85QQ/" title="Manjaro安装QQ">
+                        #Manjaro安装QQ
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux%E5%AE%89%E8%A3%85%E5%BE%AE%E4%BF%A1/" title="Linux安装微信">
+                        #Linux安装微信
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux%E5%AE%89%E8%A3%85QQ/" title="Linux安装QQ">
+                        #Linux安装QQ
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1-Linux-%E7%89%88"><span class="toc-text">微信 Linux 版</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81%E4%B8%8B%E8%BD%BD%E5%AE%98%E6%96%B9%E6%9C%80%E6%96%B0-%E5%BE%AE%E4%BF%A1-Linux-%E7%89%88%EF%BC%8C%E5%BB%BA%E8%AE%AE%E4%BF%9D%E5%AD%98%E5%88%B0%E9%9D%9E%E9%BB%98%E8%AE%A4%E4%B8%8B%E8%BD%BD%E7%9B%AE%E5%BD%95%E3%80%82"><span class="toc-text">1、下载官方最新 微信 Linux 版，建议保存到非默认下载目录。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81%E5%88%9B%E5%BB%BA%E5%BC%80%E5%A7%8B%E8%8F%9C%E5%8D%95%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F"><span class="toc-text">2、创建开始菜单快捷方式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#QQ-Linux-%E7%89%88"><span class="toc-text">QQ Linux 版</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81%E4%B8%8B%E8%BD%BD%E5%AE%98%E6%96%B9%E6%9C%80%E6%96%B0-QQ-Linux-%E7%89%88%EF%BC%8C%E5%BB%BA%E8%AE%AE%E4%BF%9D%E5%AD%98%E5%88%B0%E9%9D%9E%E9%BB%98%E8%AE%A4%E4%B8%8B%E8%BD%BD%E7%9B%AE%E5%BD%95%E3%80%82"><span class="toc-text">1、下载官方最新 QQ Linux 版，建议保存到非默认下载目录。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81%E5%88%9B%E5%BB%BA%E5%BC%80%E5%A7%8B%E8%8F%9C%E5%8D%95%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F-1"><span class="toc-text">2、创建开始菜单快捷方式</span></a></li></ol></li></ol></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067825494341267"
+  crossorigin="anonymous"></script>
+  <!-- foot_ads -->
+  <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-7067825494341267"
+    data-ad-slot="1142359537"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <br>
+
+
+  <div id="tcomment"></div>
+    <script src="https://cdn.staticfile.org/twikoo/1.6.30/twikoo.all.min.js"></script>
+    <script>
+    twikoo.init({
+      envId: 'https://zhaojiannet-zhaojian.hf.space', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
+      el: '#tcomment', // 容器元素
+      // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+      // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+      // lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
+    })
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    
+  </div>
+
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          
+              <a title="zhaojiannet" target="_blank" rel="noopener" href="https://github.com/zhaojiannet">
+                <i class="iconfont icon-github"></i>
+              </a>
+              
+        </li>
+        
+        <li>
+          
+              <a title="zhaojiannet" target="_blank" rel="noopener" href="https://www.facebook.com/zhaoJianNet">
+                <i class="iconfont icon-facebooksquare"></i>
+              </a>
+              
+        </li>
+        
+        <li>
+          
+              <a title="zhaojiannet" target="_blank" rel="noopener" href="https://twitter.com/zhaoJianNet">
+                <i class="iconfont icon-twitter"></i>
+              </a>
+              
+        </li>
+        
+        <li>
+          
+              <a title="赵健(zhaoJian.Net)的微信：757118" href="/#">
+                <i class="iconfont icon-wechat"></i>
+              </a>
+              
+        </li>
+        
+        <li>
+          
+              <a title="赵健(zhaoJian.Net)的QQ：757118" href="/#">
+                <i class="iconfont icon-qq"></i>
+              </a>
+              
+        </li>
+        
+        <li>
+          
+              <a title="rss" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+              </a>
+              
+        </li>
+        
+    </ul>
+  </div>
+  
+    
+    <div class="footer-more">
+      
+        <a href="https://www.zhaojian.net">Copyright © 2009~2024 赵健(zhaoJian) - 赵健的技术笔记  <br> <a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">辽ICP备20000595号 </a></a>
+        
+    </div>
+  
+    
+    <div class="footer-more">
+      
+        Theme by Oranges | Powered by Hexo
+        
+    </div>
+  
+  
+    <div class="footer-views">
+      
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+      
+          本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        
+      
+          本站访客数<span id="busuanzi_value_site_uv"></span>人
+        
+      
+    </div>
+  
+</div>
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="搜索...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>首次搜索，正在载入索引文件，请稍后……<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>没有找到内容，请尝试更换检索词。<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>未找到search.xml文件，具体请参考：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>请求失败，尝试重新刷新页面或稍后重试。<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + EndeavourOS%E3%80%81Manjaro%E7%AD%89Arch%E7%B3%BBLinux%E5%AE%89%E8%A3%85%E6%96%B0%E7%89%88Linux%E5%BE%AE%E4%BF%A1%E3%80%81QQ%E6%96%B9%E6%B3%95 + '&url=' + https%3A%2F%2Fwww.zhaojian.net%2Farch-endeavouros-manjaro-linux-wechat-weixin-qq%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://www.zhaojian.net/arch-endeavouros-manjaro-linux-wechat-weixin-qq/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
+  
+  
+<script src="/js/shares.js"></script>
+
+
+
+      </div>
+    </div>
+  
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>(r=>{r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,o=r.imageLazyLoadSetting.preloadRatio||1,d=i();function i(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=i());for(var e,n=0;n<d.length;n++)0<=(e=(e=d[n]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*o||document.documentElement.clientHeight*o)&&(()=>{var t,e,a,o,i=d[n];e=function(){d=d.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,o=t.getAttribute("data-original"),a.onload=function(){t.src=o,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=o},t.src!==o&&(a.src=o)))})()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)})(this);</script></body>
+</html>

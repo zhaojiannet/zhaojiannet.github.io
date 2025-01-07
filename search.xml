@@ -4,6 +4,63 @@
   
     
     <entry>
+      <title>EndeavourOS、Manjaro等Arch系Linux安装新版Linux微信、QQ方法</title>
+      <link href="/arch-endeavouros-manjaro-linux-wechat-weixin-qq/"/>
+      <url>/arch-endeavouros-manjaro-linux-wechat-weixin-qq/</url>
+      
+        <content type="html"><![CDATA[<p>最近因为AUR在WeChat包上闹的换回了Debian，用了几天竟然有点不习惯，在尝试了几个不同的Debian系 发行版后，感觉还是没有EndeavourOS用着顺手，兜兜转转又换回了EndeavourOS，但实在是分不清、看不懂也不想再卷入AUR的wechat闹剧了。</p><p>选择最原始、最简单的方法，下载官方网站 AppImage 格式软件包，自建开始菜单快捷方式。</p><h3 id="微信-Linux-版"><a href="#微信-Linux-版" class="headerlink" title="微信 Linux 版"></a>微信 Linux 版</h3><h5 id="1、下载官方最新-微信-Linux-版，建议保存到非默认下载目录。"><a href="#1、下载官方最新-微信-Linux-版，建议保存到非默认下载目录。" class="headerlink" title="1、下载官方最新 微信 Linux 版，建议保存到非默认下载目录。"></a>1、下载官方最新 微信 Linux 版，建议保存到非默认下载目录。</h5><p>微信 Linux 版 官网：<a href="https://linux.weixin.qq.com/">https://linux.weixin.qq.com/</a></p><p>![[&#x2F;uploads&#x2F;2025&#x2F;01&#x2F;wechat_appimage.png]]</p><p>微信高清logo（非官方）：<a href="https://github.com/zhaojiannet/zhaojiannet.github.io/tree/main/uploads/2025/01/wechat_logo.png">https://github.com/zhaojiannet/zhaojiannet.github.io/tree/main/uploads/2025/01/wechat_logo.png</a></p><h5 id="2、创建开始菜单快捷方式"><a href="#2、创建开始菜单快捷方式" class="headerlink" title="2、创建开始菜单快捷方式"></a>2、创建开始菜单快捷方式</h5><p>使用nano在&#x2F;usr&#x2F;share&#x2F;applications目录下，创建wechat.desktop</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /usr/share/applications/wechat.desktop</span><br></pre></td></tr></table></figure><p>wechat.desktop文件内容：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Encoding=UTF-8</span><br><span class="line">Type=Application</span><br><span class="line">#应用名称</span><br><span class="line">Name=微信</span><br><span class="line">#图标路径（建议与上面下载的AppImage软件包放到一起）</span><br><span class="line">Icon=/home/zhaojian/Cores/Tools/Linux/WeChat/wechat_logo.png</span><br><span class="line">#启动是否开启终端</span><br><span class="line">Terminal=false</span><br><span class="line">#AppImage文件路径（上面下载保存的AppImage软件包路径）</span><br><span class="line">Exec=/home/zhaojian/Cores/Tools/Linux/WeChat/WeChatLinux_x86_64.AppImage</span><br><span class="line">#分类目录</span><br><span class="line">Categories=Network;</span><br><span class="line">#说明</span><br><span class="line">Comment=微信 Linux桌面版</span><br></pre></td></tr></table></figure><p>依次输入：Ctrl + X、Y、回车键，保存。</p><h3 id="QQ-Linux-版"><a href="#QQ-Linux-版" class="headerlink" title="QQ Linux 版"></a>QQ Linux 版</h3><h5 id="1、下载官方最新-QQ-Linux-版，建议保存到非默认下载目录。"><a href="#1、下载官方最新-QQ-Linux-版，建议保存到非默认下载目录。" class="headerlink" title="1、下载官方最新 QQ Linux 版，建议保存到非默认下载目录。"></a>1、下载官方最新 QQ Linux 版，建议保存到非默认下载目录。</h5><p>QQ Linux 版 官网：<a href="https://im.qq.com/linuxqq/">https://im.qq.com/linuxqq/</a></p><p>![[&#x2F;uploads&#x2F;2025&#x2F;01&#x2F;qq_appimage.png]]</p><p>QQ高清logo（非官方）：<a href="https://github.com/zhaojiannet/zhaojiannet.github.io/tree/main/uploads/2025/01/qq_logo.png">https://github.com/zhaojiannet/zhaojiannet.github.io/tree/main/uploads/2025/01/qq_logo.png</a></p><h5 id="2、创建开始菜单快捷方式-1"><a href="#2、创建开始菜单快捷方式-1" class="headerlink" title="2、创建开始菜单快捷方式"></a>2、创建开始菜单快捷方式</h5><p>使用nano在&#x2F;usr&#x2F;share&#x2F;applications目录下，创建qq.desktop</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /usr/share/applications/qq.desktop</span><br></pre></td></tr></table></figure><p>qq.desktop文件内容：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Encoding=UTF-8</span><br><span class="line">Type=Application</span><br><span class="line">#应用名称</span><br><span class="line">Name=QQ</span><br><span class="line">#图标路径（建议与上面下载的AppImage软件包放到一起）</span><br><span class="line">Icon=/home/zhaojian/Cores/Tools/Linux/QQ/qq_logo.png</span><br><span class="line">#启动是否开启终端</span><br><span class="line">Terminal=false</span><br><span class="line">#AppImage文件路径（上面下载保存的AppImage软件包路径）</span><br><span class="line">Exec=/home/zhaojian/Cores/Tools/Linux/QQ/QQ_3.2.15_241224_x86_64_01.AppImage</span><br><span class="line">#分类目录</span><br><span class="line">Categories=Network;</span><br><span class="line">#说明</span><br><span class="line">Comment=QQ Linux桌面版</span><br></pre></td></tr></table></figure><p>依次输入：Ctrl + X、Y、回车键，保存。</p><p>腾讯官方最新发布的Linux 4.0.1 测试版，已经再不断改进中可以正常使用了，如果在使用中遇到问题，还可以加 微信Linux版官方QQ交流群：736511883 反馈。<br>加上早就可以正常使用的QQ Linux版，腾讯系现在就差企业微信和腾讯会议不能完美支持Linux了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> EndeavourOS </tag>
+            
+            <tag> Manjaro </tag>
+            
+            <tag> Arch </tag>
+            
+            <tag> Linux </tag>
+            
+            <tag> Linux 微信 </tag>
+            
+            <tag> Linux QQ </tag>
+            
+            <tag> 微信 </tag>
+            
+            <tag> QQ </tag>
+            
+            <tag> Linux WeChat </tag>
+            
+            <tag> Arch安装微信 </tag>
+            
+            <tag> Arch安装QQ </tag>
+            
+            <tag> EndeavourOS安装微信 </tag>
+            
+            <tag> EndeavourOS安装QQ </tag>
+            
+            <tag> Manjaro安装微信 </tag>
+            
+            <tag> Manjaro安装QQ </tag>
+            
+            <tag> Linux安装微信 </tag>
+            
+            <tag> Linux安装QQ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>IT课程 JavaScript基础 042_循环 while、for</title>
       <link href="/it-course-javascript-042/"/>
       <url>/it-course-javascript-042/</url>
@@ -1928,6 +1985,8 @@
       
         <tags>
             
+            <tag> Linux </tag>
+            
             <tag> IT课程 </tag>
             
             <tag> HTML课程 </tag>
@@ -1939,8 +1998,6 @@
             <tag> Java课程 </tag>
             
             <tag> 计算机系统与网络 </tag>
-            
-            <tag> Linux </tag>
             
             <tag> Linux操作系统 </tag>
             
@@ -2563,11 +2620,11 @@
       
         <tags>
             
+            <tag> Manjaro </tag>
+            
             <tag> Linux 常用软件 </tag>
             
             <tag> Linux 日常使用 </tag>
-            
-            <tag> Manjaro </tag>
             
             <tag> Manjaro Linux </tag>
             
@@ -4191,9 +4248,9 @@
       
         <tags>
             
-            <tag> 广告 </tag>
-            
             <tag> 联通 </tag>
+            
+            <tag> 广告 </tag>
             
         </tags>
       
@@ -4369,9 +4426,9 @@
       
         <tags>
             
-            <tag> 广告 </tag>
-            
             <tag> 联通 </tag>
+            
+            <tag> 广告 </tag>
             
         </tags>
       

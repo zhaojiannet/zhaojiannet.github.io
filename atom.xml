@@ -6,7 +6,7 @@
   <link href="https://www.zhaojian.net/atom.xml" rel="self"/>
   
   <link href="https://www.zhaojian.net/"/>
-  <updated>2025-01-06T09:34:43.887Z</updated>
+  <updated>2025-01-07T06:04:08.000Z</updated>
   <id>https://www.zhaojian.net/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EndeavourOS、Manjaro等Arch系Linux安装新版Linux微信、QQ方法</title>
+    <link href="https://www.zhaojian.net/arch-endeavouros-manjaro-linux-wechat-weixin-qq/"/>
+    <id>https://www.zhaojian.net/arch-endeavouros-manjaro-linux-wechat-weixin-qq/</id>
+    <published>2025-01-07T07:03:03.000Z</published>
+    <updated>2025-01-07T06:04:08.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近因为AUR在WeChat包上闹的换回了Debian，用了几天竟然有点不习惯，在尝试了几个不同的Debian系</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://www.zhaojian.net/categories/tech/"/>
+    
+    
+    <category term="EndeavourOS" scheme="https://www.zhaojian.net/tags/EndeavourOS/"/>
+    
+    <category term="Manjaro" scheme="https://www.zhaojian.net/tags/Manjaro/"/>
+    
+    <category term="Arch" scheme="https://www.zhaojian.net/tags/Arch/"/>
+    
+    <category term="Linux" scheme="https://www.zhaojian.net/tags/Linux/"/>
+    
+    <category term="Linux 微信" scheme="https://www.zhaojian.net/tags/Linux-%E5%BE%AE%E4%BF%A1/"/>
+    
+    <category term="Linux QQ" scheme="https://www.zhaojian.net/tags/Linux-QQ/"/>
+    
+    <category term="微信" scheme="https://www.zhaojian.net/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+    <category term="QQ" scheme="https://www.zhaojian.net/tags/QQ/"/>
+    
+    <category term="Linux WeChat" scheme="https://www.zhaojian.net/tags/Linux-WeChat/"/>
+    
+    <category term="Arch安装微信" scheme="https://www.zhaojian.net/tags/Arch%E5%AE%89%E8%A3%85%E5%BE%AE%E4%BF%A1/"/>
+    
+    <category term="Arch安装QQ" scheme="https://www.zhaojian.net/tags/Arch%E5%AE%89%E8%A3%85QQ/"/>
+    
+    <category term="EndeavourOS安装微信" scheme="https://www.zhaojian.net/tags/EndeavourOS%E5%AE%89%E8%A3%85%E5%BE%AE%E4%BF%A1/"/>
+    
+    <category term="EndeavourOS安装QQ" scheme="https://www.zhaojian.net/tags/EndeavourOS%E5%AE%89%E8%A3%85QQ/"/>
+    
+    <category term="Manjaro安装微信" scheme="https://www.zhaojian.net/tags/Manjaro%E5%AE%89%E8%A3%85%E5%BE%AE%E4%BF%A1/"/>
+    
+    <category term="Manjaro安装QQ" scheme="https://www.zhaojian.net/tags/Manjaro%E5%AE%89%E8%A3%85QQ/"/>
+    
+    <category term="Linux安装微信" scheme="https://www.zhaojian.net/tags/Linux%E5%AE%89%E8%A3%85%E5%BE%AE%E4%BF%A1/"/>
+    
+    <category term="Linux安装QQ" scheme="https://www.zhaojian.net/tags/Linux%E5%AE%89%E8%A3%85QQ/"/>
+    
+  </entry>
   
   <entry>
     <title>IT课程 JavaScript基础 042_循环 while、for</title>
@@ -902,49 +959,6 @@
     <category term="column" scheme="https://www.zhaojian.net/tags/column/"/>
     
     <category term="columns" scheme="https://www.zhaojian.net/tags/columns/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IT课程 CSS基础 029_列表和表格</title>
-    <link href="https://www.zhaojian.net/it-course-css-029/"/>
-    <id>https://www.zhaojian.net/it-course-css-029/</id>
-    <published>2024-02-04T05:00:00.000Z</published>
-    <updated>2024-10-30T01:35:21.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;列表&quot;&gt;&lt;a href=&quot;#列表&quot; class=&quot;headerlink&quot; title=&quot;列表&quot;&gt;&lt;/a&gt;列表&lt;/h3&gt;&lt;p&gt;CSS 中 可以通过 &lt;code&gt;list-style-type&lt;/code&gt; &lt;code&gt;list-style-image&lt;/code&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="https://www.zhaojian.net/categories/learn/"/>
-    
-    <category term="CSS基础" scheme="https://www.zhaojian.net/categories/learn/css/"/>
-    
-    
-    <category term="IT课程" scheme="https://www.zhaojian.net/tags/IT%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="HTML课程" scheme="https://www.zhaojian.net/tags/HTML%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="CSS课程" scheme="https://www.zhaojian.net/tags/CSS%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="JavaScript课程" scheme="https://www.zhaojian.net/tags/JavaScript%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="Java课程" scheme="https://www.zhaojian.net/tags/Java%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="计算机系统与网络" scheme="https://www.zhaojian.net/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%BD%91%E7%BB%9C/"/>
-    
-    <category term="hello css" scheme="https://www.zhaojian.net/tags/hello-css/"/>
-    
-    <category term="css列表" scheme="https://www.zhaojian.net/tags/css%E5%88%97%E8%A1%A8/"/>
-    
-    <category term="css表格" scheme="https://www.zhaojian.net/tags/css%E8%A1%A8%E6%A0%BC/"/>
     
   </entry>
   
