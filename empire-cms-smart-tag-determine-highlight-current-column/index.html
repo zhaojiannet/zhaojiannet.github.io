@@ -202,41 +202,6 @@
                 
               </span>
           
-              <span class="post-tags">
-                <i class="iconfont icon-tags mr-10" title="标签"></i>
-                
-                <span class="span--tag mr-8">
-                  <a href="/tags/cms/" title="cms">
-                    #cms
-                  </a>
-                </span>
-                
-                <span class="span--tag mr-8">
-                  <a href="/tags/%E5%B8%9D%E5%9B%BD/" title="帝国">
-                    #帝国
-                  </a>
-                </span>
-                
-                <span class="span--tag mr-8">
-                  <a href="/tags/%E6%A0%87%E7%AD%BE/" title="标签">
-                    #标签
-                  </a>
-                </span>
-                
-                <span class="span--tag mr-8">
-                  <a href="/tags/%E6%A0%8F%E7%9B%AE/" title="栏目">
-                    #栏目
-                  </a>
-                </span>
-                
-                <span class="span--tag mr-8">
-                  <a href="/tags/%E7%81%B5%E5%8A%A8/" title="灵动">
-                    #灵动
-                  </a>
-                </span>
-                
-              </span>
-          
       </div>
       <div class="markdown-body">
         <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[e:loop=&#123;&quot;select classid,classname,classpath from [!db.pre!]enewsclass where bclassid=1 order by myorder,classid asc&quot;,10,24,0&#125;]</span><br><span class="line">&lt;?</span><br><span class="line">$class=&quot;&quot;;</span><br><span class="line">if($GLOBALS[navclassid]==$bqr[classid])</span><br><span class="line">$class=&quot;one&quot;;</span><br><span class="line">if(($bqr[classid]==19)||($bqr[classid]==21)||($bqr[classid]==22)||($bqr[classid]==23)||($bqr[classid]==24)||($bqr[classid]==200)||($bqr[classid]==20))  // 这里是判断是显示的栏目 现在是显示的是ID=1 2 3  的栏目</span><br><span class="line">&#123;</span><br><span class="line">?&gt;</span><br><span class="line">&lt;li&gt;[&lt;?=$bqr[classpath]?&gt;&quot; class=&quot;&lt;?=$class?&gt;&quot;  target=&quot;_self&quot;&gt;&lt;?=$bqr[classname]?&gt;](&lt;?=$public_r[newsurl]?)&lt;span&gt;&lt;?=$bqr[title]?&gt;&lt;/span&gt;&lt;/li&gt;</span><br><span class="line">&lt;?php   </span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br><span class="line">[/e:loop]</span><br></pre></td></tr></table></figure>
@@ -257,22 +222,11 @@
             
           </div>
           <div class="post-attach">
-            <span class="post-pubtime">
-              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2024-10-30 10:35:21
-            </span>
-            
-                  <span class="post-categories">
-                    <i class="iconfont icon-bookmark" title="分类"></i>
-                    
-                    <span class="span--category">
-                      <a href="/categories/tech/" title="技术">
-                        <b>#</b> 技术
-                      </a>
-                    </span>
-                    
-                  </span>
+            <!-- <span class="post-pubtime"> -->
+              <!-- <i class="iconfont icon-updatetime mr-10" title=""></i> -->
               
+            <!-- </span> -->
+            
                   <span class="post-tags">
                     <i class="iconfont icon-tags mr-10" title="标签"></i>
                     

@@ -202,35 +202,6 @@
                 
               </span>
           
-              <span class="post-tags">
-                <i class="iconfont icon-tags mr-10" title="标签"></i>
-                
-                <span class="span--tag mr-8">
-                  <a href="/tags/SciTE-%E4%B8%AD%E6%96%87/" title="SciTE 中文">
-                    #SciTE 中文
-                  </a>
-                </span>
-                
-                <span class="span--tag mr-8">
-                  <a href="/tags/SciTE-%E4%B8%AD%E6%96%87%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF/" title="SciTE 中文配置信息">
-                    #SciTE 中文配置信息
-                  </a>
-                </span>
-                
-                <span class="span--tag mr-8">
-                  <a href="/tags/SciTE-%E4%BD%BF%E7%94%A8/" title="SciTE 使用">
-                    #SciTE 使用
-                  </a>
-                </span>
-                
-                <span class="span--tag mr-8">
-                  <a href="/tags/SciTE-%E9%85%8D%E7%BD%AE/" title="SciTE 配置">
-                    #SciTE 配置
-                  </a>
-                </span>
-                
-              </span>
-          
       </div>
       <div class="markdown-body">
         <p>最近换 SciTE 编辑器了，非常适合我，这是我使用过的唯一能媲美 notepad++ 的编辑器了，因为就要常驻 Linux 了，所以准备转投 SciTE 了。<br>用了几天还不错，不过配置的确很头疼，我的这个配置是参考了一下网上的，又修改了一下适合我自己的习惯。<br>贴出来，有需要的就拿去吧。（后期会持续更新…）<br>#SciTEGlobal.properties<br>—— 全局配置文件，一般不去改动；<br>#SciTEUser.properties —— 用户配置文件，对全局配置要改动的地方，都写在这个文件里；<br>#SciTE.properties —— 本地配置文件，也就是针对当前目录的配置文件，会覆盖全局和用户配置文件；<br>#html.properties —— 特定文件类型的配置文件，比如 html.properties 就是专门针对网页文件的配置文件，au3.properties 是 AutoIt 的配置文件；<br>#参数中多数情况下值设成 1 表示启用某个功能，设成 0 表示不启用某个功能。<br>#支持中文字符 ++++++++++++++++++++++++++++<br>#支持中文 963 表示简体中文<br>code.page&#x3D;65001<br>output.code.page&#x3D;65001<br>#character.set&#x3D;134 不启用的话，在输出区中文可能会乱码<br>#character.set&#x3D;134<br>#Big5:code.page&#x3D;950<br>#UTF8:code.page&#x3D;65001<br>#全局参数 ++++++++++++++++++++++++++++<br>#软件工作目录<br>SciteDefaultHome&#x3D;D:\ 系统工具 \ 网页制作 \scite<br>#关闭文件时提示保存<br>are.you.sure&#x3D;1<br>#重新载入文档时提示<br>are.you.sure.on.reload&#x3D;1<br>#重新载入文档时保留还原信息<br>reload.preserves.undo&#x3D;1<br>#编译和运行时提示保存<br>#are.you.sure.for.build&#x3D;1<br>#检查文档是否已经被其他软件打开<br>check.if.already.open&#x3D;1<br>#显示最近打开的文件<br>save.recent&#x3D;1<br>#只打开一个文件时隐藏标签卡<br>tabbar.hide.one&#x3D;1<br>#最小化时缩小到系统托盘<br>minimize.to.tray&#x3D;1<br>#显示工具栏<br>toolbar.visible&#x3D;0<br>#显示状态栏<br>statusbar.visible&#x3D;1<br>#标题栏显示 1\2\3 三种方式显示当前编辑文件名和文件路径<br>title.full.path&#x3D;2<br>#显示当前 buffer 序号<br>title.show.buffers&#x3D;1<br>buffers&#x3D;100<br>#最小化到屏幕下方的任务栏。如果改成 1，就是最小到屏幕最右下角的托盘区域。<br>minimize.to.tray&#x3D;0<br>#scite 启动时 tab 栏可见<br>tabbar.visible&#x3D;1<br>#当只打开一篇文档时隐藏 tab 栏<br>tabbar.hide.one&#x3D;0<br>#tab 栏启用多行模式，同时打开较多文件时，多行模式比较方便<br>tabbar.multiline&#x3D;1<br>#打开文件路径为当前编辑文件相同目录<br>open.dialog.in.file.directory&#x3D;1<br>#将结果输出窗口放到下方<br>split.vertical&#x3D;0<br>#打开文件时打开的目录为当前操作文件所在目录。这个功能非常实用，否则有时文件目录很深，要打开一个文件，一级级点击进去。<br>open.dialog.in.file.directory&#x3D;1<br>#在输出区显示执行命令所用时间<br>time.commands&#x3D;1<br>#替换相关设置，0 时 () 要写成 ()。一般设成 1++++++++++++++++++++++++++++<br>find.replace.regexp.posix&#x3D;1<br>#打开替换高级开关，可以只搜索某个样式<br>find.replace.advanced&#x3D;1<br>#是否默认用正则表达式搜索<br>find.replace.regexp&#x3D;0<br>#默认搜索时 Wrap around<br>find.replace.wrap&#x3D;1<br>#也就是搜索框的 Transform. backslash expressions 开关<br>#打开这个开关，搜索时要用 \ 来表示 <br>find.replace.escapes&#x3D;0<br>find.replacewith.focus&#x3D;1<br>#通过搜索查找到的字符颜色（用半透明显示）<br>find.mark&#x3D;#F14687<br>#界面布局，字体，颜色等 ++++++++++++++++++++++++++++<br>#默认<br>style.<em>.32&#x3D;$(font.base),back:#cce8cf<br>#行号背景，前景，字体，你可以在用户配置文件里改动一下试试，立即能看到效果<br>style.</em>.33&#x3D;fore:#000000,back:#CCCCCC,$(font.base)<br>#括号 (‘, ‘)’, ‘[‘, ‘]‘, ‘{‘, 和 ‘} 高亮颜色<br>style.<em>.34&#x3D;fore:#0000FF,bold<br>#不匹配括号高亮颜色。这在写代码多层括号嵌套时很有用。<br>style.</em>.35&#x3D;fore::#009933,bold<br>#控制字符<br>style.<em>.36&#x3D;<br>#缩进线<br>style.</em>.37&#x3D;fore:#C0C0C0,back:#CCCCCC<br>#启用括号匹配检查<br>braces.check&#x3D;1<br>braces.sloppy&#x3D;1<br>#软件启动时左边距，上边距，宽，高。宽高设成 - 1 时表示窗口最大化<br>position.left&#x3D;0<br>position.top&#x3D;0<br>position.width&#x3D;-1<br>position.height&#x3D;-1<br>#当打开两个 scite 时，设成 1, 并 position.left&#x3D;0,position.width &#x3D; 屏幕宽度一半，这时两个 scite 实例就可以并列显示了。这在特殊情况下可能有用<br>position.tile&#x3D;1<br>#缩进空白可见<br>view.indentation.whitespace&#x3D;1<br>#设置空白符的前景色和背景色<br>whitespace.fore<br>whitespace.back<br>#每个空白缩进单元显示一条垂直线，修改后重启 Scite 文本编辑器生效。<br>view.indentation.guides&#x3D;1<br>highlight.indentation.guides&#x3D;1<br>#默认字体字号，这里使用了等宽字体<br>font.base&#x3D;font:Courier New,size:9<br>font.small&#x3D;font:Courier New,size:9<br>#选中代码字体、背景颜色及色彩透明度<br>selection.fore&#x3D;#000000<br>selection.back&#x3D;#000080<br>selection.alpha&#x3D;80<br>#闪烁光标的颜色<br>caret.fore&#x3D;#000080<br>#闪烁光标的宽度 1\2\3<br>caret.width&#x3D;2<br>#光标所在行背景色<br>caret.line.back&#x3D;#5ba52f<br>#缩进，换行，代码折叠 ++++++++++++++++++++++++++++<br>#启用括号匹配检查<br>braces.check&#x3D;1<br>braces.sloppy&#x3D;1<br>#tab 键缩进的字符数<br>tabsize&#x3D;4<br>#缩进字符数<br>indent.size&#x3D;4<br>#缩进使用 tab 键<br>use.tabs&#x3D;1<br>#缩进，就是自动保持前一行的缩进<br>#indent.auto&#x3D;1<br>#智能缩进，和上面的区别就是有反缩进<br>indent.automatic&#x3D;1<br>#代码缩进，比如大括号回车自动缩进<br>indent.opening&#x3D;1<br>#代码反缩进，同上<br>indent.closing&#x3D;1<br>#tab 键缩进<br>#tab.indents&#x3D;0<br>#自动换行开关，写代码一般不要打开自动换行<br>wrap&#x3D;1<br>#换行的风格，没用过<br>wrap.style&#x3D;2<br>#输出窗口自动换行<br>output.wrap&#x3D;1<br>#自动换行处的标记符<br>wrap.visual.flags&#x3D;0<br>#代码折叠开关，建议打开<br>fold&#x3D;1<br>#折叠指示，建议打开<br>fold.compact&#x3D;1<br>#折叠代码样式 1\2\3，2 比较好看<br>fold.symbols&#x3D;3<br>#代码折叠区的宽度<br>fold.margin.width&#x3D;16<br>#代码注释折叠<br>fold.comment&#x3D;1<br>#折叠预处理<br>fold.preprocessor&#x3D;1<br>#鼠标到达文件末尾行后滚动条可继续下移<br>end.at.last.line&#x3D;0<br>#显示行号<br>line.margin.visible&#x3D;1<br>#行号显示的位数，3 + 表示默认 3 位数，不够再加<br>line.margin.width&#x3D;3+<br>#行号缩进的宽度，最好不缩进<br>margin.width&#x3D;0<br>#长行指示<br>edge.column&#x3D;200<br>edge.mode&#x3D;0<br>edge.colour&#x3D;#F9F9F9<br>#设置错误行的前景色和背景色<br>error.marker.fore&#x3D;#0000A0<br>error.marker.back&#x3D;#DADAFF<br>#设置书签列的前景色，背景色和透明度<br>bookmark.fore&#x3D;#808000<br>bookmark.back&#x3D;#FFFFA0<br>#如果书签列被关闭，书签所在行将以指定透明度显示<br>bookmark.alpha&#x3D;100<br>#语法提示及自动完成 ++++++++++++++++++++++++++++<br>#除默认语法提示外，可自定义增加后缀名为 API 语法自动完成文件，$(SciteDefaultHome) 表示工作目录，建议在工作目录中新建 API 目录专门存放自动完成文件<br>api.<em>.asp&#x3D;$(SciteDefaultHome)&#x2F;api&#x2F;asp.api<br>#python<br>api.</em>.py&#x3D;$(SciteDefaultHome)&#x2F;api&#x2F;python.api<br>api.<em>.pyw&#x3D;$(SciteDefaultHome)&#x2F;api&#x2F;python.api<br>#php<br>api.</em>.php&#x3D;$(SciteDefaultHome)&#x2F;api&#x2F;php.api<br>#css<br>api.<em>.css&#x3D;$(SciteDefaultHome)&#x2F;api&#x2F;css.api<br>#java<br>api.</em>.js&#x3D;$(SciteDefaultHome)&#x2F;api&#x2F;java.api<br>#在文件内出现过的词都可以自动完成<br>autocompleteword.automatic&#x3D;1<br>#自动补全 xml 及 html 标签<br>xml.auto.close.tags&#x3D;1<br>#xml 和 html 文档标签大小写不敏感<br>html.tags.case.sensitive&#x3D;0<br>#编译错误定位到源代码<br>error.select.line&#x3D;1<br>#外部的扩展，打印和导出文档的时候有用 ++++++++++++++++++++++++++++<br>#export.keep.ext&#x3D;1（构建可执行程序支持）<br>#所见即所得，可以实时预览<br>export.html.wysiwyg&#x3D;1<br>#export.html.tabs&#x3D;1（HTML tab 键支持）<br>#export.html.folding&#x3D;1（HTML 折叠支持）<br>#HTML 旧风格支持<br>export.html.styleused&#x3D;1<br>#export.html.title.fullpath&#x3D;1（HTML 文件显示完整路径）<br>#export.rtf.tabs&#x3D;1（多文档 RTF 支持）<br>#export.rtf.font.face&#x3D;Arial（RTF 文档的默认字体）<br>#export.rtf.font.size&#x3D;9（同上）<br>#export.rtf.tabsize&#x3D;8（同上）<br>#输出 PDF 文档放大倍数<br>export.pdf.magnification&#x3D;0<br>#PDF 默认字体 Font: Courier, Helvetica or Times (Courier<br>line-wraps)<br>export.pdf.font&#x3D;Helvetica<br>#Page size (in points): width, height<br>#E.g. Letter 612,792; A4 595,842; maximum 14400,14400<br>#PDF 页面默认大小<br>export.pdf.pagesize&#x3D;595,842<br>#PDF 默认页边距 Margins (in points): left, right, top, bottom<br>export.pdf.margins&#x3D;72,72,72,72<br>#支持输出 XML<br>export.xml.collapse.spaces&#x3D;1<br>export.xml.collapse.lines&#x3D;1<br>#常用字符列表，留下英文和数字就行了，汉字感觉用不上 ++++++++++++++++++++++++++++<br>chars.alpha&#x3D;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<br>chars.numeric&#x3D;0123456789<br>#打开文件对话框的文件过滤配置，默认的文件类型是在 source.files 中定义的文件类型，把自己最常编辑的文件类型写到 source.files 中，如 <em>.php;</em>.html; 等 ++++++++++++++++++++++++++++<br>source.files&#x3D;<em>.asm;</em>.c;<em>.cc;</em>.cpp;<em>.cxx;</em>.cs;<em>.h;</em>.hh;<em>.hxx;</em>.hpp;<br><em>.idl;</em>.odl;<em>.rc;</em>.rc2;<em>.dlg;</em>.def;<br><em>.vb;</em>.vbs;<em>.bas;</em>.frm;<em>.cls;</em>.ctl;<br><em>.java;</em>.js;<em>.php;</em>.py;<em>.pl;</em>.rb;<em>.cgi;</em>.lua;<em>.conf;<br>make</em>;<em>.mak;<br><em>.properties;</em>.html;</em>.xml;<em>.iface;</em>.bat;<em>.e<br>if PLAT_WIN<br>all.files&#x3D;All Files (</em>.<em>)</em>.*<br>if PLAT_GTK<br>all.files&#x3D;All Files (<em>)<em>Hidden Files (.</em>).</em><br>open.filter&#x3D;<br>All Source$(source.files)<br>$(all.files)<br>$(filter.ada)<br>$(filter.conf)<br>$(filter.asm)<br>$(filter.asn1)<br>$(filter.ave)<br>$(filter.baan)<br>$(filter.bash)<br>$(filter.caml)<br>$(filter.cmake)<br>$(filter.cpp)<br>#$(filter.ch)<br>$(filter.css)<br>$(filter.d)<br>$(filter.eiffel)<br>$(filter.erlang)<br>$(filter.fortran)<br>$(filter.idl)<br>$(filter.inno)<br>$(filter.java)<br>$(filter.js)<br>$(filter.kix)<br>$(filter.lout)<br>$(filter.lua)<br>$(filter.matlab)<br>$(filter.post)<br>$(filter.mmixal)<br>$(filter.nncrontab)<br>$(filter.nsis)<br>$(filter.opal)<br>$(filter.pascal)<br>$(filter.perl)<br>$(filter.php)<br>$(filter.pov)<br>$(filter.prg)<br>$(filter.properties)<br>$(filter.ps)<br>$(filter.python)<br>$(filter.ruby)<br>$(filter.sql)<br>$(filter.specman)<br>$(filter.tcl)<br>$(filter.tex)<br>$(filter.text)<br>$(filter.vb)<br>$(filter.web)<br>$(filter.yaml)<br>$(filter.verilog)<br>$(filter.vhdl)<br>#部分语言特别设置 ++++++++++++++++++++++++++++<br>#asp 的默认脚本语言，设成 1 时是 Java, 2 是 VB, 3 是 Python<br>asp.default.language&#x3D;2<br>#Python 用的，你不用 Python 编程语言的话，这条不用管，大概是缩进对齐用的<br>tab.timmy.whinge.level<br>#输出区的位置，大小，及启动 scite 文本编辑器时输出区是否隐藏 ++++++++++++++++++++++++++++<br>#输出区在下方<br>split.vertical&#x3D;0<br>#output.horizontal.size&#x3D;200<br>#output.vertical.size&#x3D;60<br>#output.initial.hide&#x3D;1<br>#执行命令前清空输出区的内容<br>clear.before.execute&#x3D;1<br>#文件尾留空，默认设置中，光标在文件最后一行时垂直滑动条无法再向下滚动，不符合使用习惯。<br>end.at.last.line&#x3D;0<br>#新建文件时的默认语言模块<br>default.file.ext&#x3D;.hmtl</p>
@@ -247,22 +218,11 @@
             
           </div>
           <div class="post-attach">
-            <span class="post-pubtime">
-              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2024-10-30 10:35:21
-            </span>
-            
-                  <span class="post-categories">
-                    <i class="iconfont icon-bookmark" title="分类"></i>
-                    
-                    <span class="span--category">
-                      <a href="/categories/tech/" title="技术">
-                        <b>#</b> 技术
-                      </a>
-                    </span>
-                    
-                  </span>
+            <!-- <span class="post-pubtime"> -->
+              <!-- <i class="iconfont icon-updatetime mr-10" title=""></i> -->
               
+            <!-- </span> -->
+            
                   <span class="post-tags">
                     <i class="iconfont icon-tags mr-10" title="标签"></i>
                     
