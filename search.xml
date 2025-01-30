@@ -657,6 +657,8 @@
             
             <tag> 罗技 </tag>
             
+            <tag> 小米鼠标 </tag>
+            
             <tag> 鼠标 </tag>
             
             <tag> 鼠标左键连点 </tag>
@@ -676,8 +678,6 @@
             <tag> MX Anywhere 2S </tag>
             
             <tag> Logitech </tag>
-            
-            <tag> 小米鼠标 </tag>
             
         </tags>
       
@@ -3691,11 +3691,11 @@
       
         <tags>
             
-            <tag> Windows7 </tag>
-            
             <tag> Device </tag>
             
             <tag> Unknown </tag>
+            
+            <tag> Windows7 </tag>
             
             <tag> 多合一 </tag>
             
@@ -3749,11 +3749,11 @@
       
         <tags>
             
+            <tag> Windows7 </tag>
+            
             <tag> 8024402F </tag>
             
             <tag> Update </tag>
-            
-            <tag> Windows7 </tag>
             
             <tag> 无法更新 </tag>
             
