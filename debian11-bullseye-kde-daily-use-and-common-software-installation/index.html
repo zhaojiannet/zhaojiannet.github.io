@@ -3,53 +3,53 @@
 
   <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" >
-  <meta name="author" content="赵健(zhaoJian)" >
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="赵健(zhaoJian)" />
+  <!-- Open Graph Description 简短摘要-->
   
   
   <title> Debian 11 bullseye（KDE）日常使用情况及常用软件安装   |  赵健的技术笔记 - 赵健(zhaoJian)</title>
 
+  <!-- 用于搜索引擎的文章摘要 -->
   
-  
-  <meta name="keywords" content="赵健,zhaojian,zhaojiannet,赵健的技术笔记,技术笔记,linux,IT技术,nodejs,javascript,linux,佛系IT少年" >
-  
-
-  
-  <meta name="description" content="赵健的技术笔记 | 保持热爱，勇往直前。赵健，zhaojian，zhaoJianNet，佛系IT少年。" >
+  <meta name="keywords" content="赵健,zhaojian,zhaojiannet,赵健的技术笔记,技术笔记,linux,IT技术,nodejs,javascript,linux,佛系IT少年" />
   
 
   
-
+  <meta name="description" content="赵健的技术笔记 | 保持热爱，勇往直前。赵健，zhaojian，zhaoJianNet，佛系IT少年。" />
+  
 
   
 
-  <link rel="canonical" href="https://www.zhaojian.net/debian11-bullseye-kde-daily-use-and-common-software-installation/">
+
+  <!-- hexo-auto-canonical DIY 增加 -->
+
+  <link rel="canonical" href="https://www.zhaojian.net/debian11-bullseye-kde-daily-use-and-common-software-installation/"/>
 
   
     <link rel="apple-touch-icon" href="/images/apple-touch-icon-next.png">
     <link rel="icon" href="/images/favicon-32x32-next.png">
   
 
-  
+  <!-- Raleway-Font -->
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
-  
-  <link rel="stylesheet" href="/css/main.css" >
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" >
-  
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
   
     
 <link rel="stylesheet" href="/css/figcaption/mac-block.css">
 
   
 
-  
+  <!-- jquery3.3.1 -->
   
     <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
   
 
-  
+  <!-- fancybox -->
   
     <link href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet">
     <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -59,7 +59,7 @@
 
 
   
-    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-70H136JFY6"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -85,99 +85,7 @@
 <script defer src="https://cloud.umami.is/script.js" data-website-id="634aa455-ea55-423f-896a-e2d60ea56ffd"></script>
 
 <meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="赵健的技术笔记 - 赵健(zhaoJian)" type="application/atom+xml">
-
-
-<script type="application/ld+json" id="hexo-seo-schema">[
-  {
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "url": "https://www.zhaojian.net",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "@id": "https://developers.google.com/search/docs/advanced/structured-data/sitelinks-searchbox",
-      "target": "https://www.zhaojian.net/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": "https://developers.google.com/search/docs/advanced/structured-data/breadcrumb",
-    "name": "breadcrumb",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": "https://www.zhaojian.net/tags/Debian11-%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/",
-        "name": "Debian11 常用软件"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": "https://www.zhaojian.net/tags/Debian-%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/",
-        "name": "Debian 日常使用"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": "https://www.zhaojian.net/tags/Linux-%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/",
-        "name": "Linux 常用软件"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": "https://www.zhaojian.net/tags/Linux-%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/",
-        "name": "Linux 日常使用"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": "https://www.zhaojian.net/categories/tech/",
-        "name": "技术"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "item": "https://www.zhaojian.net/debian11-bullseye-kde-daily-use-and-common-software-installation/",
-        "name": "Debian 11 bullseye（KDE）日常使用情况及常用软件安装"
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org/",
-    "@type": "Article",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.zhaojian.net/debian11-bullseye-kde-daily-use-and-common-software-installation/"
-    },
-    "headline": "Debian 11 bullseye（KDE）日常使用情况及常用软件安装",
-    "description": "Debian 11 bullseye（KDE）日常使用情况及常用软件安装",
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1200px-No_image_available.svg.png",
-      "width": "250",
-      "height": "250"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "赵健(zhaoJian)"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "赵健(zhaoJian)",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.webmanajemen.com/2022/01/04/frp-redmi-go-tiare-fix/Bypass%20FRP%20Redmi%20Go%20Tiare%20M1903C3GG.jpg",
-        "width": "125",
-        "height": "125"
-      }
-    },
-    "datePublished": "2021-10-05T12:52:45+09:00",
-    "dateModified": "2024-10-30T10:35:21+09:00"
-  }
-]</script>
-
-<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" ></head>
+</head>
 
 
   <body>
@@ -185,9 +93,9 @@
       <div class="header">
   <div class="avatar">
     <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
       
-      
-        <img no-lazy src="/images/zhaojian-avatar.png" alt title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" itemprop="image">
+        <img no-lazy src="/images/zhaojian-avatar.png" alt="">
       
     </a>
     <div class="nickname"><a href="/">赵健(zhaoJian)</a></div>
@@ -230,11 +138,11 @@
 
 
       <div class="flex-container">
-        
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
 
-
-  
+  <!-- LaTex Display -->
 
   
     <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
@@ -251,7 +159,7 @@
 
 
 
-  
+  <!-- clipboard -->
 
   
     <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
@@ -273,7 +181,7 @@
   
 
   
-  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
       <div class="post-title">Debian 11 bullseye（KDE）日常使用情况及常用软件安装</div>
@@ -297,11 +205,11 @@
       </div>
       <div class="markdown-body">
         <p>最近在用 Debian 11，之前也用其他的系统：Ubuntu、Manjaro、Fedora、CentOS，都不错，但服务器一直用 Debian，索性把桌面系统也统一了吧。</p>
-<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="/uploads/2021/10/Screenshot_20210930_164043.png" alt="&#x2F;uploads&#x2F;2021&#x2F;10&#x2F;Screenshot_20210930_164043.png" title="/uploads/2021/10/Screenshot_20210930_164043.png" itemprop="image"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="/uploads/2021/10/Screenshot_20210930_164043.png" alt="&#x2F;uploads&#x2F;2021&#x2F;10&#x2F;Screenshot_20210930_164043.png"></p>
 <p>下面是我在使用 Debian 11 时遇到的问题，发生时间节点：2021 年 9 月，具体发行版：Debian 11 bullseye，我使用的是测试版 (testing distribution) ，可以称其为 Debian bookworm，因为在 bullseye 之后 Debian 的下一个版本代号即是 bookworm。</p>
 <p>系统环境：<br>版本信息：Debian 11 bullseye 测试版 (testing)<br>桌面环境：KDE</p>
-<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="/uploads/2021/10/Screenshot_20210930_163707.png" alt="&#x2F;uploads&#x2F;2021&#x2F;10&#x2F;Screenshot_20210930_163707.png" title="/uploads/2021/10/Screenshot_20210930_163707.png" itemprop="image"></p>
-<p>常用软件：<br><a target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://www.google.com/intl/zh-CN/chrome/beta/" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">Chrome Beta</a><br><a target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://www.mozilla.org/zh-CN/firefox/developer/" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">Firefox Developer Edition</a><br><a target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://code.visualstudio.com/" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">Visual Studio Code</a><br><a target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://remmina.org/how-to-install-remmina/#debian" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">Remmina</a><br>FileZilla（Discover）<br><a target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://dbeaver.io/" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">DBeaver</a><br><a target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">VMware Workstation 16 Pro</a><br><a target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://joplinapp.org/help/#desktop-applications" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">Joplin</a><br><a target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://www.xmind.cn/download/" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">XMind</a><br><a target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://linux.wps.cn/" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">WPS Office</a><br>Photoshop CS6 <a target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://github.com/zq1997/deepin-wine" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">deepin-wine</a><br>微信 <a target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://github.com/zq1997/deepin-wine" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">deepin-wine</a><br>企业微信 <a target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://github.com/zq1997/deepin-wine" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">deepin-wine</a><br>QQ&#x2F;TIM <a target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://github.com/zq1997/deepin-wine" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">deepin-wine</a><br><a target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://pinyin.sogou.com/linux/?r=pinyin" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">搜狗输入法</a><br><a target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://beta.drweb.com/files/?p=unix/11.1" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">Dr.Web Beta</a><br><a target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://motrix.app/" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">Motrix</a></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="/uploads/2021/10/Screenshot_20210930_163707.png" alt="&#x2F;uploads&#x2F;2021&#x2F;10&#x2F;Screenshot_20210930_163707.png"></p>
+<p>常用软件：<br><a target="_blank" rel="noopener" href="https://www.google.com/intl/zh-CN/chrome/beta/">Chrome Beta</a><br><a target="_blank" rel="noopener" href="https://www.mozilla.org/zh-CN/firefox/developer/">Firefox Developer Edition</a><br><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Visual Studio Code</a><br><a target="_blank" rel="noopener" href="https://remmina.org/how-to-install-remmina/#debian">Remmina</a><br>FileZilla（Discover）<br><a target="_blank" rel="noopener" href="https://dbeaver.io/">DBeaver</a><br><a target="_blank" rel="noopener" href="https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html">VMware Workstation 16 Pro</a><br><a target="_blank" rel="noopener" href="https://joplinapp.org/help/#desktop-applications">Joplin</a><br><a target="_blank" rel="noopener" href="https://www.xmind.cn/download/">XMind</a><br><a target="_blank" rel="noopener" href="https://linux.wps.cn/">WPS Office</a><br>Photoshop CS6 <a target="_blank" rel="noopener" href="https://github.com/zq1997/deepin-wine">deepin-wine</a><br>微信 <a target="_blank" rel="noopener" href="https://github.com/zq1997/deepin-wine">deepin-wine</a><br>企业微信 <a target="_blank" rel="noopener" href="https://github.com/zq1997/deepin-wine">deepin-wine</a><br>QQ&#x2F;TIM <a target="_blank" rel="noopener" href="https://github.com/zq1997/deepin-wine">deepin-wine</a><br><a target="_blank" rel="noopener" href="https://pinyin.sogou.com/linux/?r=pinyin">搜狗输入法</a><br><a target="_blank" rel="noopener" href="https://beta.drweb.com/files/?p=unix/11.1">Dr.Web Beta</a><br><a target="_blank" rel="noopener" href="https://motrix.app/">Motrix</a></p>
 <p>发生时间：2021-09</p>
 <p>我的常用软件遵循原则<br>渠道选择：系统自带软件中心（Discover）&gt; 软件官网 &gt; 第三方网站<br>软件选择：跨平台 &gt; 开源软件 &gt; 免费 &gt; 破解 &gt; 收费<br>版本选择：开发版 &gt; 测试版 &gt; 稳定版</p>
 <p>Debian 11 安装完毕，首先需要授予当前用户 sudo 权限，否则无法进行系统升级、软件安装。</p>
@@ -318,7 +226,7 @@
 <p>FileZilla 开始 &gt; 应用 &gt; 系统 Discover 软件中心搜索下载</p>
 <p>Dbeaver</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo dpkg -i dbeaver-ce_21.2.1_amd64.deb</span><br></pre></td></tr></table></figure>
-<p>VMware Workstation 16 Pro <a href="https://www.zhaojian.net/vmware-workstation-pro-license-key-serial-key/" rel="internal follow bookmark" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">keys</a> ZF3R0-FHED2-M80TY-8QYGC-NPKYF</p>
+<p>VMware Workstation 16 Pro <a href="https://www.zhaojian.net/vmware-workstation-pro-license-key-serial-key/">keys</a> ZF3R0-FHED2-M80TY-8QYGC-NPKYF</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install build-essential linux-headers-$(uname -r)</span><br><span class="line">$ sudo chmod +x VMware-Workstation-Full-16.1.2-17966106.x86_64.bundle</span><br><span class="line">$ sudo ./VMware-Workstation-Full-16.1.2-17966106.x86_64.bundle</span><br></pre></td></tr></table></figure>
 <p>Joplin 推荐使用脚本安装，可以解决 Joplin 图标无法固定问题</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh  bash</span><br></pre></td></tr></table></figure>
@@ -339,7 +247,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 首次使用，需添加deepin-wine仓库</span><br><span class="line">$ sudo apt install com.qq.im.deepin</span><br></pre></td></tr></table></figure>
 <p>搜狗输入法</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo dpkg -i sogoupinyin_2.4.0.3469_amd64.deb</span><br></pre></td></tr></table></figure>
-<p>Dr.Web Linux 版 <a target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://beta.drweb.com/files/?p=unix/11.1/key/drweb32.key&lng=en&t=f" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">key</a><br>Dr.Web Linux 稳定版可使用 Dr.Web Linux 测试版的 key，不知道为什么，测试版的版本号较低，所以选择了稳定版</p>
+<p>Dr.Web Linux 版 <a target="_blank" rel="noopener" href="https://beta.drweb.com/files/?p=unix/11.1/key/drweb32.key&lng=en&t=f">key</a><br>Dr.Web Linux 稳定版可使用 Dr.Web Linux 测试版的 key，不知道为什么，测试版的版本号较低，所以选择了稳定版</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo chmod +x drweb-11.1.3-av-linux-amd64.run</span><br><span class="line">$ sudo ./drweb-11.1.3-av-linux-amd64.run</span><br></pre></td></tr></table></figure>
 <p>部分软件安装过程中出现问题，或需要破解、可以等，有空再更新</p>
 
@@ -355,10 +263,10 @@
             
           </div>
           <div class="post-attach">
-            
+            <!-- <span class="post-pubtime"> -->
+              <!-- <i class="iconfont icon-updatetime mr-10" title=""></i> -->
               
-              
-            
+            <!-- </span> -->
             
                   <span class="post-tags">
                     <i class="iconfont icon-tags mr-10" title="标签"></i>
@@ -412,7 +320,7 @@
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067825494341267"
   crossorigin="anonymous"></script>
-  
+  <!-- foot_ads -->
   <ins class="adsbygoogle"
     style="display:block"
     data-ad-client="ca-pub-7067825494341267"
@@ -463,7 +371,7 @@
       
         <li>
           
-              <a title="zhaojiannet" target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://github.com/zhaojiannet" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">
+              <a title="zhaojiannet" target="_blank" rel="noopener" href="https://github.com/zhaojiannet">
                 <i class="iconfont icon-github"></i>
               </a>
               
@@ -471,7 +379,7 @@
         
         <li>
           
-              <a title="zhaojiannet" target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://twitter.com/zhaoJianNet" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">
+              <a title="zhaojiannet" target="_blank" rel="noopener" href="https://twitter.com/zhaoJianNet">
                 <i class="iconfont icon-twitter"></i>
               </a>
               
@@ -507,7 +415,7 @@
     
     <div class="footer-more">
       
-        <a href="https://www.zhaojian.net" rel="internal follow bookmark" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">Copyright © 2009~2024 赵健(zhaoJian) - 赵健的技术笔记  <br> <a href="https://beian.miit.gov.cn/" rel="nofollow noopener noreferer noreferrer external" target="_blank" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装" title="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">辽ICP备20000595号 </a></a>
+        <a href="https://www.zhaojian.net">Copyright © 2009~2024 赵健(zhaoJian) - 赵健的技术笔记  <br> <a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">辽ICP备20000595号 </a></a>
         
     </div>
   
@@ -762,12 +670,12 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Debian%2011%20bullseye%EF%BC%88KDE%EF%BC%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5%E5%8F%8A%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85 + '&url=' + https%3A%2F%2Fwww.zhaojian.net%2Fdebian11-bullseye-kde-daily-use-and-common-software-installation%2F + '" target="_blank" title="Twitter" rel="nofollow noopener noreferer noreferrer external" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Debian%2011%20bullseye%EF%BC%88KDE%EF%BC%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5%E5%8F%8A%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85 + '&url=' + https%3A%2F%2Fwww.zhaojian.net%2Fdebian11-bullseye-kde-daily-use-and-common-software-installation%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://www.zhaojian.net/debian11-bullseye-kde-daily-use-and-common-software-installation/" target="_blank" title="Facebook" rel="nofollow noopener noreferer noreferrer external" hexo-seo="true" alt="Debian 11 bullseye（KDE）日常使用情况及常用软件安装">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://www.zhaojian.net/debian11-bullseye-kde-daily-use-and-common-software-installation/" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         

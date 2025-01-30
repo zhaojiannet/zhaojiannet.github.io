@@ -657,8 +657,6 @@
             
             <tag> 罗技 </tag>
             
-            <tag> 小米鼠标 </tag>
-            
             <tag> 鼠标 </tag>
             
             <tag> 鼠标左键连点 </tag>
@@ -678,6 +676,8 @@
             <tag> MX Anywhere 2S </tag>
             
             <tag> Logitech </tag>
+            
+            <tag> 小米鼠标 </tag>
             
         </tags>
       
@@ -3691,11 +3691,11 @@
       
         <tags>
             
+            <tag> Windows7 </tag>
+            
             <tag> Device </tag>
             
             <tag> Unknown </tag>
-            
-            <tag> Windows7 </tag>
             
             <tag> 多合一 </tag>
             
@@ -3749,11 +3749,11 @@
       
         <tags>
             
-            <tag> Windows7 </tag>
-            
             <tag> 8024402F </tag>
             
             <tag> Update </tag>
+            
+            <tag> Windows7 </tag>
             
             <tag> 无法更新 </tag>
             
@@ -3780,13 +3780,13 @@
       
         <tags>
             
+            <tag> PHP </tag>
+            
             <tag> base64 </tag>
             
             <tag> base64加密 </tag>
             
             <tag> base64解密 </tag>
-            
-            <tag> PHP </tag>
             
             <tag> PHP加密 </tag>
             
@@ -4162,9 +4162,9 @@
       
         <tags>
             
-            <tag> PHP </tag>
-            
             <tag> E-mail </tag>
+            
+            <tag> PHP </tag>
             
             <tag> php mail </tag>
             
@@ -4290,9 +4290,9 @@
       
         <tags>
             
-            <tag> 我的电脑 </tag>
-            
             <tag> 右键 </tag>
+            
+            <tag> 我的电脑 </tag>
             
             <tag> 文本文档 </tag>
             

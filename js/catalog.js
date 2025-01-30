@@ -1,1 +1,69 @@
-let e=document.getElementById("catalog"),t=e.offsetTop,o=document.getElementsByClassName("catalog-content")[0];function n(){let o=document.documentElement.scrollTop||document.body.scrollTop;e.style=o>t-20?"position: fixed; top: 20px; bottom: 20px;":"position: absolute; top: calc(290px + 88px + 30px)"}function l(){let e=document.documentElement.scrollTop||document.body.scrollTop,t=document.getElementsByClassName("headerlink");if(!t.length)return;let n=document.getElementsByClassName("toc-link");for(let l=0;l<n.length;l++){let c=t[l].offsetTop-20,s=l+1===t.length?1/0:t[l+1].offsetTop-20;e>=c&&e<s?(n[l].className="toc-link active",o.scrollTop=n[l].offsetTop-32):n[l].className="toc-link"}}function c(){let e=document.documentElement.clientHeight;o.setAttribute("style",`height: ${e-90}px`)}function s(){e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}n(),l(),c(),document.addEventListener("scroll",n,!1),document.addEventListener("scroll",l,!1),window.addEventListener("resize",c,!1),document.querySelector("#btn-catalog").addEventListener("click",s,!1);
+// catalog js
+let catalog = document.getElementById("catalog");
+let catalogTopHeight = catalog.offsetTop;
+let tocElement = document.getElementsByClassName("catalog-content")[0]
+
+// 是否固定目录
+function changePos() {
+  let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+  if (scrollTop > catalogTopHeight - 20) {
+    catalog.style = "position: fixed; top: 20px; bottom: 20px;"
+  } else {
+    catalog.style = "position: absolute; top: calc(290px + 88px + 30px)"
+  }
+}
+
+// 是否激活目录
+function isActiveCat() {
+  // 可宽限高度值
+  let offsetHeight = 20
+
+  // 当前页面滚动位置距页面顶部的高度值
+  let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+
+  // 页面所有标题列表
+  let headerLinkList = document.getElementsByClassName("headerlink")
+
+  if (!headerLinkList.length) return
+
+  // 页面所有目录列表
+  let catLinkList = document.getElementsByClassName("toc-link")
+
+  for(let i = 0; i < catLinkList.length; i++) {
+    let currentTopCat = headerLinkList[i].offsetTop - offsetHeight
+    let nextTopCat = i + 1 === headerLinkList.length ?
+        Infinity : headerLinkList[i+1].offsetTop - offsetHeight
+
+    if (scrollTop >= currentTopCat && scrollTop < nextTopCat) {
+      // 目录跟随滚动
+      catLinkList[i].className = "toc-link active"
+      tocElement.scrollTop = catLinkList[i].offsetTop - 32
+    } else {
+      catLinkList[i].className = "toc-link"
+    }
+  }
+}
+
+// 窗体高度变化时
+function handleResize() {
+  let windowHeight = document.documentElement.clientHeight
+  tocElement.setAttribute('style', `height: ${windowHeight - 90}px`);
+}
+
+// 小屏下（屏宽小于888px）是否展开目录
+function openOrHiddenCatalog() {
+  let isHidden = catalog.classList.contains('hidden')
+  if (isHidden) {
+    catalog.classList.remove('hidden')
+  } else {
+    catalog.classList.add('hidden')
+  }
+}
+
+changePos();
+isActiveCat();
+handleResize();
+document.addEventListener("scroll", changePos, false);
+document.addEventListener("scroll", isActiveCat, false);
+window.addEventListener("resize", handleResize, false);
+document.querySelector("#btn-catalog").addEventListener("click", openOrHiddenCatalog, false);

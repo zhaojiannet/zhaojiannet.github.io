@@ -3,53 +3,53 @@
 
   <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" >
-  <meta name="author" content="赵健(zhaoJian)" >
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="赵健(zhaoJian)" />
+  <!-- Open Graph Description 简短摘要-->
   
   
   <title> Linux 拼音输入法词库导致 fcitx5 内存使用异常 内存占用增加   |  赵健的技术笔记 - 赵健(zhaoJian)</title>
 
+  <!-- 用于搜索引擎的文章摘要 -->
   
-  
-  <meta name="keywords" content="赵健,zhaojian,zhaojiannet,赵健的技术笔记,技术笔记,linux,IT技术,nodejs,javascript,linux,佛系IT少年" >
-  
-
-  
-  <meta name="description" content="赵健的技术笔记 | 保持热爱，勇往直前。赵健，zhaojian，zhaoJianNet，佛系IT少年。" >
+  <meta name="keywords" content="赵健,zhaojian,zhaojiannet,赵健的技术笔记,技术笔记,linux,IT技术,nodejs,javascript,linux,佛系IT少年" />
   
 
   
-
+  <meta name="description" content="赵健的技术笔记 | 保持热爱，勇往直前。赵健，zhaojian，zhaoJianNet，佛系IT少年。" />
+  
 
   
 
-  <link rel="canonical" href="https://www.zhaojian.net/linux-pinyin-input-method-dictionary-is-causing-abnormal-memory-usage-in-fcitx5/">
+
+  <!-- hexo-auto-canonical DIY 增加 -->
+
+  <link rel="canonical" href="https://www.zhaojian.net/linux-pinyin-input-method-dictionary-is-causing-abnormal-memory-usage-in-fcitx5/"/>
 
   
     <link rel="apple-touch-icon" href="/images/apple-touch-icon-next.png">
     <link rel="icon" href="/images/favicon-32x32-next.png">
   
 
-  
+  <!-- Raleway-Font -->
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
-  
-  <link rel="stylesheet" href="/css/main.css" >
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" >
-  
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
   
     
 <link rel="stylesheet" href="/css/figcaption/mac-block.css">
 
   
 
-  
+  <!-- jquery3.3.1 -->
   
     <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
   
 
-  
+  <!-- fancybox -->
   
     <link href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet">
     <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -59,7 +59,7 @@
 
 
   
-    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-70H136JFY6"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -85,135 +85,7 @@
 <script defer src="https://cloud.umami.is/script.js" data-website-id="634aa455-ea55-423f-896a-e2d60ea56ffd"></script>
 
 <meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="赵健的技术笔记 - 赵健(zhaoJian)" type="application/atom+xml">
-
-
-<script type="application/ld+json" id="hexo-seo-schema">[
-  {
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "url": "https://www.zhaojian.net",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "@id": "https://developers.google.com/search/docs/advanced/structured-data/sitelinks-searchbox",
-      "target": "https://www.zhaojian.net/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": "https://developers.google.com/search/docs/advanced/structured-data/breadcrumb",
-    "name": "breadcrumb",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": "https://www.zhaojian.net/tags/Linux/",
-        "name": "Linux"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": "https://www.zhaojian.net/tags/Debian/",
-        "name": "Debian"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": "https://www.zhaojian.net/tags/KDE/",
-        "name": "KDE"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": "https://www.zhaojian.net/tags/fcitx/",
-        "name": "fcitx"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": "https://www.zhaojian.net/tags/fcitx5/",
-        "name": "fcitx5"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "item": "https://www.zhaojian.net/tags/fcitx5-%E5%86%85%E5%AD%98%E5%BC%82%E5%B8%B8/",
-        "name": "fcitx5 内存异常"
-      },
-      {
-        "@type": "ListItem",
-        "position": 7,
-        "item": "https://www.zhaojian.net/tags/fcitx5-%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8/",
-        "name": "fcitx5 内存占用"
-      },
-      {
-        "@type": "ListItem",
-        "position": 8,
-        "item": "https://www.zhaojian.net/tags/fcitx5-%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8/",
-        "name": "fcitx5 内存使用"
-      },
-      {
-        "@type": "ListItem",
-        "position": 9,
-        "item": "https://www.zhaojian.net/tags/fcitx5-%E4%BA%91%E6%8B%BC%E9%9F%B3/",
-        "name": "fcitx5 云拼音"
-      },
-      {
-        "@type": "ListItem",
-        "position": 10,
-        "item": "https://www.zhaojian.net/tags/linux-%E4%BA%91%E6%8B%BC%E9%9F%B3/",
-        "name": "linux 云拼音"
-      },
-      {
-        "@type": "ListItem",
-        "position": 11,
-        "item": "https://www.zhaojian.net/categories/tech/",
-        "name": "技术"
-      },
-      {
-        "@type": "ListItem",
-        "position": 12,
-        "item": "https://www.zhaojian.net/linux-pinyin-input-method-dictionary-is-causing-abnormal-memory-usage-in-fcitx5/",
-        "name": "Linux 拼音输入法词库导致 fcitx5 内存使用异常 内存占用增加"
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org/",
-    "@type": "Article",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.zhaojian.net/linux-pinyin-input-method-dictionary-is-causing-abnormal-memory-usage-in-fcitx5/"
-    },
-    "headline": "Linux 拼音输入法词库导致 fcitx5 内存使用异常 内存占用增加",
-    "description": "Linux 拼音输入法词库导致 fcitx5 内存使用异常 内存占用增加",
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1200px-No_image_available.svg.png",
-      "width": "250",
-      "height": "250"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "赵健(zhaoJian)"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "赵健(zhaoJian)",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.webmanajemen.com/2022/01/04/frp-redmi-go-tiare-fix/Bypass%20FRP%20Redmi%20Go%20Tiare%20M1903C3GG.jpg",
-        "width": "125",
-        "height": "125"
-      }
-    },
-    "datePublished": "2023-11-28T03:39:58+09:00",
-    "dateModified": "2024-10-30T10:35:21+09:00"
-  }
-]</script>
-
-<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" ></head>
+</head>
 
 
   <body>
@@ -221,9 +93,9 @@
       <div class="header">
   <div class="avatar">
     <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
       
-      
-        <img no-lazy src="/images/zhaojian-avatar.png" alt title="Linux 拼音输入法词库导致 fcitx5 内存使用异常 内存占用增加" itemprop="image">
+        <img no-lazy src="/images/zhaojian-avatar.png" alt="">
       
     </a>
     <div class="nickname"><a href="/">赵健(zhaoJian)</a></div>
@@ -266,11 +138,11 @@
 
 
       <div class="flex-container">
-        
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
 
-
-  
+  <!-- LaTex Display -->
 
   
     <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
@@ -287,7 +159,7 @@
 
 
 
-  
+  <!-- clipboard -->
 
   
     <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
@@ -309,7 +181,7 @@
   
 
   
-  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
       <div class="post-title">Linux 拼音输入法词库导致 fcitx5 内存使用异常 内存占用增加</div>
@@ -333,12 +205,12 @@
       </div>
       <div class="markdown-body">
         <p>这次在 Debian 12 测试版（testing）没有安装 fcitx5-rime，直接使用系统自带的 fcitx5-chinese-addons 涵盖了五笔、拼音、双拼、自然码等输入法，可以使用云拼音，还能直接使用搜狗官方拼音词库。不过，在使用过程中发现 fcitx5 内存占用异常。</p>
-<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="/uploads/2023/11/Screenshot_20231127_223525.png" alt="&#x2F;uploads&#x2F;2023&#x2F;11&#x2F;Screenshot_20231127_223525.png" title="/uploads/2023/11/Screenshot_20231127_223525.png" itemprop="image"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="/uploads/2023/11/Screenshot_20231127_223525.png" alt="&#x2F;uploads&#x2F;2023&#x2F;11&#x2F;Screenshot_20231127_223525.png"></p>
 <p>经过排查，发现是因为使用了 fcitx5-pinyin-zhwiki 词库导致的，fcitx5-pinyin-zhwiki 是根据中文维基百科创建的，词库量非常大，fcitx5 会把词库直接加载到内存中，所以使用 fcitx5-pinyin-zhwiki 无形中就增加了600多M内存。</p>
 <p>因为平时没有连续输入打字的场景，仅使用搜狗词库就够用了，所以决定暂时删除 fcitx5-pinyin-zhwiki 词库，重新启动输入法后，内存恢复到接近初始状态。</p>
-<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="/uploads/2023/11/Screenshot_20231127_223610.png" alt="&#x2F;uploads&#x2F;2023&#x2F;11&#x2F;Screenshot_20231127_223610.png" title="/uploads/2023/11/Screenshot_20231127_223610.png" itemprop="image"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="/uploads/2023/11/Screenshot_20231127_223610.png" alt="&#x2F;uploads&#x2F;2023&#x2F;11&#x2F;Screenshot_20231127_223610.png"></p>
 <p>另外，有网友遇到 fcitx5 内存异常的另一种情况，是因为开启了云拼音后，默认的谷歌（Google）后端服务无法访问，因此造成内存增加，只要把云拼音后端服务更改为百度（Baidu）即可解决。</p>
-<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="/uploads/2023/11/Screenshot_20231128_033320.png" alt="&#x2F;uploads&#x2F;2023&#x2F;11&#x2F;Screenshot_20231128_033320.png" title="/uploads/2023/11/Screenshot_20231128_033320.png" itemprop="image"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="/uploads/2023/11/Screenshot_20231128_033320.png" alt="&#x2F;uploads&#x2F;2023&#x2F;11&#x2F;Screenshot_20231128_033320.png"></p>
 
       </div>
       
@@ -352,10 +224,10 @@
             
           </div>
           <div class="post-attach">
-            
+            <!-- <span class="post-pubtime"> -->
+              <!-- <i class="iconfont icon-updatetime mr-10" title=""></i> -->
               
-              
-            
+            <!-- </span> -->
             
                   <span class="post-tags">
                     <i class="iconfont icon-tags mr-10" title="标签"></i>
@@ -445,7 +317,7 @@
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067825494341267"
   crossorigin="anonymous"></script>
-  
+  <!-- foot_ads -->
   <ins class="adsbygoogle"
     style="display:block"
     data-ad-client="ca-pub-7067825494341267"
@@ -496,7 +368,7 @@
       
         <li>
           
-              <a title="zhaojiannet" target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://github.com/zhaojiannet" hexo-seo="true" alt="Linux 拼音输入法词库导致 fcitx5 内存使用异常 内存占用增加">
+              <a title="zhaojiannet" target="_blank" rel="noopener" href="https://github.com/zhaojiannet">
                 <i class="iconfont icon-github"></i>
               </a>
               
@@ -504,7 +376,7 @@
         
         <li>
           
-              <a title="zhaojiannet" target="_blank" rel="nofollow noopener noreferer noreferrer external" href="https://twitter.com/zhaoJianNet" hexo-seo="true" alt="Linux 拼音输入法词库导致 fcitx5 内存使用异常 内存占用增加">
+              <a title="zhaojiannet" target="_blank" rel="noopener" href="https://twitter.com/zhaoJianNet">
                 <i class="iconfont icon-twitter"></i>
               </a>
               
@@ -540,7 +412,7 @@
     
     <div class="footer-more">
       
-        <a href="https://www.zhaojian.net" rel="internal follow bookmark" hexo-seo="true" alt="Linux 拼音输入法词库导致 fcitx5 内存使用异常 内存占用增加" title="Linux 拼音输入法词库导致 fcitx5 内存使用异常 内存占用增加">Copyright © 2009~2024 赵健(zhaoJian) - 赵健的技术笔记  <br> <a href="https://beian.miit.gov.cn/" rel="nofollow noopener noreferer noreferrer external" target="_blank" hexo-seo="true" alt="Linux 拼音输入法词库导致 fcitx5 内存使用异常 内存占用增加" title="Linux 拼音输入法词库导致 fcitx5 内存使用异常 内存占用增加">辽ICP备20000595号 </a></a>
+        <a href="https://www.zhaojian.net">Copyright © 2009~2024 赵健(zhaoJian) - 赵健的技术笔记  <br> <a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">辽ICP备20000595号 </a></a>
         
     </div>
   
@@ -795,12 +667,12 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Linux%20%E6%8B%BC%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95%E8%AF%8D%E5%BA%93%E5%AF%BC%E8%87%B4%20fcitx5%20%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8%E5%BC%82%E5%B8%B8%20%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8%E5%A2%9E%E5%8A%A0 + '&url=' + https%3A%2F%2Fwww.zhaojian.net%2Flinux-pinyin-input-method-dictionary-is-causing-abnormal-memory-usage-in-fcitx5%2F + '" target="_blank" title="Twitter" rel="nofollow noopener noreferer noreferrer external" hexo-seo="true" alt="Linux 拼音输入法词库导致 fcitx5 内存使用异常 内存占用增加">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Linux%20%E6%8B%BC%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95%E8%AF%8D%E5%BA%93%E5%AF%BC%E8%87%B4%20fcitx5%20%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8%E5%BC%82%E5%B8%B8%20%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8%E5%A2%9E%E5%8A%A0 + '&url=' + https%3A%2F%2Fwww.zhaojian.net%2Flinux-pinyin-input-method-dictionary-is-causing-abnormal-memory-usage-in-fcitx5%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://www.zhaojian.net/linux-pinyin-input-method-dictionary-is-causing-abnormal-memory-usage-in-fcitx5/" target="_blank" title="Facebook" rel="nofollow noopener noreferer noreferrer external" hexo-seo="true" alt="Linux 拼音输入法词库导致 fcitx5 内存使用异常 内存占用增加">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://www.zhaojian.net/linux-pinyin-input-method-dictionary-is-causing-abnormal-memory-usage-in-fcitx5/" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         

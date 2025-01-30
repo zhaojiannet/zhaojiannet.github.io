@@ -1,1 +1,9 @@
-let t=document.querySelectorAll(".nav-item"),e=window.location.pathname;for(let a of t){let t=a.getAttribute("data-path");t&&t===e&&(a.className="nav-item active")}
+// which nav has active
+let navs = document.querySelectorAll('.nav-item');
+let pagePath = window.location.pathname;
+for(let nav of navs) {
+  let navPath = nav.getAttribute("data-path");
+  if(navPath && navPath === pagePath) {
+    nav.className = "nav-item active";
+  }
+}
