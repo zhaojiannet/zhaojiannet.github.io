@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="zh-CN" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="赵健(zhaoJian)" />
+  <!-- Open Graph Description 简短摘要-->
+  
+  
+  <title> EndeavourOS 日常使用情况及常用软件安装   |  赵健的技术笔记 - 赵健(zhaoJian)</title>
+
+  <!-- 用于搜索引擎的文章摘要 -->
+  
+  <meta name="keywords" content="赵健,zhaojian,zhaojiannet,赵健的技术笔记,技术笔记,linux,IT技术,nodejs,javascript,linux,佛系IT少年" />
+  
+
+  
+  <meta name="description" content="赵健的技术笔记 | 保持热爱，勇往直前。赵健，zhaojian，zhaoJianNet，佛系IT少年。" />
+  
+
+  
+
+
+  <!-- hexo-auto-canonical DIY 增加 -->
+
+  <link rel="canonical" href="https://www.zhaojian.net/endeavouros-daily-use-and-common-software-installation/"/>
+
+  
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon-next.png">
+    <link rel="icon" href="/images/favicon-32x32-next.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
+  
+    
+<link rel="stylesheet" href="/css/figcaption/mac-block.css">
+
+  
+
+  <!-- jquery3.3.1 -->
+  
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  
+
+  <!-- fancybox -->
+  
+    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70H136JFY6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-70H136JFY6');
+    </script>
+  
+
+  
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="634aa455-ea55-423f-896a-e2d60ea56ffd"></script>
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="赵健的技术笔记 - 赵健(zhaoJian)" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img no-lazy src="/images/zhaojian-avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">赵健(zhaoJian)</a></div>
+    
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">首页</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">关于</a>
+        </li>
+      
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">分类</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">归档</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">标签</a>
+        </li>
+      
+        <li class="nav-item" data-path="/sitemap.xml">
+          <a href="/sitemap.xml">站点地图</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">EndeavourOS 日常使用情况及常用软件安装</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2025-02-18 09:44:14
+        </span>
+        
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="分类"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/tech/" title="技术">
+                    <b>#</b> 技术
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <p>最近因为AUR在WeChat包上闹的想回Debian系，然而在尝试了几个不同的Linux 发行版后，感觉还是没有EndeavourOS用着顺手，虽说微信 Linux版和QQ Linux版都可以正常使用了，但我想在安装过程中就能够选择Btrfs分区和设置休眠，看来这只有EndeavourOS能满足了，折腾一气，又回来了。</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="/uploads/2025/02/EndeavourOS2501.png" alt="EndeavourOS"></p>
+<p>系统环境：<br>版本信息：<a target="_blank" rel="noopener" href="https://endeavouros.com/">EndeavourOS</a>（Endeavour_neo-2024.09.22）<br>桌面环境：KDE Plasma 6.2.5</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="/uploads/2025/02/KDE_Plasma2501.png" alt="EndeavourOS"></p>
+<p>常用软件使用原则<br>渠道选择：系统自带软件中心（Discover）&gt; 软件官网 &gt; Flathub &gt; AUR &gt; 第三方网站<br>软件包优先选择提供AppImage格式的</p>
+<h3 id="1、启动蓝牙并设置开机启动"><a href="#1、启动蓝牙并设置开机启动" class="headerlink" title="1、启动蓝牙并设置开机启动"></a>1、启动蓝牙并设置开机启动</h3><p>在我的电脑上，蓝牙一直遇到问题，EndeavourOS还好，只需要设置开机启动就OK了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl start bluetooth</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> bluetooth</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、安装-Timeshift"><a href="#2、安装-Timeshift" class="headerlink" title="2、安装 Timeshift"></a>2、安装 Timeshift</h3><p>使用Btrfs分区后，Timeshift可以更方便的备份，这样就不怕折腾了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S timeshift</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、安装Fcitx5输入法"><a href="#3、安装Fcitx5输入法" class="headerlink" title="3、安装Fcitx5输入法"></a>3、安装Fcitx5输入法</h3><h5 id="fcitx5-rime"><a href="#fcitx5-rime" class="headerlink" title="fcitx5-rime"></a>fcitx5-rime</h5><p>fcitx5-chinese-addons的中文已经够好了，尤其是云拼音，但fcitx5-chinese-addons会把词库全部加载到运行内存中，增加内存使用量，而且无法直接输入邮箱、网址，所以选择了fcitx5-rime</p>
+<p><a href="https://www.zhaojian.net/linux-pinyin-input-method-dictionary-is-causing-abnormal-memory-usage-in-fcitx5/">Linux 拼音输入法词库导致 fcitx5 内存使用异常 内存占用增加</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S fcitx5-im fcitx5-rime fcitx5-mozc</span><br></pre></td></tr></table></figure>
+
+<h5 id="fcitx5-chinese-addons"><a href="#fcitx5-chinese-addons" class="headerlink" title="fcitx5-chinese-addons"></a>fcitx5-chinese-addons</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S fcitx5-im fcitx5-chinese-addons fcitx5-mozc</span><br></pre></td></tr></table></figure>
+
+<p>额外安装词库，以fcitx5-chinese-addons为例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S fcitx5-pinyin-zhwiki fcitx5-pinyin-sougou-dict-git fcitx5-pinyin-moegirl fcitx5-pinyin-custom-pinyin-dictionary</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、安装浏览器"><a href="#4、安装浏览器" class="headerlink" title="4、安装浏览器"></a>4、安装浏览器</h3><p>这里使用的是AUR中测试版，一方面能更早的体验新功能，二来也不喜欢那个橘红色。之前因为Chrome即将停止支持Manifest v2的扩展，选择了Brave浏览器，Brave默认规则就可以屏蔽YouTube等视频广告，但有两点不太满意，一是自建的翻译模块太卡，在国内无法使用，国外也太慢，二就是同步方法有点怪，搞不懂规则，有时候能马上同步，有时候很久也不同步。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S brave-beta-bin</span><br></pre></td></tr></table></figure>
+
+<p>最近接连几次更换系统后Brave无法同步，之前也有超24小时候才同步的情况，但这几次2天了还没同步，准备换chrome了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S google-chrome-beta</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、设置数字小键盘开机自动启动"><a href="#5、设置数字小键盘开机自动启动" class="headerlink" title="5、设置数字小键盘开机自动启动"></a>5、设置数字小键盘开机自动启动</h3><p>在系统设置-键盘里面可以设置NumLock，但只在进入系统后有效，如果想在登录界面使用数字小键盘输入密码，还是无法满足。EndeavourOS默认使用的SDDM，需要修改  &#x2F;etc&#x2F;sddm.conf，增加以下内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[General]</span><br><span class="line">Numlock=on</span><br></pre></td></tr></table></figure>
+
+<h3 id="6、安装开发相关软件"><a href="#6、安装开发相关软件" class="headerlink" title="6、安装开发相关软件"></a>6、安装开发相关软件</h3><p>Remmina、FileZilla、DBeaver Community、Visual Studio Code（AUR）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S remmina filezilla dbeaver visual-studio-code-bin </span><br></pre></td></tr></table></figure>
+
+<h3 id="7、下载、配置-QQ、微信的官方Linux版"><a href="#7、下载、配置-QQ、微信的官方Linux版" class="headerlink" title="7、下载、配置 QQ、微信的官方Linux版"></a>7、下载、配置 QQ、微信的官方Linux版</h3><p>因为AUR的wechat包闹的，不想再使用AUR了，自己下载配置一下也挺好<br>因为经常在不同系统下来回切换，所以我把微信和QQ单独建了个文件夹，把相关配置文件保存好，装好系统只要复制一份到&#x2F;usr&#x2F;share&#x2F;applications&#x2F;就可以了</p>
+<p>具体方法可查看：<br><a href="https://www.zhaojian.net/arch-endeavouros-manjaro-linux-wechat-weixin-qq/">EndeavourOS、Manjaro等Arch系Linux安装新版Linux微信、QQ方法</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /home/zhaojian/Cores/Tools/Linux/QQ/qq.desktop /usr/share/applications/qq.desktop</span><br><span class="line"></span><br><span class="line">sudo cp /home/zhaojian/Cores/Tools/Linux/WeChat/wechat.desktop /usr/share/applications/wechat.desktop</span><br></pre></td></tr></table></figure>
+
+<p>官方 <a target="_blank" rel="noopener" href="https://im.qq.com/linuxqq/index.shtml">QQ Linux版</a><br>官方 <a target="_blank" rel="noopener" href="https://linux.weixin.qq.com/">微信 Linux版</a></p>
+<h3 id="8、安装Office等常用软件"><a href="#8、安装Office等常用软件" class="headerlink" title="8、安装Office等常用软件"></a>8、安装Office等常用软件</h3><p>因为使用WPS Linux版导出PDF文件出现文字空白情况，现在WPS不再是唯一选项，同时还使用了ONLYOFFICE，互补着用吧。同时因发现 ONLYOFFICE 有 AppImage 格式的软件包，现在正由WPS Office for Linux向ONLYOFFICE Desktop Editors 迁移。</p>
+<h5 id="WPS"><a href="#WPS" class="headerlink" title="WPS"></a>WPS</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S wps-office-cn wps-office-mui-zh-cn ttf-wps-fonts</span><br></pre></td></tr></table></figure>
+
+<p>ONLYOFFICE<br><a target="_blank" rel="noopener" href="https://www.onlyoffice.com/download-desktop.aspx">https://www.onlyoffice.com/download-desktop.aspx</a> </p>
+<h3 id="9、安装字体"><a href="#9、安装字体" class="headerlink" title="9、安装字体"></a>9、安装字体</h3><p>思源黑体是由Adobe与Google合作开发的开源字体，Adobe名称：Source Han Sans；Google名称：Noto Sans CJK；中文通常叫思源黑体，都是一样的。一般情况选择中文系统就会默认安装，但还是有个别情况，如：WPS、微信等需要，所以重新安装一下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S adobe-source-han-sans-cn-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra</span><br></pre></td></tr></table></figure>
+
+<h3 id="10、安装虚拟机相关软件QEMU、virt-manager"><a href="#10、安装虚拟机相关软件QEMU、virt-manager" class="headerlink" title="10、安装虚拟机相关软件QEMU、virt-manager"></a>10、安装虚拟机相关软件QEMU、virt-manager</h3><p>Virt-Manager 是前端，提供了方便的 GUI，QEMU 是后端，提供底层支持。目前来看比 VMware Workstation Pro 要快</p>
+<p>具体方法可查看：<br><a href="https://www.zhaojian.net/arch-endeavouros-manjaro-linux-qemu-kvm-libvirt-virt-manager/">EndeavourOS、Manjaro等Arch系Linux安装QEMU+KVM、libvirt、Virt-Manager虚拟机</a></p>
+<h3 id="11、安装Dropbox、easystroke（鼠标手势）AUR、Xmind"><a href="#11、安装Dropbox、easystroke（鼠标手势）AUR、Xmind" class="headerlink" title="11、安装Dropbox、easystroke（鼠标手势）AUR、Xmind"></a>11、安装Dropbox、easystroke（鼠标手势）AUR、Xmind</h3><p>之前在国内的时候，因为未知原因，Dropbox是无法使用的，现在网络畅通无阻，感觉还是Dropbox用起来方便。另外，<a target="_blank" rel="noopener" href="https://github.com/thjaeger/easystroke">easystroke</a>始终是我在Linux下唯一使用也是非常需要的软件，因为Linux系统的右键触发原则和Windows不同，所以浏览器的鼠标手势扩展在Linux下无法正常使用，需要在系统环境中安装easystroke实现，但easystroke的开发者已多年没有更新，尤其在Wayland下虽然可以勉强使用，可根本无法显示鼠标手势轨迹。虽然有一个 <a target="_blank" rel="noopener" href="https://github.com/jersou/mouse-actions">Mouse-Actions</a>在easystroke的多个GitHub页面中声称自己是一个同类产品的替代，但使用后发现未知的错误更多，尤其是连基本的使用说明都没有，内存占用会随着使用时间增多，莫名报一些未知错误停止运行。结合Wayland一时半会也不会全面普及，还是老老实实使用x11，继续用AUR上的easystroke吧。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S dropbox easystroke xmind</span><br></pre></td></tr></table></figure>
+
+<h3 id="12、下载、配置-Obsidian"><a href="#12、下载、配置-Obsidian" class="headerlink" title="12、下载、配置 Obsidian"></a>12、下载、配置 Obsidian</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /usr/share/applications/wechat.desktop</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]  </span><br><span class="line">Name=Obsidian  </span><br><span class="line">Exec=/home/zhaojian/Cores/Tools/Obsidian/Obsidian.AppImage %U  </span><br><span class="line">Terminal=false  </span><br><span class="line">Type=Application  </span><br><span class="line">Icon=/home/zhaojian/Cores/Tools/Obsidian/obsidian.png  </span><br><span class="line">StartupWMClass=obsidian  </span><br><span class="line">Comment=Obsidian  </span><br><span class="line">MimeType=x-scheme-handler/obsidian;  </span><br><span class="line">Categories=Office;</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://obsidian.md/download">Obsidian fow Linux（AppImage）</a></p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/tunxiaomeng-repair/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <!-- <span class="post-pubtime"> -->
+              <!-- <i class="iconfont icon-updatetime mr-10" title=""></i> -->
+              
+            <!-- </span> -->
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="标签"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS/" title="EndeavourOS">
+                        #EndeavourOS
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Manjaro/" title="Manjaro">
+                        #Manjaro
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Arch/" title="Arch">
+                        #Arch
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux/" title="Linux">
+                        #Linux
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-%E5%BE%AE%E4%BF%A1/" title="Linux 微信">
+                        #Linux 微信
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-QQ/" title="Linux QQ">
+                        #Linux QQ
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-Timeshift/" title="Linux Timeshift">
+                        #Linux Timeshift
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-fcitx5/" title="Linux fcitx5">
+                        #Linux fcitx5
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-fcitx5-chinese-addons/" title="Linux fcitx5-chinese-addons">
+                        #Linux fcitx5-chinese-addons
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-fcitx5-rime/" title="Linux fcitx5-rime">
+                        #Linux fcitx5-rime
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-Brave/" title="Linux Brave">
+                        #Linux Brave
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-VSCode/" title="Linux VSCode">
+                        #Linux VSCode
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-WPS/" title="Linux WPS">
+                        #Linux WPS
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-ONLYOFFICE/" title="Linux ONLYOFFICE">
+                        #Linux ONLYOFFICE
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-qemu/" title="Linux qemu">
+                        #Linux qemu
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-virt-manager/" title="Linux virt-manager">
+                        #Linux virt-manager
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-easystroke/" title="Linux easystroke">
+                        #Linux easystroke
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-Obsidian/" title="Linux Obsidian">
+                        #Linux Obsidian
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Linux-Dropbox/" title="Linux Dropbox">
+                        #Linux Dropbox
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS-%E5%BE%AE%E4%BF%A1/" title="EndeavourOS 微信">
+                        #EndeavourOS 微信
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS-QQ/" title="EndeavourOS QQ">
+                        #EndeavourOS QQ
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS-Timeshift/" title="EndeavourOS Timeshift">
+                        #EndeavourOS Timeshift
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS-fcitx5/" title="EndeavourOS fcitx5">
+                        #EndeavourOS fcitx5
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS-fcitx5-chinese-addons/" title="EndeavourOS fcitx5-chinese-addons">
+                        #EndeavourOS fcitx5-chinese-addons
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS-fcitx5-rime/" title="EndeavourOS fcitx5-rime">
+                        #EndeavourOS fcitx5-rime
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS-Brave/" title="EndeavourOS Brave">
+                        #EndeavourOS Brave
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS-VSCode/" title="EndeavourOS VSCode">
+                        #EndeavourOS VSCode
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS-WPS/" title="EndeavourOS WPS">
+                        #EndeavourOS WPS
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS-ONLYOFFICE/" title="EndeavourOS ONLYOFFICE">
+                        #EndeavourOS ONLYOFFICE
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS-qemu/" title="EndeavourOS qemu">
+                        #EndeavourOS qemu
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS-virt-manager/" title="EndeavourOS virt-manager">
+                        #EndeavourOS virt-manager
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS-easystroke/" title="EndeavourOS easystroke">
+                        #EndeavourOS easystroke
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS-Obsidian/" title="EndeavourOS Obsidian">
+                        #EndeavourOS Obsidian
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/EndeavourOS-Dropbox/" title="EndeavourOS Dropbox">
+                        #EndeavourOS Dropbox
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%90%AF%E5%8A%A8%E8%93%9D%E7%89%99%E5%B9%B6%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8"><span class="toc-text">1、启动蓝牙并设置开机启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85-Timeshift"><span class="toc-text">2、安装 Timeshift</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%AE%89%E8%A3%85Fcitx5%E8%BE%93%E5%85%A5%E6%B3%95"><span class="toc-text">3、安装Fcitx5输入法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#fcitx5-rime"><span class="toc-text">fcitx5-rime</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#fcitx5-chinese-addons"><span class="toc-text">fcitx5-chinese-addons</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%AE%89%E8%A3%85%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="toc-text">4、安装浏览器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E8%AE%BE%E7%BD%AE%E6%95%B0%E5%AD%97%E5%B0%8F%E9%94%AE%E7%9B%98%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8"><span class="toc-text">5、设置数字小键盘开机自动启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E5%AE%89%E8%A3%85%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3%E8%BD%AF%E4%BB%B6"><span class="toc-text">6、安装开发相关软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E4%B8%8B%E8%BD%BD%E3%80%81%E9%85%8D%E7%BD%AE-QQ%E3%80%81%E5%BE%AE%E4%BF%A1%E7%9A%84%E5%AE%98%E6%96%B9Linux%E7%89%88"><span class="toc-text">7、下载、配置 QQ、微信的官方Linux版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81%E5%AE%89%E8%A3%85Office%E7%AD%89%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6"><span class="toc-text">8、安装Office等常用软件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#WPS"><span class="toc-text">WPS</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9%E3%80%81%E5%AE%89%E8%A3%85%E5%AD%97%E4%BD%93"><span class="toc-text">9、安装字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10%E3%80%81%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9B%B8%E5%85%B3%E8%BD%AF%E4%BB%B6QEMU%E3%80%81virt-manager"><span class="toc-text">10、安装虚拟机相关软件QEMU、virt-manager</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11%E3%80%81%E5%AE%89%E8%A3%85Dropbox%E3%80%81easystroke%EF%BC%88%E9%BC%A0%E6%A0%87%E6%89%8B%E5%8A%BF%EF%BC%89AUR%E3%80%81Xmind"><span class="toc-text">11、安装Dropbox、easystroke（鼠标手势）AUR、Xmind</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12%E3%80%81%E4%B8%8B%E8%BD%BD%E3%80%81%E9%85%8D%E7%BD%AE-Obsidian"><span class="toc-text">12、下载、配置 Obsidian</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067825494341267"
+  crossorigin="anonymous"></script>
+  <!-- foot_ads -->
+  <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-7067825494341267"
+    data-ad-slot="1142359537"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <br>
+
+
+  <div id="tcomment"></div>
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.41/dist/twikoo.all.min.js"></script>
+    <script>
+    twikoo.init({
+      envId: 'https://zhaojian.netlify.app/.netlify/functions/twikoo', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
+      el: '#tcomment', // 容器元素
+      // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+      // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+      // lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
+    })
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    
+  </div>
+
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          
+              <a title="zhaojiannet" target="_blank" rel="noopener" href="https://github.com/zhaojiannet">
+                <i class="iconfont icon-github"></i>
+              </a>
+              
+        </li>
+        
+        <li>
+          
+              <a title="zhaojiannet" target="_blank" rel="noopener" href="https://twitter.com/zhaoJianNet">
+                <i class="iconfont icon-twitter"></i>
+              </a>
+              
+        </li>
+        
+        <li>
+          
+              <a title="赵健(zhaoJian.Net)的微信：757118" href="/#">
+                <i class="iconfont icon-wechat"></i>
+              </a>
+              
+        </li>
+        
+        <li>
+          
+              <a title="赵健(zhaoJian.Net)的QQ：757118" href="/#">
+                <i class="iconfont icon-qq"></i>
+              </a>
+              
+        </li>
+        
+        <li>
+          
+              <a title="rss" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+              </a>
+              
+        </li>
+        
+    </ul>
+  </div>
+  
+    
+    <div class="footer-more">
+      
+        <a href="https://www.zhaojian.net">Copyright © 2009~2024 赵健(zhaoJian) - 赵健的技术笔记  <br> <a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">辽ICP备20000595号 </a></a>
+        
+    </div>
+  
+    
+    <div class="footer-more">
+      
+        Theme by Oranges | Powered by Hexo
+        
+    </div>
+  
+  
+    <div class="footer-views">
+      
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+      
+          本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        
+      
+          本站访客数<span id="busuanzi_value_site_uv"></span>人
+        
+      
+    </div>
+  
+</div>
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="搜索...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>首次搜索，正在载入索引文件，请稍后……<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>没有找到内容，请尝试更换检索词。<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>未找到search.xml文件，具体请参考：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>请求失败，尝试重新刷新页面或稍后重试。<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + EndeavourOS%20%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5%E5%8F%8A%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85 + '&url=' + https%3A%2F%2Fwww.zhaojian.net%2Fendeavouros-daily-use-and-common-software-installation%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://www.zhaojian.net/endeavouros-daily-use-and-common-software-installation/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
+  
+  
+<script src="/js/shares.js"></script>
+
+
+
+      </div>
+    </div>
+  
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z\d\-\.\+]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(t.test(e.href)||r.test(e.href))&&(e.href=a.dataset.original)})});</script><script>(r=>{r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,o=r.imageLazyLoadSetting.preloadRatio||1,d=i();function i(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=i());for(var e,n=0;n<d.length;n++)0<=(e=(e=d[n]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*o||document.documentElement.clientHeight*o)&&(()=>{var t,e,a,o,i=d[n];e=function(){d=d.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,o=t.getAttribute("data-original"),a.onload=function(){t.src=o,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=o},t.src!==o&&(a.src=o)))})()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)})(this);</script></body>
+</html>

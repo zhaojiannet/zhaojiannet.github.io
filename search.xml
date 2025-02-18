@@ -4,6 +4,97 @@
   
     
     <entry>
+      <title>EndeavourOS 日常使用情况及常用软件安装</title>
+      <link href="/endeavouros-daily-use-and-common-software-installation/"/>
+      <url>/endeavouros-daily-use-and-common-software-installation/</url>
+      
+        <content type="html"><![CDATA[<p>最近因为AUR在WeChat包上闹的想回Debian系，然而在尝试了几个不同的Linux 发行版后，感觉还是没有EndeavourOS用着顺手，虽说微信 Linux版和QQ Linux版都可以正常使用了，但我想在安装过程中就能够选择Btrfs分区和设置休眠，看来这只有EndeavourOS能满足了，折腾一气，又回来了。</p><p><img src="/uploads/2025/02/EndeavourOS2501.png" alt="EndeavourOS"></p><p>系统环境：<br>版本信息：<a href="https://endeavouros.com/">EndeavourOS</a>（Endeavour_neo-2024.09.22）<br>桌面环境：KDE Plasma 6.2.5</p><p><img src="/uploads/2025/02/KDE_Plasma2501.png" alt="EndeavourOS"></p><p>常用软件使用原则<br>渠道选择：系统自带软件中心（Discover）&gt; 软件官网 &gt; Flathub &gt; AUR &gt; 第三方网站<br>软件包优先选择提供AppImage格式的</p><h3 id="1、启动蓝牙并设置开机启动"><a href="#1、启动蓝牙并设置开机启动" class="headerlink" title="1、启动蓝牙并设置开机启动"></a>1、启动蓝牙并设置开机启动</h3><p>在我的电脑上，蓝牙一直遇到问题，EndeavourOS还好，只需要设置开机启动就OK了</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl start bluetooth</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> bluetooth</span><br></pre></td></tr></table></figure><h3 id="2、安装-Timeshift"><a href="#2、安装-Timeshift" class="headerlink" title="2、安装 Timeshift"></a>2、安装 Timeshift</h3><p>使用Btrfs分区后，Timeshift可以更方便的备份，这样就不怕折腾了</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S timeshift</span><br></pre></td></tr></table></figure><h3 id="3、安装Fcitx5输入法"><a href="#3、安装Fcitx5输入法" class="headerlink" title="3、安装Fcitx5输入法"></a>3、安装Fcitx5输入法</h3><h5 id="fcitx5-rime"><a href="#fcitx5-rime" class="headerlink" title="fcitx5-rime"></a>fcitx5-rime</h5><p>fcitx5-chinese-addons的中文已经够好了，尤其是云拼音，但fcitx5-chinese-addons会把词库全部加载到运行内存中，增加内存使用量，而且无法直接输入邮箱、网址，所以选择了fcitx5-rime</p><p><a href="https://www.zhaojian.net/linux-pinyin-input-method-dictionary-is-causing-abnormal-memory-usage-in-fcitx5/">Linux 拼音输入法词库导致 fcitx5 内存使用异常 内存占用增加</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S fcitx5-im fcitx5-rime fcitx5-mozc</span><br></pre></td></tr></table></figure><h5 id="fcitx5-chinese-addons"><a href="#fcitx5-chinese-addons" class="headerlink" title="fcitx5-chinese-addons"></a>fcitx5-chinese-addons</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S fcitx5-im fcitx5-chinese-addons fcitx5-mozc</span><br></pre></td></tr></table></figure><p>额外安装词库，以fcitx5-chinese-addons为例：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S fcitx5-pinyin-zhwiki fcitx5-pinyin-sougou-dict-git fcitx5-pinyin-moegirl fcitx5-pinyin-custom-pinyin-dictionary</span><br></pre></td></tr></table></figure><h3 id="4、安装浏览器"><a href="#4、安装浏览器" class="headerlink" title="4、安装浏览器"></a>4、安装浏览器</h3><p>这里使用的是AUR中测试版，一方面能更早的体验新功能，二来也不喜欢那个橘红色。之前因为Chrome即将停止支持Manifest v2的扩展，选择了Brave浏览器，Brave默认规则就可以屏蔽YouTube等视频广告，但有两点不太满意，一是自建的翻译模块太卡，在国内无法使用，国外也太慢，二就是同步方法有点怪，搞不懂规则，有时候能马上同步，有时候很久也不同步。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S brave-beta-bin</span><br></pre></td></tr></table></figure><p>最近接连几次更换系统后Brave无法同步，之前也有超24小时候才同步的情况，但这几次2天了还没同步，准备换chrome了</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S google-chrome-beta</span><br></pre></td></tr></table></figure><h3 id="5、设置数字小键盘开机自动启动"><a href="#5、设置数字小键盘开机自动启动" class="headerlink" title="5、设置数字小键盘开机自动启动"></a>5、设置数字小键盘开机自动启动</h3><p>在系统设置-键盘里面可以设置NumLock，但只在进入系统后有效，如果想在登录界面使用数字小键盘输入密码，还是无法满足。EndeavourOS默认使用的SDDM，需要修改  &#x2F;etc&#x2F;sddm.conf，增加以下内容。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[General]</span><br><span class="line">Numlock=on</span><br></pre></td></tr></table></figure><h3 id="6、安装开发相关软件"><a href="#6、安装开发相关软件" class="headerlink" title="6、安装开发相关软件"></a>6、安装开发相关软件</h3><p>Remmina、FileZilla、DBeaver Community、Visual Studio Code（AUR）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S remmina filezilla dbeaver visual-studio-code-bin </span><br></pre></td></tr></table></figure><h3 id="7、下载、配置-QQ、微信的官方Linux版"><a href="#7、下载、配置-QQ、微信的官方Linux版" class="headerlink" title="7、下载、配置 QQ、微信的官方Linux版"></a>7、下载、配置 QQ、微信的官方Linux版</h3><p>因为AUR的wechat包闹的，不想再使用AUR了，自己下载配置一下也挺好<br>因为经常在不同系统下来回切换，所以我把微信和QQ单独建了个文件夹，把相关配置文件保存好，装好系统只要复制一份到&#x2F;usr&#x2F;share&#x2F;applications&#x2F;就可以了</p><p>具体方法可查看：<br><a href="https://www.zhaojian.net/arch-endeavouros-manjaro-linux-wechat-weixin-qq/">EndeavourOS、Manjaro等Arch系Linux安装新版Linux微信、QQ方法</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /home/zhaojian/Cores/Tools/Linux/QQ/qq.desktop /usr/share/applications/qq.desktop</span><br><span class="line"></span><br><span class="line">sudo cp /home/zhaojian/Cores/Tools/Linux/WeChat/wechat.desktop /usr/share/applications/wechat.desktop</span><br></pre></td></tr></table></figure><p>官方 <a href="https://im.qq.com/linuxqq/index.shtml">QQ Linux版</a><br>官方 <a href="https://linux.weixin.qq.com/">微信 Linux版</a></p><h3 id="8、安装Office等常用软件"><a href="#8、安装Office等常用软件" class="headerlink" title="8、安装Office等常用软件"></a>8、安装Office等常用软件</h3><p>因为使用WPS Linux版导出PDF文件出现文字空白情况，现在WPS不再是唯一选项，同时还使用了ONLYOFFICE，互补着用吧。同时因发现 ONLYOFFICE 有 AppImage 格式的软件包，现在正由WPS Office for Linux向ONLYOFFICE Desktop Editors 迁移。</p><h5 id="WPS"><a href="#WPS" class="headerlink" title="WPS"></a>WPS</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S wps-office-cn wps-office-mui-zh-cn ttf-wps-fonts</span><br></pre></td></tr></table></figure><p>ONLYOFFICE<br><a href="https://www.onlyoffice.com/download-desktop.aspx">https://www.onlyoffice.com/download-desktop.aspx</a> </p><h3 id="9、安装字体"><a href="#9、安装字体" class="headerlink" title="9、安装字体"></a>9、安装字体</h3><p>思源黑体是由Adobe与Google合作开发的开源字体，Adobe名称：Source Han Sans；Google名称：Noto Sans CJK；中文通常叫思源黑体，都是一样的。一般情况选择中文系统就会默认安装，但还是有个别情况，如：WPS、微信等需要，所以重新安装一下。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S adobe-source-han-sans-cn-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra</span><br></pre></td></tr></table></figure><h3 id="10、安装虚拟机相关软件QEMU、virt-manager"><a href="#10、安装虚拟机相关软件QEMU、virt-manager" class="headerlink" title="10、安装虚拟机相关软件QEMU、virt-manager"></a>10、安装虚拟机相关软件QEMU、virt-manager</h3><p>Virt-Manager 是前端，提供了方便的 GUI，QEMU 是后端，提供底层支持。目前来看比 VMware Workstation Pro 要快</p><p>具体方法可查看：<br><a href="https://www.zhaojian.net/arch-endeavouros-manjaro-linux-qemu-kvm-libvirt-virt-manager/">EndeavourOS、Manjaro等Arch系Linux安装QEMU+KVM、libvirt、Virt-Manager虚拟机</a></p><h3 id="11、安装Dropbox、easystroke（鼠标手势）AUR、Xmind"><a href="#11、安装Dropbox、easystroke（鼠标手势）AUR、Xmind" class="headerlink" title="11、安装Dropbox、easystroke（鼠标手势）AUR、Xmind"></a>11、安装Dropbox、easystroke（鼠标手势）AUR、Xmind</h3><p>之前在国内的时候，因为未知原因，Dropbox是无法使用的，现在网络畅通无阻，感觉还是Dropbox用起来方便。另外，<a href="https://github.com/thjaeger/easystroke">easystroke</a>始终是我在Linux下唯一使用也是非常需要的软件，因为Linux系统的右键触发原则和Windows不同，所以浏览器的鼠标手势扩展在Linux下无法正常使用，需要在系统环境中安装easystroke实现，但easystroke的开发者已多年没有更新，尤其在Wayland下虽然可以勉强使用，可根本无法显示鼠标手势轨迹。虽然有一个 <a href="https://github.com/jersou/mouse-actions">Mouse-Actions</a>在easystroke的多个GitHub页面中声称自己是一个同类产品的替代，但使用后发现未知的错误更多，尤其是连基本的使用说明都没有，内存占用会随着使用时间增多，莫名报一些未知错误停止运行。结合Wayland一时半会也不会全面普及，还是老老实实使用x11，继续用AUR上的easystroke吧。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S dropbox easystroke xmind</span><br></pre></td></tr></table></figure><h3 id="12、下载、配置-Obsidian"><a href="#12、下载、配置-Obsidian" class="headerlink" title="12、下载、配置 Obsidian"></a>12、下载、配置 Obsidian</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /usr/share/applications/wechat.desktop</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]  </span><br><span class="line">Name=Obsidian  </span><br><span class="line">Exec=/home/zhaojian/Cores/Tools/Obsidian/Obsidian.AppImage %U  </span><br><span class="line">Terminal=false  </span><br><span class="line">Type=Application  </span><br><span class="line">Icon=/home/zhaojian/Cores/Tools/Obsidian/obsidian.png  </span><br><span class="line">StartupWMClass=obsidian  </span><br><span class="line">Comment=Obsidian  </span><br><span class="line">MimeType=x-scheme-handler/obsidian;  </span><br><span class="line">Categories=Office;</span><br></pre></td></tr></table></figure><p><a href="https://obsidian.md/download">Obsidian fow Linux（AppImage）</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> EndeavourOS </tag>
+            
+            <tag> Manjaro </tag>
+            
+            <tag> Arch </tag>
+            
+            <tag> Linux </tag>
+            
+            <tag> Linux 微信 </tag>
+            
+            <tag> Linux QQ </tag>
+            
+            <tag> Linux Timeshift </tag>
+            
+            <tag> Linux fcitx5 </tag>
+            
+            <tag> Linux fcitx5-chinese-addons </tag>
+            
+            <tag> Linux fcitx5-rime </tag>
+            
+            <tag> Linux Brave </tag>
+            
+            <tag> Linux VSCode </tag>
+            
+            <tag> Linux WPS </tag>
+            
+            <tag> Linux ONLYOFFICE </tag>
+            
+            <tag> Linux qemu </tag>
+            
+            <tag> Linux virt-manager </tag>
+            
+            <tag> Linux easystroke </tag>
+            
+            <tag> Linux Obsidian </tag>
+            
+            <tag> Linux Dropbox </tag>
+            
+            <tag> EndeavourOS 微信 </tag>
+            
+            <tag> EndeavourOS QQ </tag>
+            
+            <tag> EndeavourOS Timeshift </tag>
+            
+            <tag> EndeavourOS fcitx5 </tag>
+            
+            <tag> EndeavourOS fcitx5-chinese-addons </tag>
+            
+            <tag> EndeavourOS fcitx5-rime </tag>
+            
+            <tag> EndeavourOS Brave </tag>
+            
+            <tag> EndeavourOS VSCode </tag>
+            
+            <tag> EndeavourOS WPS </tag>
+            
+            <tag> EndeavourOS ONLYOFFICE </tag>
+            
+            <tag> EndeavourOS qemu </tag>
+            
+            <tag> EndeavourOS virt-manager </tag>
+            
+            <tag> EndeavourOS easystroke </tag>
+            
+            <tag> EndeavourOS Obsidian </tag>
+            
+            <tag> EndeavourOS Dropbox </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>豚小蒙熏听机拆机维修方法 解决豚小蒙熏听机无声音 PIYO PEN故事机早教机</title>
       <link href="/tunxiaomeng-repair/"/>
       <url>/tunxiaomeng-repair/</url>
@@ -4290,9 +4381,9 @@
       
         <tags>
             
-            <tag> 右键 </tag>
-            
             <tag> 我的电脑 </tag>
+            
+            <tag> 右键 </tag>
             
             <tag> 文本文档 </tag>
             
