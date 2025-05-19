@@ -188,7 +188,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2025-02-18 09:44:14
+          2025-02-18 00:45:58
         </span>
         
               <span class="post-categories">
@@ -253,7 +253,7 @@
 <h3 id="11、安装Dropbox、easystroke（鼠标手势）AUR、Xmind"><a href="#11、安装Dropbox、easystroke（鼠标手势）AUR、Xmind" class="headerlink" title="11、安装Dropbox、easystroke（鼠标手势）AUR、Xmind"></a>11、安装Dropbox、easystroke（鼠标手势）AUR、Xmind</h3><p>之前在国内的时候，因为未知原因，Dropbox是无法使用的，现在网络畅通无阻，感觉还是Dropbox用起来方便。另外，<a target="_blank" rel="noopener" href="https://github.com/thjaeger/easystroke">easystroke</a>始终是我在Linux下唯一使用也是非常需要的软件，因为Linux系统的右键触发原则和Windows不同，所以浏览器的鼠标手势扩展在Linux下无法正常使用，需要在系统环境中安装easystroke实现，但easystroke的开发者已多年没有更新，尤其在Wayland下虽然可以勉强使用，可根本无法显示鼠标手势轨迹。虽然有一个 <a target="_blank" rel="noopener" href="https://github.com/jersou/mouse-actions">Mouse-Actions</a>在easystroke的多个GitHub页面中声称自己是一个同类产品的替代，但使用后发现未知的错误更多，尤其是连基本的使用说明都没有，内存占用会随着使用时间增多，莫名报一些未知错误停止运行。结合Wayland一时半会也不会全面普及，还是老老实实使用x11，继续用AUR上的easystroke吧。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S dropbox easystroke xmind</span><br></pre></td></tr></table></figure>
 
-<h3 id="12、下载、配置-Obsidian"><a href="#12、下载、配置-Obsidian" class="headerlink" title="12、下载、配置 Obsidian"></a>12、下载、配置 Obsidian</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /usr/share/applications/wechat.desktop</span><br></pre></td></tr></table></figure>
+<h3 id="12、下载、配置-Obsidian"><a href="#12、下载、配置-Obsidian" class="headerlink" title="12、下载、配置 Obsidian"></a>12、下载、配置 Obsidian</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /usr/share/applications/obsidian.desktop</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]  </span><br><span class="line">Name=Obsidian  </span><br><span class="line">Exec=/home/zhaojian/Cores/Tools/Obsidian/Obsidian.AppImage %U  </span><br><span class="line">Terminal=false  </span><br><span class="line">Type=Application  </span><br><span class="line">Icon=/home/zhaojian/Cores/Tools/Obsidian/obsidian.png  </span><br><span class="line">StartupWMClass=obsidian  </span><br><span class="line">Comment=Obsidian  </span><br><span class="line">MimeType=x-scheme-handler/obsidian;  </span><br><span class="line">Categories=Office;</span><br></pre></td></tr></table></figure>
 
