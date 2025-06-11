@@ -4,6 +4,59 @@
   
     
     <entry>
+      <title>Linux系统下Dr.Web大蜘蛛拦截Docker服务网络无法连接</title>
+      <link href="/linux-drweb-blocks-docker-service-network/"/>
+      <url>/linux-drweb-blocks-docker-service-network/</url>
+      
+        <content type="html"><![CDATA[<p>都说Linux系统不需要安装杀毒软件，但是我的的确确是用Dr.Web大蜘蛛查出过病毒，所以不管需不需要，还是装一个好。</p><p>Dr.Web Desktop Security Suite 是目前为止，我掌握并测试后发现，唯一一个能在Linux 桌面系统下运行的杀毒软件，并且通过测试key，可以免费升级。Linux版的测试key一直没更新，但可以用win或其他版本的测试key。前段时间，出现过授权限制，无法使用win版本的测试key，但现在又可以正常使用了。</p><p>最近测试多个docker服务互通时，发现docker服务间无法互通，网络无法连接，宿主机也不能连接docker服务。排查到崩溃也找不出原因，各种踩坑后，最终发现是Dr.Web大蜘蛛的SpIDer Gate模块拦截了docker-proxy。本来想着记下来，后来换系统就给忘了，今天又遇到同样的问题，还是记录一下吧。</p><p>PostgreSQL 的 docker服务连不上了<br><img src="/uploads/2025/06/20250611_172310.png" alt="无法连接 docker PostgreSQL 服务"></p><p>打开 Dr.Web Desktop Security Suite，选择“设置”</p><p><img src="/uploads/2025/06/20250611_172201.png" alt="Dr.Web Desktop Security Suite 设置"></p><p>选择“Exclusions”下的“Applications”</p><p><img src="/uploads/2025/06/20250611_172134.png" alt="Dr.Web Desktop Security Suite SpIDer Gate 白名单"></p><p>把docker-proxy添加到排除名单里</p><p><img src="/uploads/2025/06/20250611_172122.png" alt="Dr.Web Desktop Security Suite SpIDer Gate 白名单"></p><p>搞定，这回网络互通了。<br><img src="/uploads/2025/06/20250611_172238.png" alt="docker PostgreSQL 网络连通"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> EndeavourOS </tag>
+            
+            <tag> Manjaro </tag>
+            
+            <tag> Arch </tag>
+            
+            <tag> Linux </tag>
+            
+            <tag> Linux 系统 </tag>
+            
+            <tag> Linux 杀毒 </tag>
+            
+            <tag> Linux 杀毒软件 </tag>
+            
+            <tag> Linux Dr.Web </tag>
+            
+            <tag> Linux 大蜘蛛 </tag>
+            
+            <tag> 大蜘蛛 </tag>
+            
+            <tag> Dr.Web </tag>
+            
+            <tag> docker无法连接 </tag>
+            
+            <tag> docker </tag>
+            
+            <tag> docker互通 </tag>
+            
+            <tag> docker网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>7天换证 中国驾照在日本东京鲛洲免许中心更换驾驶证记录 外国の運転免許証切り替え</title>
       <link href="/7-days-replacement-of-drivers-license/"/>
       <url>/7-days-replacement-of-drivers-license/</url>
